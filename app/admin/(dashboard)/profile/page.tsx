@@ -1,0 +1,1 @@
+import {auth} from "@/lib/auth"; export default async function Page(){const s=await auth();return <><h1 className="admin-title">Profile</h1><section className="admin-card" style={{marginTop:24,maxWidth:620}}><h2>{s?.user.name}</h2><p>{s?.user.email}</p><span className="admin-badge">{s?.user.role}</span></section></>}

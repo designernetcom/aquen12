@@ -1,0 +1,1 @@
+export default function Page(){return <><h1 className="admin-title">Settings</h1><p className="admin-muted">Website identity, contact details, social links, analytics, metadata defaults, and SMTP.</p></>}

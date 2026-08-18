@@ -1,0 +1,743 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
+
+.page {
+  --blue: #008cff;
+  --cyan: #00c8ff;
+  --navy: #052c65;
+  --ink: #06213f;
+  --muted: #57779b;
+  --ice: #eaf7ff;
+  --line: rgba(5, 44, 101, 0.09);
+  font-family: "Manrope",;
+font-optical-sizing: auto;
+  color: var(--ink);
+  overflow: hidden;
+  background: #fff;
+}
+.page * {
+  box-sizing: border-box;
+}
+/* .page button,
+.page input,
+.page select,
+.page textarea {
+  font: inherit;
+} */
+.container {
+  width: min(1400px, 100%);
+  margin: auto;
+  padding: 0 32px;
+}
+/* .hero {
+  min-height: 760px;
+  padding: 215px 32px 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(112deg, #031b36 0%, #052c65 57%, #075d8d 100%);
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at 74% 32%,
+      rgba(0, 200, 255, 0.22),
+      transparent 30%
+    ),
+    linear-gradient(90deg, rgba(1, 19, 38, 0.25), transparent);
+}
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(91, 218, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 218, 255, 0.12) 1px, transparent 1px);
+  background-size: 62px 62px;
+  mask-image: linear-gradient(to right, #000, transparent);
+}
+.heroContent {
+  width: min(1400px, 100%);
+  margin: auto;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+} */
+.eyebrow,
+.eyebrowDark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 800;
+  font-size: 12px;
+}
+.eyebrow {
+  color: #72e4ff;
+}
+.eyebrow > span,
+.eyebrowDark > span {
+  width: 24px;
+  height: 3px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+}
+.hero h1 {
+  font:
+    800 clamp(48px, 7vw, 88px)/1.04 "Plus Jakarta Sans",
+    sans-serif;
+  letter-spacing: -0.045em;
+  max-width: 900px;
+  margin: 25px 0 24px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(120deg, #46b9ff, #72ecff);
+  color: transparent;
+  background-clip: text;
+}
+.heroContent > p {
+  max-width: 710px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.7;
+  margin: 0 0 38px;
+}
+.primaryButton,
+.submitButton,
+.roleButton {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.primaryButton:before,
+.submitButton:before,
+.roleButton:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.24);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.55s;
+}
+.primaryButton:hover:before,
+.submitButton:hover:before,
+.roleButton:hover:before {
+  transform: translate(-50%, -50%) scale(18);
+}
+.primaryButton {
+  padding: 17px 25px;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  box-shadow: 0 16px 34px rgba(0, 140, 255, 0.32);
+}
+.primaryButton:hover,
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 42px rgba(0, 140, 255, 0.42);
+}
+.heroTrust {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  margin-top: 24px;
+}
+.orbOne,
+.orbTwo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  z-index: -1;
+  animation: float 9s ease-in-out infinite;
+}
+.orbOne {
+  width: 420px;
+  height: 420px;
+  right: -110px;
+  top: -100px;
+  background: rgba(0, 140, 255, 0.14);
+}
+.orbTwo {
+  width: 320px;
+  height: 320px;
+  right: 18%;
+  bottom: -170px;
+  background: rgba(0, 210, 255, 0.12);
+  animation-delay: -4s;
+}
+.particles i {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(105, 231, 255, 0.55);
+  border-radius: 50%;
+  bottom: -20px;
+  left: calc(9% * var(--i));
+  animation: bubble 10s linear infinite;
+}
+.particles i:nth-child(1) {
+  left: 7%;
+  animation-delay: -2s;
+}
+.particles i:nth-child(2) {
+  left: 18%;
+  animation-delay: -7s;
+  width: 11px;
+  height: 11px;
+}
+.particles i:nth-child(3) {
+  left: 31%;
+  animation-delay: -4s;
+}
+.particles i:nth-child(4) {
+  left: 47%;
+  animation-delay: -9s;
+  width: 5px;
+  height: 5px;
+}
+.particles i:nth-child(5) {
+  left: 59%;
+  animation-delay: -1s;
+}
+.particles i:nth-child(6) {
+  left: 68%;
+  animation-delay: -6s;
+  width: 12px;
+  height: 12px;
+}
+.particles i:nth-child(7) {
+  left: 78%;
+  animation-delay: -3s;
+}
+.particles i:nth-child(8) {
+  left: 88%;
+  animation-delay: -8s;
+}
+.particles i:nth-child(9) {
+  left: 95%;
+  animation-delay: -5s;
+}
+.wave {
+  position: absolute;
+  left: -5%;
+  bottom: -95px;
+  width: 110%;
+  height: 145px;
+  border-radius: 50% 50% 0 0;
+  background: #fff;
+  transform: rotate(-1deg);
+}
+.why,
+.openings,
+.application {
+  padding: 50px 0;
+}
+.sectionHead {
+  margin-bottom: 62px;
+}
+.eyebrowDark {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.eyebrowDark {
+background: #ffffff0a;
+    border: 1px solid #008cff29;
+    border-radius: 100px;
+    width: fit-content;
+    margin-bottom: 22px;
+    padding: 9px 14px;
+    box-shadow: 0 8px 28px #052c650f;
+}
+
+.sectionHead h2,
+.formIntro h2 {
+  /* font: 800 clamp(32px, 4vw, 48px)/1.12 "Plus Jakarta Sans", sans-serif; */
+  font-family: "Manrope",;
+font-optical-sizing: auto;
+font-size: 35px;
+font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #052c65;
+  margin: 0;
+}
+.sectionHead > p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 17px 0 0;
+}
+.benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.benefitCard {
+  min-height: 310px;
+  padding: 30px;
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: linear-gradient(145deg, #fff, #f1faff);
+  box-shadow: 0 18px 46px rgba(5, 44, 101, 0.06);
+  transition:
+    transform 0.35s,
+    border-color 0.35s,
+    box-shadow 0.35s;
+}
+.benefitCard:hover {
+  transform: translateY(-9px);
+  border-color: rgba(0, 140, 255, 0.24);
+  box-shadow:
+    0 28px 58px rgba(5, 44, 101, 0.13),
+    0 0 32px rgba(0, 200, 255, 0.07);
+}
+.iconBox,
+.jobIcon {
+  display: grid;
+  place-items: center;
+  color: var(--blue);
+  background: linear-gradient(135deg, var(--ice), #fff);
+  border: 1px solid rgba(0, 140, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 140, 255, 0.1);
+  transition: transform 0.35s;
+}
+.iconBox {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  margin-bottom: 34px;
+}
+.benefitCard:hover .iconBox {
+  transform: scale(1.08) rotate(-4deg);
+}
+.cardNumber {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  color: rgba(5, 44, 101, 0.12);
+  font: 800 15px "Plus Jakarta Sans";
+}
+.benefitCard h3,
+.jobCard h3 {
+  /* font: 700 20px/1.35 "Plus Jakarta Sans"; */
+  font-family: "Manrope",;
+font-optical-sizing: auto;
+font-size: 20px;
+font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 13px;
+}
+.benefitCard p,
+.jobDescription {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--muted);
+  margin: 0;
+}
+.openings {
+  background: #f4fbff;
+}
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.jobCard {
+  padding: 31px;
+  border: 1px solid rgba(5, 44, 101, 0.1);
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 18px 44px rgba(5, 44, 101, 0.06);
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s,
+    border-color 0.35s;
+}
+.jobCard:hover {
+  transform: translateY(-7px);
+  border-color: rgba(0, 140, 255, 0.22);
+  box-shadow: 0 28px 58px rgba(5, 44, 101, 0.12);
+}
+.jobTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.jobIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+}
+.jobTop > span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: #008c72;
+  background: #e7fbf6;
+  padding: 8px 11px;
+  border-radius: 50px;
+}
+.department {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  color: var(--blue);
+  margin: 0 0 10px;
+}
+.jobCard h3 {
+  font-size: 23px;
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #7890aa;
+  font-size: 13px;
+  margin: 0 0 22px;
+}
+.jobDescription {
+  min-height: 77px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.roleButton {
+  width: 100%;
+  margin-top: 26px;
+  padding: 14px;
+  border-radius: 11px;
+  color: var(--navy);
+  background: var(--ice);
+  border: 1px solid rgba(0, 140, 255, 0.12);
+}
+.roleButton:hover {
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  transform: translateY(-2px);
+}
+.application {
+  background: #fff;
+}
+.formShell {
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(5, 44, 101, 0.15);
+  border: 1px solid rgba(5, 44, 101, 0.08);
+}
+.formIntro {
+  position: relative;
+  overflow: hidden;
+  padding: 58px 48px;
+  color: #fff;
+  background: linear-gradient(155deg, #052c65, #043c6b 60%, #0075a7);
+}
+.formIntro:after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 70px solid rgba(0, 210, 255, 0.09);
+  border-radius: 50%;
+  right: -170px;
+  bottom: -160px;
+}
+.formIntro h2 {
+  color: #fff;
+  font-size: clamp(30px, 3vw, 42px);
+  margin: 24px 0 22px;
+}
+.formIntro > p {
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  font-size: 15px;
+}
+.formPoints {
+  display: grid;
+  gap: 16px;
+  margin-top: 42px;
+}
+.formPoints span {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+}
+.formPoints svg {
+  width: 19px;
+  color: #6ce7ff;
+}
+.form {
+  padding: 48px;
+  background: #fff;
+}
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.formHeader span {
+  font: 700 20px "Plus Jakarta Sans";
+  color: var(--navy);
+}
+.formHeader strong {
+  font-size: 11px;
+  color: #7890aa;
+  font-weight: 600;
+}
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 21px 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+.field > span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #365879;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(5, 44, 101, 0.14);
+  border-radius: 10px;
+  background: #f8fcff;
+  color: var(--ink);
+  outline: 0;
+  padding: 14px 15px;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background 0.2s;
+}
+.field input,
+.field select {
+  height: 49px;
+}
+.field textarea {
+  resize: vertical;
+  min-height: 126px;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(0, 140, 255, 0.09);
+}
+.full {
+  grid-column: 1/-1;
+}
+.upload input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.uploadInner {
+  height: 49px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px dashed rgba(0, 140, 255, 0.3);
+  border-radius: 10px;
+  background: #f5fbff;
+  cursor: pointer;
+  color: var(--blue) !important;
+}
+.uploadInner b {
+  font-size: 13px;
+}
+.uploadInner small {
+  margin-left: auto;
+  color: #7890aa;
+}
+.invalid input,
+.invalid select,
+.invalid .uploadInner {
+  border-color: #d94a5d;
+}
+.error {
+  color: #c8394d;
+  font-size: 11px;
+}
+.submitButton {
+  margin-top: 27px;
+  padding: 16px 23px;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  box-shadow: 0 14px 30px rgba(0, 140, 255, 0.25);
+}
+.privacy {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #7890aa;
+  font-size: 11.5px;
+  margin: 17px 0 0;
+}
+.success {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #008c72;
+  background: #e9fbf6;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 15px 0 0;
+}
+@keyframes float {
+  50% {
+    transform: translateY(22px) scale(1.04);
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: translateY(0) scale(0.4);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-800px) translateX(35px) scale(1.2);
+    opacity: 0;
+  }
+}
+@media (max-width: 1050px) {
+  .benefitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .formShell {
+    grid-template-columns: 1fr;
+  }
+  .formIntro {
+    padding: 48px;
+  }
+  .jobsGrid {
+    gap: 15px;
+  }
+  .jobCard {
+    padding: 25px;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    min-height: 690px;
+    padding: 185px 24px 120px;
+  }
+  .why,
+  .openings,
+  .application {
+    padding: 82px 0;
+  }
+  .container {
+    padding: 0 22px;
+  }
+  .jobsGrid {
+    grid-template-columns: 1fr;
+  }
+  .jobDescription {
+    min-height: auto;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .full {
+    grid-column: auto;
+  }
+  .form {
+    padding: 34px 25px;
+  }
+  .sectionHead {
+    margin-bottom: 42px;
+  }
+}
+@media (max-width: 560px) {
+  .hero {
+    min-height: 650px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero h1 {
+    font-size: 45px;
+  }
+  .benefitGrid {
+    grid-template-columns: 1fr;
+  }
+  .benefitCard {
+    min-height: auto;
+  }
+  .formIntro {
+    padding: 39px 27px;
+  }
+  .formHeader {
+    align-items: flex-start;
+    gap: 8px;
+    flex-direction: column;
+  }
+  .uploadInner small {
+    display: none;
+  }
+  .privacy {
+    align-items: flex-start;
+  }
+  .container {
+    padding: 0 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbOne,
+  .orbTwo,
+  .particles i {
+    animation: none;
+  }
+  .benefitCard,
+  .jobCard,
+  .primaryButton,
+  .submitButton,
+  .roleButton {
+    transition: none;
+  }
+}

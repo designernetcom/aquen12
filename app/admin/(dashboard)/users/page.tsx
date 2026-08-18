@@ -1,0 +1,1 @@
+export default function Page(){return <><h1 className="admin-title">Users</h1><p className="admin-muted">Super Admins can create and manage administrator accounts. Public registration is disabled.</p></>}

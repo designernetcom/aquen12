@@ -1,0 +1,1 @@
+export default function Page(){return <><h1 className="admin-title">SEO manager</h1><p className="admin-muted">Review titles, descriptions, canonical URLs, social cards, schema, and indexing directives.</p></>}
