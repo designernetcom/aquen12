@@ -100,6 +100,21 @@ const HERO_STATS = [
 ];
 
 const HERO_SLIDES = [
+
+    {
+    eyebrow: "Wastewater Treatment Solutions",
+    badge: "Integrated Water & Wastewater Solutions",
+    titleStart: "Industrial Sewage",
+    titleMiddle: "Treatment Plant for",
+    highlight: "Wastewater Recycling",
+    description:
+      "Aquen sewage treatment plant solutions are engineered to treat wastewater from residential, commercial, institutional and industrial facilities through screening, equalization, biological.",
+    image: " banner2.png",
+    sideTitle: "Recovery Program",
+    sideValue: "99.2%",
+    sideText:
+      "Reduced BOD, COD, TSS and odour for compliant discharge and reliable non-potable water reuse.",
+  },
   {
     eyebrow: "Smart Effluent Engineering",
     badge: "Retrofit, Upgrade And Performance Optimisation",
@@ -123,26 +138,13 @@ const HERO_SLIDES = [
     highlight: "Continuous Industrial Supply",
     description:
       "From filtration and softening to DM and RO polishing, our plants are designed to deliver stable process water quality with automation, reliability and long operating life.",
-    image: "banner2.png",
+    image: "banner3.webp",
     sideTitle: "Flow Assurance",
     sideValue: "1,200 m3/day",
     sideText:
       "Integrated treatment trains sized for industrial demand, operational continuity and monitored performance.",
   },
-  {
-    eyebrow: "Wastewater Treatment Solutions",
-    badge: "Integrated Water & Wastewater Solutions",
-    titleStart: "Industrial Sewage",
-    titleMiddle: "Treatment Plant for",
-    highlight: "Wastewater Recycling",
-    description:
-      "Aquen sewage treatment plant solutions are engineered to treat wastewater from residential, commercial, institutional and industrial facilities through screening, equalization, biological.",
-    image: "banner3.webp",
-    sideTitle: "Recovery Program",
-    sideValue: "99.2%",
-    sideText:
-      "Reduced BOD, COD, TSS and odour for compliant discharge and reliable non-potable water reuse.",
-  },
+
 ];
 
 const CAPABILITIES = [

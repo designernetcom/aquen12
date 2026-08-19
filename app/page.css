@@ -4482,7 +4482,7 @@
     font-weight: 600;
     font-style: normal;
     /* font-family: var(--display); */
-    font-size: 60px;
+    font-size: 57px;
     line-height: 1.02;
     letter-spacing: -0.04em;
 }
@@ -4496,7 +4496,7 @@
     font-family: "Manrope", ;
     font-optical-sizing: auto;
     /* font-size: var(--section-title-size); */
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 600;
     line-height: var(--title-line-height);
     letter-spacing: var(--title-letter-spacing);
@@ -4511,7 +4511,7 @@
     }
 
     .hero .hero-title {
-        font-size: 48px;
+        font-size: 40px;
         line-height: 1.06;
         letter-spacing: -0.04em;
     }
