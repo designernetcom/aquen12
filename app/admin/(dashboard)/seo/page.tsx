@@ -1,1 +1,3 @@
-export default function Page(){return <><h1 className="admin-title">SEO manager</h1><p className="admin-muted">Review titles, descriptions, canonical URLs, social cards, schema, and indexing directives.</p></>}
+import { Globe2, Search } from "lucide-react";
+import AdminSection from "../admin-section";
+export default function Page(){return <AdminSection eyebrow="Search visibility" title="SEO manager" description="Shape how every page is discovered, shared, and understood by search engines and the people looking for AQUEN." icon={Search} accent="#6f61b5" items={[{label:"Pages optimized",value:"—",note:"Titles and descriptions"},{label:"Needs attention",value:"—",note:"Review recommended"},{label:"Indexing status",value:"Live",note:"Search directives active"}]} actions={[{label:"Review page metadata",href:"/admin/pages",icon:Search},{label:"Open live website",href:"/",icon:Globe2}]}/>}

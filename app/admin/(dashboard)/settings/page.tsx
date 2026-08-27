@@ -1,1 +1,3 @@
-export default function Page(){return <><h1 className="admin-title">Settings</h1><p className="admin-muted">Website identity, contact details, social links, analytics, metadata defaults, and SMTP.</p></>}
+import { Save, Settings2, ShieldCheck } from "lucide-react";
+import AdminSection from "../admin-section";
+export default function Page(){return <AdminSection eyebrow="Workspace controls" title="Settings" description="Control the website identity, defaults, integrations, and publishing environment from one considered workspace." icon={Settings2} accent="#087f73" items={[{label:"Configuration",value:"—",note:"Core website defaults"},{label:"Integrations",value:"—",note:"Connected services"},{label:"Security",value:"Protected",note:"Admin access enabled"}]} actions={[{label:"Edit website settings",href:"/admin/settings",icon:Save},{label:"Review access",href:"/admin/users",icon:ShieldCheck}]}/>}

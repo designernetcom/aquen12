@@ -1,1 +1,3 @@
-export default function Page(){return <><h1 className="admin-title">Projects</h1><p className="admin-muted">Manage ongoing and completed projects.</p></>}
+import { BriefcaseBusiness, ImagePlus, Plus } from "lucide-react";
+import AdminSection from "../admin-section";
+export default function Page(){return <AdminSection eyebrow="Portfolio workspace" title="Projects" description="Keep ongoing and completed project stories polished, discoverable, and ready for the public website." icon={BriefcaseBusiness} accent="#b27638" items={[{label:"Active projects",value:"—",note:"Currently in progress"},{label:"Completed stories",value:"—",note:"Published portfolio"},{label:"Media attached",value:"—",note:"Reusable project assets"}]} actions={[{label:"Create project",href:"/admin/media",icon:Plus},{label:"Upload project media",href:"/admin/media",icon:ImagePlus}]}/>}

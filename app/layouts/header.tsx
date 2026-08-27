@@ -24,9 +24,21 @@ const PROJECTS_LINKS = [
   { label: 'Completed', to: '/our-projects/projects-completed' },
 ]
 
+const PRODUCT_LINKS = [
+  { label: 'Mixed Bed Unit (MBU)', to: '/products/mixed-bed-unit' },
+  { label: 'Degasser Unit', to: '/products/degasser-unit' },
+  { label: 'Anion Exchange Unit', to: '/products/anion-exchange-unit' },
+  { label: 'Cation Exchange Unit', to: '/products/cation-exchange-unit' },
+  { label: 'Reverse Osmosis Plant (RO Plant)', to: '/products/reverse-osmosis-plant' },
+  { label: 'Iron Removal Plant (IRP)', to: '/products/iron-removal-plant' },
+  { label: 'Water Softener', to: '/products/water-softener' },
+  { label: 'Multi Grade Filter (MGF)', to: '/products/multi-grade-filter' },
+  { label: 'Activated Carbon Filter (ACF)', to: '/products/activated-carbon-filter' },
+]
+
 type SolutionMenuCategory = { title: string; links: { label: string; to: string }[] };
 
-type MobileSectionKey = 'company' | 'solutions' | 'projects';
+type MobileSectionKey = 'company' | 'solutions' | 'projects' | 'products';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -50,6 +62,7 @@ export default function Header() {
     { key: 'company', label: 'Company', count: COMPANY_LINKS.length },
     { key: 'solutions', label: 'Solutions', count: solutionCategories.length },
     { key: 'projects', label: 'Projects', count: PROJECTS_LINKS.length },
+    { key: 'products', label: 'Products', count: PRODUCT_LINKS.length },
   ]
 
   useEffect(() => {
@@ -106,6 +119,15 @@ export default function Header() {
               {COMPANY_LINKS.map((link) => (
                 <Link key={link.label} href={link.to}>{link.label}</Link>
               ))}
+            </div>
+          </div>
+
+          <div className={styles.dropdown}>
+            <button className={styles['dropdown-trigger']} type="button">
+              Products <ChevronDown size={15} aria-hidden="true" />
+            </button>
+            <div className={styles['dropdown-menu']}>
+              {PRODUCT_LINKS.map((link) => <Link key={link.label} href={link.to}>{link.label}</Link>)}
             </div>
           </div>
 
@@ -235,6 +257,10 @@ export default function Header() {
                     ))}
 
                     {key === 'projects' && PROJECTS_LINKS.map((link) => (
+                      <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
+                    ))}
+
+                    {key === 'products' && PRODUCT_LINKS.map((link) => (
                       <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
                     ))}
 

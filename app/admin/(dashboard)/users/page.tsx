@@ -1,1 +1,3 @@
-export default function Page(){return <><h1 className="admin-title">Users</h1><p className="admin-muted">Super Admins can create and manage administrator accounts. Public registration is disabled.</p></>}
+import { UserPlus, Users, ShieldCheck } from "lucide-react";
+import AdminSection from "../admin-section";
+export default function Page(){return <AdminSection eyebrow="Team access" title="Users" description="Keep administrator access intentional, transparent, and aligned with the people shaping the AQUEN experience." icon={Users} accent="#b27638" items={[{label:"Administrators",value:"—",note:"Workspace members"},{label:"Active sessions",value:"—",note:"Currently signed in"},{label:"Access policy",value:"Private",note:"Invite-only workspace"}]} actions={[{label:"Invite team member",href:"/admin/users",icon:UserPlus},{label:"Review permissions",href:"/admin/settings",icon:ShieldCheck}]}/>}

@@ -1,1 +1,3 @@
-export default function Page(){return <><h1 className="admin-title">Industries</h1><p className="admin-muted">Manage reusable industry records and project relationships.</p></>}
+import { Factory, Plus, Settings2 } from "lucide-react";
+import AdminSection from "../admin-section";
+export default function Page(){return <AdminSection eyebrow="Content library" title="Industries" description="Manage the sectors AQUEN serves and connect them to the right project stories and solution experiences." icon={Factory} accent="#b27638" items={[{label:"Published industries",value:"—",note:"Ready to publish"},{label:"Linked projects",value:"—",note:"Across your portfolio"},{label:"Last reviewed",value:"Today",note:"Workspace status"}]} actions={[{label:"Add industry",href:"/admin/projects",icon:Plus},{label:"Review projects",href:"/admin/projects",icon:Settings2}]}/>}

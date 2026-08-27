@@ -1,1 +1,3 @@
-export default function Page(){return <><h1 className="admin-title">Media library</h1><p className="admin-muted">Upload and reuse images, SVGs, PDFs, documents, and videos.</p></>}
+import { FileImage, FolderOpen, ImagePlus } from "lucide-react";
+import AdminSection from "../admin-section";
+export default function Page(){return <AdminSection eyebrow="Asset library" title="Media library" description="A single, visual home for the images and documents powering your website. Keep every asset easy to find and reuse." icon={FileImage} accent="#087f73" items={[{label:"Total assets",value:"—",note:"Across your library"},{label:"Images",value:"—",note:"Ready for content"},{label:"Storage used",value:"—",note:"Within workspace"}]} actions={[{label:"Upload new asset",href:"/admin/media",icon:ImagePlus},{label:"Browse folders",href:"/admin/media",icon:FolderOpen}]}/>}
