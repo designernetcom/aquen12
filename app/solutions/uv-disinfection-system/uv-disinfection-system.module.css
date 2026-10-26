@@ -1,0 +1,85 @@
+.capacityPhotoGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.capacityPhotoCard { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 12px 28px rgba(5, 44, 101, .06); }
+.capacityPhoto { position: relative; height: 218px; overflow: hidden; background: #dff4fb; }
+.capacityPhoto::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(3, 29, 70, .46)); content: ""; pointer-events: none; }
+.capacityPhoto img { object-fit: cover; transition: transform .4s ease; }
+.capacityPhotoCard:hover .capacityPhoto img { transform: scale(1.035); }
+.capacityPhotoBody { display: grid; gap: 7px; padding: 20px; }
+.capacityPhotoBody > span { color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.capacityPhotoBody h3 { margin: 4px 0 0; color: var(--navy); font-size: 19px; line-height: 1.25; }
+.capacityPhotoBody strong { color: var(--blue); font-size: 20px; }
+.capacityPhotoBody p, .capacityPhotoBody small { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.capacityPhotoBody small { color: #78919e; font-size: 10px; }
+
+.processBoard { padding: 29px; border: 1px solid rgba(166, 235, 247, .28); border-radius: 22px; background: linear-gradient(135deg, #031d46, #063d75); box-shadow: 0 15px 35px rgba(0, 13, 39, .15); }
+.processPath { display: grid; grid-template-columns: 1fr 50px 1fr 50px 1fr; gap: 12px; align-items: center; }
+.processNode { min-height: 132px; padding: 20px; border: 1px solid rgba(157, 235, 248, .32); border-radius: 17px; background: rgba(255, 255, 255, .08); }
+.processNodeActive { background: linear-gradient(145deg, rgba(7, 139, 201, .65), rgba(16, 91, 130, .55)); border-color: rgba(141, 234, 244, .8); box-shadow: inset 0 1px 0 rgba(255,255,255,.2); }
+.processNode span { display: block; color: #82eaf4; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+.processNode strong { display: block; margin-top: 16px; color: #fff; font-size: 18px; line-height: 1.2; }
+.processNode small { display: block; margin-top: 8px; color: #c4e8ef; font-size: 11px; line-height: 1.45; }
+.processArrow { display: grid; place-items: center; color: #79e7f4; }
+.reactorCallouts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 19px; padding-top: 20px; border-top: 1px solid rgba(157, 235, 248, .18); }
+.reactorCallouts span { color: #c4e8ef; font-size: 11px; line-height: 1.6; }
+.reactorCallouts b { display: block; margin-bottom: 3px; color: #82eaf4; font-size: 11px; }
+.workingGrid { display: grid; grid-template-columns: 1fr .72fr; gap: 55px; align-items: center; margin-top: 30px; }
+.workingGrid h3 { margin: 0 0 12px; color: #fff; font-size: 21px; }
+.workingGrid p { max-width: 650px; margin: 0; color: #c9e8f2; font-size: 14px; line-height: 1.8; }
+.workingNote { display: flex; align-items: flex-start; gap: 12px; padding: 18px; border: 1px solid rgba(250, 216, 119, .33); border-radius: 16px; background: rgba(84, 65, 15, .28); color: #f1e2ab; font-size: 13px; line-height: 1.6; }
+.workingNote svg { flex: none; color: #f3d66d; }
+
+.applicationSection { display: grid; grid-template-columns: .72fr 1.28fr; gap: 35px; margin-top: 30px; padding: 24px; border: 1px solid #bce5ee; border-radius: 20px; background: #fff; }
+.applicationLead h3 { margin: 13px 0 8px; color: var(--navy); font: 800 27px/1.1 "Plus Jakarta Sans", Arial, sans-serif; letter-spacing: -.04em; }
+.applicationLead p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.applicationGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.applicationCard { overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+.applicationImage { position: relative; height: 78px; overflow: hidden; background: #dff4fb; }
+.applicationImage::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(3, 29, 70, .58)); content: ""; }
+.applicationImage img { object-fit: cover; }
+.applicationImage > span { position: absolute; z-index: 1; left: 9px; bottom: 8px; display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 8px; background: rgba(3,29,70,.65); color: #fff; }
+.applicationCard strong { display: block; min-height: 50px; padding: 10px; color: #234b69; font-size: 11px; line-height: 1.35; }
+
+.quoteSection { color: #fff; background: linear-gradient(125deg, #031e4b, #0578c1); }
+.quoteGrid { display: grid; grid-template-columns: 1fr .83fr; gap: 58px; align-items: start; }
+.quoteGrid h2 { max-width: 700px; margin: 14px 0 18px; color: #fff; font: 800 clamp(33px, 4.5vw, 55px)/1.07 "Plus Jakarta Sans", Arial, sans-serif; letter-spacing: -.06em; }
+.quoteGrid > div > p { max-width: 620px; margin: 0; color: #c9e8f2; font-size: 16px; line-height: 1.8; }
+.formCard { display: grid; gap: 10px; padding: 25px; border: 1px solid rgba(255,255,255,.2); border-radius: 21px; background: rgba(255,255,255,.1); box-shadow: 0 20px 40px rgba(0, 0, 0, .13); backdrop-filter: blur(10px); }
+.formEyebrow { color: #8cddf3; font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.formCard h3 { margin: 2px 0 0; color: #fff; font-size: 21px; }
+.formCard > p { margin: 0 0 9px; color: #c9e8f2; font-size: 12px; line-height: 1.5; }
+.formGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.formGrid label { display: grid; gap: 6px; color: #d8f5fa; font-size: 11px; font-weight: 800; line-height: 1.3; }
+.formGrid input, .formGrid select, .formGrid textarea { width: 100%; min-height: 42px; padding: 10px 11px; border: 1px solid rgba(198, 239, 248, .25); border-radius: 9px; outline: none; background: rgba(255,255,255,.95); color: #173d59; font: inherit; font-size: 12px; font-weight: 500; }
+.formGrid textarea { min-height: 92px; resize: vertical; }
+.formGrid input::placeholder, .formGrid textarea::placeholder { color: #78919e; }
+.formGrid input:focus, .formGrid select:focus, .formGrid textarea:focus { border-color: #83edff; box-shadow: 0 0 0 3px rgba(131,237,255,.18); }
+.fieldFull { grid-column: 1 / -1; }
+.formSubmit { display: grid; gap: 9px; margin-top: 6px; }
+.formSubmit button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: max-content; min-height: 44px; padding: 11px 15px; border: 0; border-radius: 10px; background: #fff; color: var(--navy); cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 800; }
+.formSubmit button:focus-visible { outline: 3px solid #f8d25e; outline-offset: 3px; }
+.formSubmit span { color: #c9e8f2; font-size: 10px; line-height: 1.55; }
+.formSubmit a { color: #fff; font-weight: 800; }
+
+.reactorSvg { display: block; width: 100%; height: auto; }
+
+@media (max-width: 1050px) {
+  .capacityPhotoGrid { grid-template-columns: repeat(2, 1fr); }
+  .applicationGrid { grid-template-columns: repeat(2, 1fr); }
+  .reactorCallouts { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 850px) {
+  .processPath { grid-template-columns: 1fr; gap: 8px; }
+  .processArrow { transform: rotate(90deg); }
+  .workingGrid, .applicationSection, .quoteGrid { grid-template-columns: 1fr; gap: 35px; }
+}
+@media (max-width: 620px) {
+  .capacityPhotoGrid, .applicationGrid { grid-template-columns: 1fr; }
+  .capacityPhoto { height: 205px; }
+  .processBoard { padding: 18px; }
+  .processNode { min-height: 102px; padding: 16px; }
+  .processNode strong { margin-top: 10px; font-size: 16px; }
+  .reactorCallouts { grid-template-columns: 1fr; }
+  .formGrid { grid-template-columns: 1fr; }
+  .fieldFull { grid-column: auto; }
+  .formSubmit button { width: 100%; }
+}

@@ -1,0 +1,50 @@
+.componentGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.componentCard { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(5, 44, 101, .06); }
+.componentVisual { display: grid; min-height: 225px; place-items: center; padding: 16px; background: linear-gradient(145deg, #effcff, #d9f5fa); }
+.componentVisual svg { display: block; width: 100%; height: auto; }
+.componentCaption { display: grid; gap: 6px; padding: 18px; }
+.componentCaption span { color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.componentCaption h3 { margin: 0; color: var(--navy); font-size: 17px; line-height: 1.3; }
+.componentCaption p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+
+.workingGrid { display: grid; grid-template-columns: 1fr .72fr; gap: 55px; align-items: center; }
+.workingGrid h2 { max-width: 700px; margin: 14px 0 18px; color: #fff; font: 800 clamp(33px, 4.5vw, 55px)/1.07 "Plus Jakarta Sans", Arial, sans-serif; letter-spacing: -.06em; }
+.darkLead { max-width: 620px; margin: 0; color: #c9e8f2; font-size: 16px; line-height: 1.8; }
+.workingPoints { display: grid; gap: 12px; margin-top: 27px; }
+.workingPoints span { display: flex; align-items: flex-start; gap: 8px; color: #d8f5fa; font-size: 13px; line-height: 1.5; }
+.workingPoints svg { flex: none; margin-top: 2px; color: var(--cyan); }
+.workingCard { padding: 28px; border: 1px solid rgba(166, 235, 247, .28); border-radius: 21px; background: rgba(255, 255, 255, .1); box-shadow: 0 20px 40px rgba(0, 0, 0, .13); }
+.workingIcon { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 13px; background: rgba(103, 229, 250, .14); color: var(--cyan); }
+.workingCard > span { display: block; margin-top: 22px; color: #8cddf3; font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.workingCard h3 { margin: 13px 0 10px; color: #fff; font-size: 21px; line-height: 1.25; }
+.workingCard p { margin: 0; color: #c9e8f2; font-size: 14px; line-height: 1.75; }
+
+.ozoneFlowBoard { padding: 29px; border: 1px solid rgba(166, 235, 247, .28); border-radius: 22px; background: linear-gradient(135deg, #031d46, #063d75); box-shadow: 0 15px 35px rgba(0, 13, 39, .15); }
+.diagramScroller { width: 100%; overflow-x: auto; padding-bottom: 6px; }
+.processSvg { display: block; width: 1340px; min-width: 1340px; height: auto; }
+.safetyBanner { display: grid; grid-template-columns: 28px 1fr; gap: 12px; margin-top: 28px; padding: 18px 20px; border: 1px solid #bce5ee; border-radius: 17px; background: #f5fcff; }
+.safetyBanner > svg { margin-top: 2px; color: var(--blue); }
+.safetyBanner h3 { margin: 0 0 7px; color: var(--navy); font-size: 17px; }
+.safetyBanner p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+.bomList { display: grid; gap: 8px; padding: 13px; border: 1px solid var(--line); border-radius: 17px; background: #fff; box-shadow: 0 10px 25px rgba(5, 44, 101, .05); }
+.bomItem { display: grid; grid-template-columns: 32px 1fr auto; gap: 10px; align-items: center; padding: 10px 8px; border-bottom: 1px solid #e4f0f4; }
+.bomItem:last-child { border-bottom: 0; }
+.bomItem > span { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 9px; background: #e8f8ff; color: var(--blue); font-size: 10px; font-weight: 900; }
+.bomItem strong { color: #234b69; font-size: 13px; }
+.bomItem small { color: var(--muted); font-size: 11px; text-align: right; }
+
+@media (max-width: 1050px) {
+  .componentGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 850px) {
+  .workingGrid { grid-template-columns: 1fr; gap: 35px; }
+}
+@media (max-width: 620px) {
+  .componentGrid { grid-template-columns: 1fr; }
+  .componentVisual { min-height: 205px; }
+  .ozoneFlowBoard { padding: 18px; }
+  .bomItem { grid-template-columns: 32px 1fr; }
+  .bomItem small { grid-column: 2; text-align: left; }
+  .safetyBanner { grid-template-columns: 1fr; }
+}

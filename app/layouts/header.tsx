@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { ArrowRight, ChevronDown, Mail, Menu, Phone, X } from 'lucide-react'
 import styles from './header.module.css'
 import Link from 'next/link';
+import { STATIC_SOLUTION_CATEGORIES } from '@/lib/data/static-solutions';
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -24,45 +25,35 @@ const PROJECTS_LINKS = [
   { label: 'Completed', to: '/our-projects/projects-completed' },
 ]
 
-const PRODUCT_LINKS = [
-  { label: 'Mixed Bed Unit (MBU)', to: '/products/mixed-bed-unit' },
-  { label: 'Degasser Unit', to: '/products/degasser-unit' },
-  { label: 'Anion Exchange Unit', to: '/products/anion-exchange-unit' },
-  { label: 'Cation Exchange Unit', to: '/products/cation-exchange-unit' },
-  { label: 'Reverse Osmosis Plant (RO Plant)', to: '/products/reverse-osmosis-plant' },
-  { label: 'Iron Removal Plant (IRP)', to: '/products/iron-removal-plant' },
-  { label: 'Water Softener', to: '/products/water-softener' },
-  { label: 'Multi Grade Filter (MGF)', to: '/products/multi-grade-filter' },
-  { label: 'Activated Carbon Filter (ACF)', to: '/products/activated-carbon-filter' },
-]
-
-type SolutionMenuCategory = { title: string; links: { label: string; to: string }[] };
-
-type MobileSectionKey = 'company' | 'solutions' | 'projects' | 'products';
+type MobileSectionKey = 'company' | 'solutions' | 'projects';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [openSection, setOpenSection] = useState<MobileSectionKey | null>(null)
-  const [solutionCategories, setSolutionCategories] = useState<SolutionMenuCategory[]>([])
+  const solutionCategories = STATIC_SOLUTION_CATEGORIES
 
-  useEffect(() => {
-    const controller = new AbortController()
-    fetch('/api/public/navigation', { signal: controller.signal })
-      .then((response) => response.ok ? response.json() : Promise.reject(new Error('Navigation unavailable')))
-      .then(({ data }) => setSolutionCategories(data.map((category: { name: string; slug: string; subcategories: { name: string; pages: { title: string; slug: string }[] }[] }) => ({
-        title: category.name,
-        links: category.subcategories.flatMap((subcategory) => subcategory.pages.map((page) => ({ label: page.title, to: `/solutions/${page.slug}` }))),
-      }))))
-      .catch(() => undefined)
-    return () => controller.abort()
-  }, [])
+  /*
+   * Dynamic Solutions navigation is paused for now in favor of the static menu above.
+   * Restore this effect when the Solutions content is ready to come from the API again.
+   *
+   * useEffect(() => {
+   *   const controller = new AbortController()
+   *   fetch('/api/public/navigation', { signal: controller.signal })
+   *     .then((response) => response.ok ? response.json() : Promise.reject(new Error('Navigation unavailable')))
+   *     .then(({ data }) => setSolutionCategories(data.map((category: { name: string; slug: string; subcategories: { name: string; pages: { title: string; slug: string }[] }[] }) => ({
+   *       title: category.name,
+   *       links: category.subcategories.flatMap((subcategory) => subcategory.pages.map((page) => ({ label: page.title, to: `/solutions/${page.slug}` }))),
+   *     }))))
+   *     .catch(() => undefined)
+   *   return () => controller.abort()
+   * }, [])
+   */
 
   const mobileSections: { key: MobileSectionKey; label: string; count: number }[] = [
     { key: 'company', label: 'Company', count: COMPANY_LINKS.length },
     { key: 'solutions', label: 'Solutions', count: solutionCategories.length },
     { key: 'projects', label: 'Projects', count: PROJECTS_LINKS.length },
-    { key: 'products', label: 'Products', count: PRODUCT_LINKS.length },
   ]
 
   useEffect(() => {
@@ -122,30 +113,24 @@ export default function Header() {
             </div>
           </div>
 
-          <div className={styles.dropdown}>
-            <button className={styles['dropdown-trigger']} type="button">
-              Products <ChevronDown size={15} aria-hidden="true" />
-            </button>
-            <div className={styles['dropdown-menu']}>
-              {PRODUCT_LINKS.map((link) => <Link key={link.label} href={link.to}>{link.label}</Link>)}
-            </div>
-          </div>
-
           <div className={`${styles.dropdown} ${styles["mega-dropdown"]}`}>
             <button className={styles["dropdown-trigger"]} type="button">
               Solutions <ChevronDown size={15} aria-hidden="true" />
             </button>
             <div className={styles["mega-menu"]}>
+              <div className={styles["mega-menu-head"]}>
+                <div>
+                  <span className={styles["mega-menu-kicker"]}>Solutions directory</span>
+                  <p>Water treatment systems, components, and fabrication.</p>
+                </div>
+                <span className={styles["mega-menu-count"]}>04 categories</span>
+              </div>
               <div className={styles["mega-menu-grid"]}>
                 {solutionCategories.map((category) => (
                   <div key={category.title} className={styles["mega-col"]}>
                     <h4>{category.title}</h4>
                     {category.links.map((link) => (
-                      link.to ? (
-                        <Link key={link.label} href={link.to}>{link.label}</Link>
-                      ) : (
-                        <span key={link.label} className={styles.unavailableLink}>{link.label}</span>
-                      )
+                      <Link key={link.label} href={link.to}>{link.label}</Link>
                     ))}
                   </div>
                 ))}
@@ -260,19 +245,11 @@ export default function Header() {
                       <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
                     ))}
 
-                    {key === 'products' && PRODUCT_LINKS.map((link) => (
-                      <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
-                    ))}
-
                     {key === 'solutions' && solutionCategories.map((category) => (
                       <div key={category.title} className={styles['mm-subgroup']}>
                         <strong>{category.title}</strong>
                         {category.links.map((link) => (
-                          link.to ? (
-                            <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
-                          ) : (
-                            <span key={link.label} className={styles.unavailableLink}>{link.label}</span>
-                          )
+                          <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
                         ))}
                       </div>
                     ))}

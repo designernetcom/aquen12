@@ -1,0 +1,40 @@
+.processPath { grid-template-columns: 1fr 35px 1fr 35px 1fr 35px 1fr 35px 1fr; }
+
+.packingGrid, .projectGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.projectGrid { grid-template-columns: repeat(3, 1fr); }
+.packingCard, .projectCard { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(5, 44, 101, .05); }
+.packingVisual, .projectVisual { position: relative; min-height: 210px; overflow: hidden; background: linear-gradient(145deg, #effcff, #d8f4fa); }
+.packingVisual img, .projectVisual img { object-fit: cover; transition: transform .4s ease; }
+.packingCard:hover .packingVisual img, .projectCard:hover .projectVisual img { transform: scale(1.035); }
+.packingBody, .projectBody { display: grid; gap: 7px; padding: 18px; }
+.packingBody > span, .projectBody > span { color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.packingBody h3, .projectBody h3 { margin: 3px 0 0; color: var(--navy); font-size: 17px; line-height: 1.3; }
+.packingBody p, .projectBody p, .packingBody small, .projectBody small { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.packingBody small, .projectBody small { color: #78919e; font-size: 10px; }
+.projectVisual { min-height: 220px; }
+.projectBody strong { color: var(--blue); font-size: 13px; line-height: 1.4; }
+
+.operatingFlow { display: grid; gap: 13px; padding: 23px; border: 1px solid #bce5ee; border-radius: 18px; background: #f5fcff; }
+.operatingFlow div { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
+.operatingFlow b { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 10px; background: #dff5fb; color: var(--blue); font-size: 12px; }
+.operatingFlow span { color: var(--muted); font-size: 13px; line-height: 1.65; }
+.operatingFlow strong { color: var(--navy); }
+
+.flowLegend { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 18px; }
+.flowLegend span { display: inline-flex; align-items: center; gap: 8px; color: #c4e8ef; font-size: 12px; }
+.flowLegend i { display: inline-block; width: 22px; height: 3px; border-radius: 4px; background: #79e7f4; }
+.flowLegend i.gas { background: #f2cf6b; }
+
+@media (max-width: 1050px) {
+  .packingGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 850px) {
+  .processPath { grid-template-columns: 1fr; gap: 8px; }
+  .projectGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+  .packingGrid { grid-template-columns: 1fr; }
+  .packingVisual, .projectVisual { min-height: 190px; }
+}

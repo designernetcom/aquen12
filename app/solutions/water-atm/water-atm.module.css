@@ -1,0 +1,78 @@
+.paymentGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.paymentCard { display: grid; align-content: start; gap: 12px; min-height: 285px; padding: 24px; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 10px 24px rgba(5, 44, 101, .05); }
+.paymentCard:nth-child(2) { border-color: #abddea; background: linear-gradient(145deg, #fff, #f2fcff); }
+.paymentIcon { display: grid; width: 48px; height: 48px; place-items: center; border-radius: 14px; background: #e6f8fd; color: var(--blue); }
+.paymentCard h3 { margin: 4px 0 0; color: var(--navy); font-size: 20px; }
+.paymentCard > p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.paymentCard ul { display: grid; gap: 8px; margin: 2px 0 0; padding: 0; list-style: none; }
+.paymentCard li { display: flex; align-items: flex-start; gap: 8px; color: #587286; font-size: 13px; line-height: 1.5; }
+.paymentCard li svg { flex: none; margin-top: 2px; color: #42a7c0; }
+.paymentNote { margin: 24px 0 0; padding: 15px 18px; border: 1px solid #bce5ee; border-radius: 14px; background: #f4fcff; color: #557487; font-size: 13px; line-height: 1.65; }
+.processBoard { padding: 28px; border: 1px solid rgba(166, 235, 247, .27); border-radius: 22px; background: linear-gradient(135deg, #031d46, #063d75); box-shadow: 0 15px 35px rgba(0, 13, 39, .15); }
+.processGrid { display: grid; grid-template-columns: repeat(8, minmax(115px, 1fr)); gap: 9px; align-items: stretch; overflow-x: auto; padding-bottom: 7px; }
+.processNode { position: relative; min-height: 150px; padding: 17px 14px; border: 1px solid rgba(161, 232, 245, .3); border-radius: 15px; background: rgba(255, 255, 255, .1); }
+.processNode:not(:last-child)::after { position: absolute; top: 50%; right: -14px; width: 18px; height: 1px; background: #7de5f5; content: ""; }
+.processNode span { display: block; color: #8edfec; font-size: 9px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.processNode strong { display: block; margin-top: 20px; color: #fff; font-size: 15px; line-height: 1.25; }
+.processNode small { display: block; margin-top: 8px; color: rgba(218, 247, 250, .7); font-size: 11px; line-height: 1.45; }
+.processNodeOptional { border-style: dashed; }
+.processNodeActive { border-color: #79e4f6; background: linear-gradient(145deg, rgba(23, 159, 190, .42), rgba(255, 255, 255, .11)); box-shadow: inset 0 0 0 1px rgba(121, 228, 246, .15); }
+.processFoot { display: flex; flex-wrap: wrap; gap: 16px 30px; margin-top: 20px; padding-top: 18px; border-top: 1px solid rgba(157, 235, 248, .18); color: #d7f4f8; font-size: 12px; line-height: 1.55; }
+.processFoot span { flex: 1 1 300px; }
+.processFoot b { color: #9deaf6; }
+.modelIntro { margin: -16px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.wideTable table { min-width: 1180px; }
+.optionGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.optionCard { display: grid; grid-template-columns: 28px 1fr; gap: 10px; min-height: 118px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 9px 22px rgba(5, 44, 101, .04); }
+.optionCard svg { color: var(--blue); }
+.optionCard strong { color: var(--navy); font-size: 14px; line-height: 1.45; }
+.optionCard small { grid-column: 2; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.installationGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 13px; }
+.installationCard { display: grid; align-content: center; min-height: 190px; padding: 18px; border: 1px dashed #9ccbd8; border-radius: 18px; background: linear-gradient(145deg, #f6fdff, #e2f5fa); text-align: center; }
+.installationCard svg { margin: 0 auto 16px; color: #2c8ca9; }
+.installationCard strong { color: var(--navy); font-size: 14px; line-height: 1.4; }
+.installationCard small { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.installationNote { margin-top: 20px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.atmVisual { position: absolute; inset: 14px; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 19px; background: radial-gradient(circle at 50% 30%, rgba(127, 231, 247, .25), transparent 32%), linear-gradient(155deg, #0c7098, #032049 72%); }
+.atmVisual::before { position: absolute; top: -120px; right: -80px; width: 330px; height: 330px; border: 1px solid rgba(145, 236, 247, .35); border-radius: 50%; box-shadow: 0 0 0 33px rgba(145, 236, 247, .06), 0 0 0 66px rgba(145, 236, 247, .04); content: ""; }
+.atmMachine { position: relative; z-index: 1; width: min(68%, 250px); min-height: 335px; padding: 17px 16px 18px; border: 4px solid #a9d7e0; border-radius: 23px 23px 11px 11px; background: linear-gradient(90deg, #d8f3f4, #82c5d1 48%, #e7fbfa); box-shadow: 20px 24px 35px rgba(0, 12, 42, .35), inset 0 0 0 2px rgba(255, 255, 255, .7); }
+.atmMachine::after { position: absolute; right: 10px; bottom: -13px; left: 10px; height: 17px; border-radius: 0 0 8px 8px; background: #5e9aaa; content: ""; }
+.atmBrand { display: flex; align-items: center; justify-content: space-between; color: #053469; font-size: 12px; font-weight: 950; letter-spacing: .11em; }
+.atmBrand small { color: #147f9a; font-size: 8px; letter-spacing: .08em; }
+.atmScreen { display: grid; gap: 5px; margin: 27px 7px 18px; padding: 14px 12px; border: 3px solid #254e63; border-radius: 7px; background: #0c2c45; box-shadow: inset 0 0 12px rgba(111, 230, 249, .25); text-align: center; }
+.atmScreen span { color: #8be9f5; font-size: 8px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.atmScreen strong { color: #fff; font-size: 21px; }
+.atmControls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.atmControls span { display: grid; min-height: 30px; place-items: center; border: 1px solid #5aa6b6; border-radius: 4px; background: #e5fbfa; color: #0a6681; font-size: 8px; font-weight: 800; }
+.atmOutlet { width: 78px; height: 11px; margin: 23px auto 0; border-radius: 99px; background: #2c5c70; box-shadow: 0 5px 0 #14435b; }
+.visualLabel { position: absolute; z-index: 2; right: 22px; bottom: 22px; max-width: 170px; padding: 10px 12px; border: 1px solid rgba(166, 237, 248, .27); border-radius: 10px; background: rgba(3, 29, 70, .76); color: #d7f6fa; font-size: 10px; line-height: 1.45; }
+.qualityGrid { display: grid; grid-template-columns: 1fr .95fr; gap: 30px; align-items: start; }
+.qualityCard { padding: 26px; border: 1px solid #bce5ee; border-radius: 20px; background: #f5fcff; }
+.qualityCard h3 { margin: 0 0 12px; color: var(--navy); font-size: 21px; }
+.qualityCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.qualityCard ul { display: grid; gap: 10px; margin: 20px 0 0; padding: 0; list-style: none; }
+.qualityCard li { display: flex; align-items: flex-start; gap: 8px; color: #557487; font-size: 13px; line-height: 1.55; }
+.qualityCard li svg { flex: none; margin-top: 2px; color: #2c8ca9; }
+.contactLine { display: inline-flex; align-items: center; gap: 8px; }
+@media (max-width: 1050px) {
+  .optionGrid { grid-template-columns: repeat(2, 1fr); }
+  .installationGrid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 850px) {
+  .paymentGrid, .qualityGrid { grid-template-columns: 1fr; }
+  .processGrid { grid-template-columns: repeat(4, minmax(130px, 1fr)); }
+  .processNode:nth-child(4)::after, .processNode:nth-child(8)::after { display: none; }
+}
+@media (max-width: 620px) {
+  .paymentGrid, .optionGrid, .installationGrid { grid-template-columns: 1fr; }
+  .processBoard { padding: 18px; }
+  .processGrid { grid-template-columns: 1fr; overflow: visible; }
+  .processNode { min-height: 0; padding: 15px; }
+  .processNode:not(:last-child)::after { top: auto; right: auto; bottom: -10px; left: 50%; width: 1px; height: 15px; }
+  .processNode:nth-child(4)::after, .processNode:nth-child(8)::after { display: block; }
+  .processNode:last-child::after { display: none; }
+  .atmMachine { width: 58%; min-height: 265px; transform: scale(.88); }
+  .atmScreen { margin-top: 18px; }
+  .atmScreen strong { font-size: 17px; }
+  .visualLabel { right: 14px; bottom: 14px; max-width: 145px; font-size: 9px; }
+}

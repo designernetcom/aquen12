@@ -1,0 +1,368 @@
+.referenceNote {
+  position: absolute;
+  z-index: 2;
+  right: 27px;
+  bottom: 29px;
+  max-width: 230px;
+  padding: 10px 12px;
+  border: 1px solid rgba(166, 237, 248, .3);
+  border-radius: 10px;
+  background: rgba(3, 29, 70, .78);
+  color: #d7f6fa;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.featureGridWide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.featureCardTall {
+  min-height: 205px;
+}
+
+.specCard {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(5, 44, 101, .05);
+}
+
+.specCard + .specCard {
+  margin-top: 18px;
+}
+
+.specCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, #effaff, #fff);
+}
+
+.specCardHeader span {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.specCardHeader strong {
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.specCard .tableWrap,
+.specCard .compactTable {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.specCard .tableWrap table {
+  min-width: 920px;
+}
+
+.compactSpec table {
+  min-width: 620px !important;
+}
+
+.selectionTable table {
+  min-width: 1700px !important;
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.panel {
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(5, 44, 101, .05);
+}
+
+.panel h3 {
+  margin: 0 0 17px;
+  color: var(--navy);
+  font: 800 21px/1.2 "Plus Jakarta Sans", Arial, sans-serif;
+  letter-spacing: -.04em;
+}
+
+.panelLead {
+  margin: -5px 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bulletList {
+  display: grid;
+  gap: 11px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bulletList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.bulletList svg {
+  flex: none;
+  margin-top: 2px;
+  color: #2aa7c7;
+}
+
+.mountGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.mountCard {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #f8fdff, #eaf8ff);
+}
+
+.mountCard::after {
+  position: absolute;
+  right: -55px;
+  bottom: -70px;
+  width: 170px;
+  height: 170px;
+  border: 1px solid rgba(7, 139, 201, .18);
+  border-radius: 50%;
+  box-shadow: 0 0 0 22px rgba(7, 139, 201, .05);
+  content: "";
+}
+
+.mountCard span {
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.mountCard h3 {
+  margin: 13px 0 8px;
+  color: var(--navy);
+  font: 800 24px/1.1 "Plus Jakarta Sans", Arial, sans-serif;
+  letter-spacing: -.045em;
+}
+
+.mountCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.mountSize {
+  display: block;
+  margin-top: 19px !important;
+  color: var(--navy) !important;
+  font-size: 15px !important;
+  font-weight: 800;
+}
+
+.functionGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.functionCard {
+  display: grid;
+  gap: 7px;
+  min-height: 116px;
+  padding: 18px;
+  border: 1px solid rgba(166, 235, 247, .25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .08);
+}
+
+.functionCard svg {
+  color: var(--cyan);
+}
+
+.functionCard strong {
+  color: #fff;
+  font-size: 15px;
+}
+
+.functionCard span {
+  color: rgba(218, 247, 250, .72);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.flowGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.flowCard {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 23px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(5, 44, 101, .04);
+}
+
+.flowIcon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 14px;
+  background: #e9f8ff;
+  color: var(--blue);
+}
+
+.flowCard h3 {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.flowCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.imageStrip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.imageCard {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(5, 44, 101, .06);
+}
+
+.imageFrame {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+  background: #e8f7fc;
+}
+
+.imageFrame img {
+  object-fit: cover;
+}
+
+.imageCard figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 15px 17px;
+}
+
+.imageCard figcaption strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.imageCard figcaption span {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.noteBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 17px;
+  padding: 14px 16px;
+  border: 1px solid #ead187;
+  border-radius: 14px;
+  background: #fff9e8;
+  color: #7e6c36;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.noteBlock svg {
+  flex: none;
+  margin-top: 2px;
+  color: #ae8511;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tag {
+  padding: 8px 11px;
+  border: 1px solid #c8e6ef;
+  border-radius: 999px;
+  background: #f6fcfe;
+  color: #29718e;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.darkTagRow .tag {
+  border-color: rgba(166, 235, 247, .25);
+  background: rgba(255, 255, 255, .08);
+  color: #d7f4f8;
+}
+
+@media (max-width: 1050px) {
+  .featureGridWide { grid-template-columns: repeat(2, 1fr); }
+  .imageStrip { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 850px) {
+  .twoColumn { grid-template-columns: 1fr; }
+  .mountGrid, .flowGrid { grid-template-columns: 1fr; }
+  .functionGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 620px) {
+  .referenceNote { right: 17px; bottom: 18px; max-width: 190px; font-size: 9px; }
+  .featureGridWide, .functionGrid, .imageStrip { grid-template-columns: 1fr; }
+  .specCardHeader { flex-direction: column; gap: 8px; }
+  .specCardHeader strong { text-align: left; }
+  .panel, .mountCard, .flowCard { padding: 20px; }
+  .flowCard { grid-template-columns: 1fr; }
+}

@@ -1,11 +1,35 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPublishedSolutionBySlug } from "@/lib/data/solutions";
+import { getStaticSolutionBySlug, STATIC_SOLUTION_PAGES } from "@/lib/data/static-solutions";
 import ClarifierMasterTemplate from "@/app/solutions/water-treatment-plants/clarifier-system/clarifier-template";
+import StaticSolutionTemplate from "@/app/solutions/static-solution-template";
 
 type Props = { params: Promise<{ slug: string }> };
+
+export function generateStaticParams() {
+  return STATIC_SOLUTION_PAGES.map((page) => ({ slug: page.slug }));
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = await getPublishedSolutionBySlug((await params).slug);
+  const slug = (await params).slug;
+  const staticPage = getStaticSolutionBySlug(slug);
+  if (staticPage) {
+    return {
+      title: `${staticPage.title} | AQUEN Fluid Technologies LLP`,
+      description: staticPage.description,
+      alternates: { canonical: `/solutions/${staticPage.slug}` },
+      openGraph: {
+        title: `${staticPage.title} | AQUEN Fluid Technologies LLP`,
+        description: staticPage.description,
+        url: `/solutions/${staticPage.slug}`,
+        type: "website",
+        images: [staticPage.image],
+      },
+    };
+  }
+
+  const page = await getPublishedSolutionBySlug(slug);
   if (!page) return {};
   return {
     title: page.seoTitle || page.title,
@@ -22,7 +46,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 export default async function Solution({ params }: Props) {
-  const page = await getPublishedSolutionBySlug((await params).slug);
+  const slug = (await params).slug;
+  const staticPage = getStaticSolutionBySlug(slug);
+  if (staticPage) return <StaticSolutionTemplate solution={staticPage} />;
+
+  const page = await getPublishedSolutionBySlug(slug);
   if (!page) notFound();
   return (
     <ClarifierMasterTemplate

@@ -1,0 +1,69 @@
+.coolerPlaceholder { position: absolute; inset: 14px; display: grid; align-content: center; justify-items: center; gap: 13px; overflow: hidden; border: 1px solid rgba(166, 237, 248, .3); border-radius: 19px; background: radial-gradient(circle at 50% 28%, rgba(123, 229, 247, .23), transparent 30%), linear-gradient(145deg, #0b779a, #032049 74%); text-align: center; }
+.coolerPlaceholder::before { position: absolute; top: -100px; right: -110px; width: 350px; height: 350px; border: 1px solid rgba(145, 236, 247, .35); border-radius: 50%; box-shadow: 0 0 0 35px rgba(145, 236, 247, .06), 0 0 0 70px rgba(145, 236, 247, .04); content: ""; }
+.coolerPlaceholder > svg, .coolerPlaceholder strong, .coolerPlaceholder span, .coolerPlaceholder small { position: relative; z-index: 1; }
+.coolerPlaceholder > svg { color: #9cecf7; }
+.coolerPlaceholder strong { max-width: 260px; color: #fff; font-size: 22px; }
+.coolerPlaceholder span { max-width: 290px; color: #c7f2f7; font-size: 13px; line-height: 1.55; }
+.coolerPlaceholder small { max-width: 260px; color: rgba(219, 248, 251, .68); font-size: 11px; line-height: 1.5; }
+.rangeGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.rangeCard { display: grid; align-content: start; min-height: 210px; padding: 21px; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(5, 44, 101, .05); }
+.rangeMarker { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 14px; background: #e7f8fd; color: var(--blue); }
+.rangeCard > span { margin-top: 20px; color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.rangeCard h3 { margin: 9px 0 7px; color: var(--navy); font-size: 17px; line-height: 1.3; }
+.rangeCard strong { color: var(--blue); font-size: 18px; }
+.rangeCard p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.wideTable table { min-width: 1450px; }
+.tableNoteGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.tableNote { display: flex; align-items: flex-start; gap: 10px; padding: 16px 18px; border: 1px solid #bce5ee; border-radius: 15px; background: #f4fcff; color: #557487; font-size: 12px; line-height: 1.6; }
+.tableNote svg { flex: none; margin-top: 2px; color: #2c8ca9; }
+.cardGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.modelCard { display: grid; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 12px 28px rgba(5, 44, 101, .06); }
+.modelPlaceholder { position: relative; display: grid; min-height: 170px; place-items: center; align-content: center; gap: 10px; padding: 22px; background: linear-gradient(145deg, #effcff, #d8f4fa); color: #3084a0; text-align: center; }
+.modelPlaceholder span { max-width: 160px; color: #3283a4; font-size: 11px; font-weight: 800; line-height: 1.5; }
+.modelBody { display: grid; gap: 7px; padding: 19px; }
+.modelBody > span { color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.modelBody h3 { margin: 4px 0 0; color: var(--navy); font-size: 18px; line-height: 1.25; }
+.modelBody strong { color: var(--blue); font-size: 17px; }
+.modelSpecs { display: grid; gap: 4px; margin-top: 6px; padding-top: 10px; border-top: 1px solid var(--line); }
+.modelSpecs span { color: var(--muted); font-size: 11px; line-height: 1.45; }
+.modelSpecs b { color: #234b69; }
+.modelWarning { display: flex; align-items: flex-start; gap: 7px; margin-top: 4px; padding: 9px; border-radius: 9px; background: #fff9e8; color: #7e6c36; font-size: 10px; line-height: 1.5; }
+.modelWarning svg { flex: none; margin-top: 1px; color: #ae8511; }
+.optionGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.optionCard { display: grid; grid-template-columns: 30px 1fr; gap: 10px; min-height: 118px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 9px 22px rgba(5, 44, 101, .04); }
+.optionCard svg { color: var(--blue); }
+.optionCard strong { color: var(--navy); font-size: 14px; line-height: 1.4; }
+.optionCard small { grid-column: 2; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.applicationGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.applicationCard { display: grid; align-content: start; min-height: 190px; padding: 20px; border: 1px solid var(--line); border-radius: 17px; background: #fff; box-shadow: 0 9px 22px rgba(5, 44, 101, .04); }
+.applicationCard > svg { color: var(--blue); }
+.applicationCard h3 { margin: 16px 0 7px; color: var(--navy); font-size: 16px; line-height: 1.3; }
+.applicationCard p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.characteristicGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.characteristicCard { min-height: 165px; padding: 21px; border: 1px solid rgba(166, 235, 247, .28); border-radius: 17px; background: rgba(255, 255, 255, .09); }
+.characteristicCard > svg { color: #74e4f4; }
+.characteristicCard h3 { margin: 14px 0 7px; color: #fff; font-size: 16px; line-height: 1.3; }
+.characteristicCard p { margin: 0; color: #c9e8f2; font-size: 12px; line-height: 1.65; }
+.installationPanel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: start; margin-top: 30px; padding: 25px; border: 1px solid #bce5ee; border-radius: 20px; background: #fff; }
+.installationPanel h3 { margin: 0 0 9px; color: var(--navy); font-size: 21px; }
+.installationPanel p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.installationChecklist { display: grid; gap: 11px; }
+.installationChecklist span { display: flex; align-items: flex-start; gap: 8px; color: #557487; font-size: 13px; line-height: 1.5; }
+.installationChecklist svg { flex: none; margin-top: 2px; color: #2c8ca9; }
+.contactLine { display: inline-flex; align-items: center; gap: 8px; }
+@media (max-width: 1050px) {
+  .rangeGrid { grid-template-columns: repeat(3, 1fr); }
+  .cardGrid { grid-template-columns: repeat(2, 1fr); }
+  .optionGrid, .applicationGrid { grid-template-columns: repeat(2, 1fr); }
+  .characteristicGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 850px) {
+  .tableNoteGrid, .installationPanel { grid-template-columns: 1fr; }
+  .rangeGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .rangeGrid, .cardGrid, .optionGrid, .applicationGrid, .characteristicGrid { grid-template-columns: 1fr; }
+  .coolerPlaceholder { inset: 9px; }
+  .coolerPlaceholder strong { font-size: 19px; }
+  .coolerPlaceholder span { max-width: 245px; font-size: 12px; }
+}

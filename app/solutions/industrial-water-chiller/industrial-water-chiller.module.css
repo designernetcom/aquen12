@@ -1,0 +1,73 @@
+.heroPlaceholder { position: absolute; inset: 14px; display: grid; align-content: center; justify-items: center; gap: 13px; overflow: hidden; border: 1px solid rgba(166, 237, 248, .3); border-radius: 19px; background: radial-gradient(circle at 50% 25%, rgba(123, 229, 247, .22), transparent 30%), linear-gradient(145deg, #0b779a, #032049 74%); text-align: center; }
+.heroPlaceholder::before { position: absolute; top: -100px; right: -110px; width: 350px; height: 350px; border: 1px solid rgba(145, 236, 247, .35); border-radius: 50%; box-shadow: 0 0 0 35px rgba(145, 236, 247, .06), 0 0 0 70px rgba(145, 236, 247, .04); content: ""; }
+.heroPlaceholder > svg, .heroPlaceholder strong, .heroPlaceholder span, .heroPlaceholder small { position: relative; z-index: 1; }
+.heroPlaceholder > svg { color: #9cecf7; }
+.heroPlaceholder strong { max-width: 285px; color: #fff; font-size: 22px; }
+.heroPlaceholder span { max-width: 310px; color: #c7f2f7; font-size: 13px; line-height: 1.55; }
+.heroPlaceholder small { max-width: 280px; color: rgba(219, 248, 251, .68); font-size: 11px; line-height: 1.5; }
+.typeGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+.typeCard { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 12px 28px rgba(5, 44, 101, .06); }
+.typeVisual { display: grid; min-height: 170px; place-items: center; align-content: center; gap: 10px; padding: 23px; background: linear-gradient(145deg, #effcff, #d8f4fa); color: #3084a0; text-align: center; }
+.typeVisual span { max-width: 180px; color: #3283a4; font-size: 11px; font-weight: 800; line-height: 1.5; }
+.typeBody { display: grid; gap: 8px; padding: 20px; }
+.typeBody > span { color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.typeBody h3 { margin: 3px 0 0; color: var(--navy); font-size: 18px; line-height: 1.25; }
+.typeBody p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.typeBody small { color: #78919e; font-size: 10px; line-height: 1.5; }
+.wideTable table { min-width: 1780px; }
+.tableNoteGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.tableNote { display: flex; align-items: flex-start; gap: 10px; padding: 16px 18px; border: 1px solid #bce5ee; border-radius: 15px; background: #f4fcff; color: #557487; font-size: 12px; line-height: 1.6; }
+.tableNote svg { flex: none; margin-top: 2px; color: #2c8ca9; }
+.markGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.markCard { min-height: 150px; padding: 20px; border: 1px solid rgba(166, 235, 247, .28); border-radius: 17px; background: rgba(255, 255, 255, .09); }
+.markCard > svg { color: #74e4f4; }
+.markCard h3 { margin: 14px 0 7px; color: #fff; font-size: 16px; line-height: 1.3; }
+.markCard p { margin: 0; color: #c9e8f2; font-size: 12px; line-height: 1.65; }
+.optionalGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.optionalCard { display: grid; grid-template-columns: 28px 1fr; gap: 10px; min-height: 132px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 9px 22px rgba(5, 44, 101, .04); }
+.optionalCard > svg { color: var(--blue); }
+.optionalCard strong { color: var(--navy); font-size: 14px; line-height: 1.4; }
+.optionalCard small { grid-column: 2; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.detailGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.detailTable { width: 100%; overflow: hidden; border: 1px solid var(--line); border-radius: 17px; background: #fff; box-shadow: 0 10px 25px rgba(5, 44, 101, .05); }
+.detailTable table { width: 100%; border-collapse: collapse; text-align: left; }
+.detailTable th { width: 36%; padding: 13px 15px; background: #effaff; color: #234b69; font-size: 11px; line-height: 1.4; text-transform: uppercase; vertical-align: top; }
+.detailTable td { padding: 13px 15px; border-bottom: 1px solid #e4f0f4; color: #587286; font-size: 13px; line-height: 1.5; vertical-align: top; }
+.detailTable tr:last-child td, .detailTable tr:last-child th { border-bottom: 0; }
+.dimensionPanel { padding: 25px; border: 1px solid #bce5ee; border-radius: 20px; background: #f5fcff; }
+.dimensionPanel h3 { margin: 0 0 9px; color: var(--navy); font-size: 21px; }
+.dimensionPanel p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.dimensionMarks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 22px; }
+.dimensionMark { display: grid; gap: 5px; padding: 15px; border: 1px solid #bce5ee; border-radius: 13px; background: #fff; }
+.dimensionMark strong { color: var(--blue); font-size: 24px; }
+.dimensionMark span { color: #557487; font-size: 11px; line-height: 1.4; }
+.dimensionNote { margin-top: 18px !important; color: #7e6c36 !important; }
+.applicationGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.applicationCard { display: grid; align-content: start; min-height: 188px; padding: 20px; border: 1px solid var(--line); border-radius: 17px; background: #fff; box-shadow: 0 9px 22px rgba(5, 44, 101, .04); }
+.applicationCard > svg { color: var(--blue); }
+.applicationCard h3 { margin: 16px 0 7px; color: var(--navy); font-size: 16px; line-height: 1.3; }
+.applicationCard p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.engineeringPanel { display: grid; grid-template-columns: .9fr 1.1fr; gap: 28px; align-items: start; margin-top: 30px; padding: 25px; border: 1px solid #bce5ee; border-radius: 20px; background: #fff; }
+.engineeringPanel h3 { margin: 0 0 9px; color: var(--navy); font-size: 21px; }
+.engineeringPanel p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.engineeringChecklist { display: grid; gap: 11px; }
+.engineeringChecklist span { display: flex; align-items: flex-start; gap: 8px; color: #557487; font-size: 13px; line-height: 1.5; }
+.engineeringChecklist svg { flex: none; margin-top: 2px; color: #2c8ca9; }
+.contactLine { display: inline-flex; align-items: center; gap: 8px; }
+@media (max-width: 1050px) {
+  .typeGrid { grid-template-columns: repeat(2, 1fr); }
+  .optionalGrid { grid-template-columns: repeat(3, 1fr); }
+  .applicationGrid { grid-template-columns: repeat(2, 1fr); }
+  .markGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 850px) {
+  .tableNoteGrid, .detailGrid, .engineeringPanel { grid-template-columns: 1fr; }
+  .optionalGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .typeGrid, .optionalGrid, .applicationGrid, .markGrid { grid-template-columns: 1fr; }
+  .heroPlaceholder { inset: 9px; }
+  .heroPlaceholder strong { font-size: 19px; }
+  .heroPlaceholder span { max-width: 245px; font-size: 12px; }
+  .dimensionMarks { grid-template-columns: 1fr; }
+}

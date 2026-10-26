@@ -1,0 +1,36 @@
+.heroImageNote { position: absolute; z-index: 2; right: 23px; bottom: 99px; max-width: 225px; padding: 10px 12px; border: 1px solid rgba(166, 237, 248, .3); border-radius: 10px; background: rgba(3, 29, 70, .78); color: #d7f6fa; font-size: 10px; line-height: 1.45; }
+.screenVisual { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; min-height: 150px; padding: 20px 28px; border: 1px solid #9fcfda; border-radius: 16px; background: linear-gradient(155deg, #d6f2f5, #b8e0e8); overflow: hidden; }
+.screenVisual::before { position: absolute; top: 50%; right: -4px; left: -4px; height: 18px; border-radius: 99px; background: #69a6b4; box-shadow: 0 -31px 0 #69a6b4, 0 31px 0 #69a6b4; content: ""; transform: translateY(-50%); }
+.screenVisual span { position: relative; z-index: 1; width: 7px; height: 100%; justify-self: center; border-radius: 99px; background: #f6ffff; box-shadow: 0 0 0 1px rgba(32, 101, 119, .35); }
+.screenVisual i { position: absolute; right: 25px; bottom: 25px; width: 10px; height: 10px; border-radius: 50%; background: #3b9f77; }
+.screenVisual i:nth-of-type(2) { right: 45px; bottom: 34px; }
+.screenVisual i:nth-of-type(3) { right: 32px; bottom: 47px; }
+.debrisVisual { display: grid; justify-items: center; align-content: center; gap: 10px; min-height: 150px; border: 1px dashed #8cc6d2; border-radius: 16px; background: #e6f8ee; color: #20805e; text-align: center; }
+.debrisVisual span { color: #256b55; font-size: 12px; font-weight: 800; line-height: 1.4; }
+.processBoard { padding: 28px; border: 1px solid rgba(166, 235, 247, .28); border-radius: 22px; background: linear-gradient(135deg, #031d46, #063d75); box-shadow: 0 15px 35px rgba(0, 13, 39, .15); }
+.laneLabel { margin-bottom: 12px; color: #9deaf6; font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.laneLabel:not(:first-child) { margin-top: 25px; }
+.processLaneFour { grid-template-columns: repeat(4, minmax(160px, 1fr)); }
+.screeningsPath { display: grid; grid-template-columns: minmax(190px, 270px) 35px minmax(190px, 270px); gap: 12px; align-items: center; }
+.screeningsNode { display: grid; align-content: start; min-height: 135px; padding: 18px; border: 1px solid rgba(241, 226, 171, .4); border-radius: 16px; background: rgba(85, 67, 26, .3); }
+.screeningsNode > svg { color: #f3d66d; }
+.screeningsNode strong { margin-top: 15px; color: #fff; font-size: 16px; }
+.screeningsNode small { margin-top: 7px; color: #f1e2ab; font-size: 12px; line-height: 1.5; }
+.screeningsNodeActive { border-color: rgba(130, 238, 190, .58); background: rgba(25, 125, 93, .35); }
+.screeningsNodeActive > svg { color: #86e8bd; }
+.screeningsNodeActive small { color: #c9f4df; }
+.screeningsPath > svg { color: #f3d66d; }
+.applicationGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+@media (max-width: 850px) {
+  .applicationGrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px) {
+  .heroImageNote { right: 14px; bottom: 84px; max-width: 180px; font-size: 9px; }
+  .screenVisual { min-height: 125px; padding: 16px 19px; }
+  .debrisVisual { min-height: 125px; }
+  .processBoard { padding: 18px; }
+  .processLaneFour { grid-template-columns: 1fr; }
+  .screeningsPath { grid-template-columns: 1fr; gap: 23px; }
+  .screeningsPath > svg { justify-self: center; transform: rotate(90deg); }
+  .applicationGrid { grid-template-columns: 1fr; }
+}
