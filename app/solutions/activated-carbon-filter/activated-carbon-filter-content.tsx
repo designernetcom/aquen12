@@ -73,8 +73,8 @@ const vessels: {
     key: "frp",
     title: "FRP Vessel",
     fullName: "Fibreglass Reinforced Plastic",
-    image: "/acf-15000-lph-frp.png",
-    imageAlt: "Supplied FRP activated carbon filter technical drawing reference",
+    image: "/acf-frp-vessel.png",
+    imageAlt: "Blue FRP activated carbon filter vessels in an industrial water-treatment installation",
     features: [
       "Lightweight construction",
       "Corrosion resistant",
@@ -88,8 +88,8 @@ const vessels: {
     key: "msep",
     title: "MSEP Vessel",
     fullName: "Mild Steel Epoxy Painted",
-    image: "/acf-15000-lph-nsep.png",
-    imageAlt: "MSEP activated carbon filter technical catalogue reference",
+    image: "/acf-msep-vessel.png",
+    imageAlt: "Activated carbon filter vessel options with pumps in an industrial water-treatment installation",
     features: [
       "High structural strength",
       "Epoxy-coated construction",
@@ -103,8 +103,8 @@ const vessels: {
     key: "msrl",
     title: "MSRL Vessel",
     fullName: "Mild Steel Rubber Lined",
-    image: "/activated-carbon-filter-catalog.avif",
-    imageAlt: "Supplied activated carbon filter equipment reference",
+    image: "/acf-msrl-vessel.png",
+    imageAlt: "Grey MSRL activated carbon filter vessels in an industrial water-treatment installation",
     features: [
       "Rubber lining for improved corrosion resistance",
       "Suitable for aggressive-water duties, subject to compatibility",
