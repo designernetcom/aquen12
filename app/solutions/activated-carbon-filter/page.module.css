@@ -211,14 +211,12 @@
 .mediaNote strong { color: var(--navy); font-size: 13px; }
 .mediaNote p { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
 
+.catalogFrame { overflow: hidden; margin: 0; border: 1px solid #cce3ec; border-radius: 20px; background: #fff; box-shadow: 0 14px 35px rgba(5, 44, 101, 0.08); }
+.catalogFrame img { display: block; width: 100%; height: auto; }
+.catalogFrame figcaption { padding: 12px 16px; color: #6b8390; font-size: 11px; line-height: 1.5; }
+
 .qualityCard .tableWrap table { min-width: 620px; }
 .applicationGrid { grid-template-columns: repeat(4, 1fr); }
-
-.installationGrid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 16px; min-height: 470px; }
-.installationPrimary, .installationRail { position: relative; overflow: hidden; border-radius: 20px; background: #eaf7ff; box-shadow: 0 14px 35px rgba(5, 44, 101, 0.08); }
-.installationPrimary img, .installationRail img { object-fit: cover; }
-.installationRail { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; overflow: visible; background: transparent; box-shadow: none; }
-.installationNote { margin: 15px 0 0; color: #6b8390; font-size: 11px; font-style: italic; line-height: 1.6; }
 
 .ctaSection { padding: 96px 0 !important; background: linear-gradient(125deg, #031e4b, #0578c1) !important; }
 .ctaGrid { display: grid; grid-template-columns: 1fr 0.8fr; gap: 64px; align-items: center; }
@@ -240,18 +238,14 @@
   .vesselImage { height: 100%; min-height: 250px; }
   .processGrid { grid-template-columns: repeat(2, 1fr); }
   .applicationGrid { grid-template-columns: repeat(2, 1fr); }
-  .installationGrid { min-height: 390px; }
 }
 
 @media (max-width: 800px) {
   .hero { padding-top: 126px; }
-  .heroGrid, .ctaGrid, .mediaLayout, .installationGrid { grid-template-columns: 1fr; }
+  .heroGrid, .ctaGrid, .mediaLayout { grid-template-columns: 1fr; }
   .heroVisual { min-height: 360px; }
   .ctaGrid { gap: 32px; }
   .mediaReferenceImage { min-height: 300px; }
-  .installationGrid { min-height: 0; }
-  .installationPrimary { min-height: 320px; }
-  .installationRail { min-height: 420px; }
 }
 
 @media (max-width: 600px) {
@@ -276,8 +270,6 @@
   .tabs { align-items: stretch; flex-direction: column; }
   .tabs button { width: 100%; text-align: left; }
   .mediaReferenceImage { min-height: 245px; }
-  .installationPrimary { min-height: 260px; }
-  .installationRail { min-height: 360px; }
   .ctaSection { padding: 70px 0 !important; }
   .ctaCard .primaryButton { width: 100%; }
 }

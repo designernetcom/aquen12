@@ -88,8 +88,8 @@ const vessels: {
     key: "msep",
     title: "MSEP Vessel",
     fullName: "Mild Steel Epoxy Painted",
-    image: "/water-softener-15000-lph-msep.png",
-    imageAlt: "MSEP industrial vessel configuration reference",
+    image: "/acf-15000-lph-nsep.png",
+    imageAlt: "MSEP activated carbon filter technical catalogue reference",
     features: [
       "High structural strength",
       "Epoxy-coated construction",
@@ -103,8 +103,8 @@ const vessels: {
     key: "msrl",
     title: "MSRL Vessel",
     fullName: "Mild Steel Rubber Lined",
-    image: "/ironremoval.png",
-    imageAlt: "Industrial rubber-lined vessel and piping reference",
+    image: "/activated-carbon-filter-catalog.avif",
+    imageAlt: "Supplied activated carbon filter equipment reference",
     features: [
       "Rubber lining for improved corrosion resistance",
       "Suitable for aggressive-water duties, subject to compatibility",
@@ -301,10 +301,10 @@ export default function ActivatedCarbonFilterContent() {
               <div className={styles.heroVisual}>
                 <div className={styles.heroVisualMedia}>
                   <Image
-                    src="/Activatedcarbon.png"
-                    alt="Aquen activated carbon filter system with vessels, piping and control panel"
-                    width={1400}
-                    height={1128}
+                    src="/activated-carbon-filter-catalog.avif"
+                    alt="Activated carbon filter vessels and pipework in an operating water-treatment installation"
+                    width={2560}
+                    height={1920}
                     priority
                     sizes="(max-width: 800px) 100vw, 50vw"
                   />
@@ -412,9 +412,27 @@ export default function ActivatedCarbonFilterContent() {
           </div>
         </section>
 
+        <section className={`${styles.section} ${styles.lightSection}`} id="product-catalogue">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="05 / Product catalogue" title="Activated Carbon Filter catalogue">
+              Review the complete technical reference for vessel construction, process flow, design data, equipment and bill of quantities.
+            </SectionHeading>
+            <figure className={styles.catalogFrame}>
+              <Image
+                src="/acf-15000-lph-frp.png"
+                alt="Full activated carbon filter technical catalogue"
+                width={1536}
+                height={1024}
+                sizes="(max-width: 1180px) calc(100vw - 48px), 1180px"
+              />
+              <figcaption>Full technical catalogue reference · Open image in a new tab for detailed reading.</figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className={`${styles.section} ${styles.lightSection}`} id="activated-carbon-media">
           <div className={styles.container}>
-            <SectionHeading eyebrow="05 / Activated carbon media" title="Activated carbon media selected for the treatment objective">
+            <SectionHeading eyebrow="06 / Activated carbon media" title="Activated carbon media selected for the treatment objective">
               Granular activated carbon works by adsorption. The carbon grade, media depth, contact time and replacement cycle should be selected around the incoming water and the impurity target.
             </SectionHeading>
             <div className={styles.mediaLayout}>
@@ -440,7 +458,7 @@ export default function ActivatedCarbonFilterContent() {
 
         <section className={styles.section} id="water-quality">
           <div className={styles.container}>
-            <SectionHeading eyebrow="06 / Water quality" title="Typical inlet & outlet parameters">
+            <SectionHeading eyebrow="07 / Water quality" title="Typical inlet & outlet parameters">
               These brochure-transcribed values are indicative only. Actual outlet results depend on feed-water quality, carbon type, contact time, operating conditions and the complete treatment process.
             </SectionHeading>
             <div className={styles.qualityCard}><DataTable headers={["Parameter", "Inlet (Typical)", "Outlet (Typical)"]} rows={qualityRows} /></div>
@@ -450,7 +468,7 @@ export default function ActivatedCarbonFilterContent() {
 
         <section className={`${styles.section} ${styles.lightSection}`} id="applications">
           <div className={styles.container}>
-            <SectionHeading eyebrow="07 / Applications" title="Where activated carbon filtration fits">
+            <SectionHeading eyebrow="08 / Applications" title="Where activated carbon filtration fits">
               Applications are selected around the water source, target impurity, media compatibility and any required validation or compliance process.
             </SectionHeading>
             <div className={styles.applicationGrid}>
@@ -462,24 +480,6 @@ export default function ActivatedCarbonFilterContent() {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className={styles.section} id="installation">
-          <div className={styles.container}>
-            <SectionHeading eyebrow="08 / Installation" title="Activated carbon filter installation">
-              Vessel placement, connected piping, valves, pumps and access space should be coordinated with the complete water-treatment process and maintenance requirements.
-            </SectionHeading>
-            <div className={styles.installationGrid}>
-              <div className={styles.installationPrimary}>
-                <Image src="/installation-img1.png" alt="Water treatment installation environment with process basins and pipework" fill sizes="(max-width: 800px) 100vw, 58vw" />
-              </div>
-              <div className={styles.installationRail}>
-                <Image src="/installation-img2.png" alt="Water treatment project site and equipment installation reference" fill sizes="(max-width: 800px) 100vw, 30vw" />
-                <Image src="/installation-img3.png" alt="Industrial water-treatment construction and piping reference" fill sizes="(max-width: 800px) 100vw, 30vw" />
-              </div>
-            </div>
-            <p className={styles.installationNote}>Installation imagery is included as a project reference asset; verify project attribution before publishing it as a confirmed Aquen installation.</p>
           </div>
         </section>
 
