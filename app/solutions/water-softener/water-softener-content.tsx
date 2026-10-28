@@ -5,6 +5,7 @@ import {
   ArrowRight,
   Building2,
   CircleCheck,
+  Download,
   Droplets,
   Factory,
   FlaskConical,
@@ -184,6 +185,7 @@ export default function WaterSoftenerContent() {
                 <div className={styles.heroActions}>
                   <Link href="/contact" className={styles.primaryButton}>Request a Quote <ArrowRight size={17} /></Link>
                   <a href="#contact" className={styles.textButton}>Contact Us <ArrowRight size={16} /></a>
+                  <a href="/water-softener-technical-brochure.pdf" className={styles.downloadButton} download="Aquen-Water-Softener-Technical-Brochure.pdf" aria-label="Download the Aquen Water Softener technical brochure PDF">Download Brochure <Download size={16} /></a>
                 </div>
                 <div className={styles.heroMetrics}>
                   <div><strong>Ion exchange</strong><span>general process</span></div>

@@ -7,6 +7,7 @@ import {
   Check,
   ChevronRight,
   CircleAlert,
+  Download,
   Droplets,
   Factory,
   FlaskConical,
@@ -283,6 +284,7 @@ export default function UltrafiltrationSystemContent() {
                 <div className={styles.heroActions}>
                   <Link className={styles.primaryButton} href="/contact#contact-form">Request a Quote <ArrowRight size={17} /></Link>
                   <Link className={styles.textButton} href="/contact">Contact Us <ArrowRight size={15} /></Link>
+                  <a className={styles.downloadButton} href="/ultrafiltration-systems-catalogue.pdf" download="Aquen-Ultrafiltration-Systems-Catalogue.pdf" aria-label="Download the Aquen Ultrafiltration Systems catalogue PDF">Download Catalogue <Download size={16} /></a>
                 </div>
                 <div className={styles.heroMetrics}>
                   <div><strong>2–20 m³/hr</strong><span>brochure capacity range</span></div>

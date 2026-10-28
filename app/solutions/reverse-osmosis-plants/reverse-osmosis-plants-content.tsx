@@ -7,6 +7,7 @@ import {
   Check,
   ChevronRight,
   CircleAlert,
+  Download,
   Droplets,
   Factory,
   Gauge,
@@ -207,6 +208,7 @@ export default function ReverseOsmosisPlantsContent() {
                 <div className={styles.heroActions}>
                   <Link className={styles.primaryButton} href="/contact">Request a Quote <ArrowRight size={17} /></Link>
                   <Link className={styles.textButton} href="/contact">Contact Us <ArrowRight size={15} /></Link>
+                  <a className={styles.downloadButton} href="/reverse-osmosis-solutions-brochure.pdf" download="Aquen-Reverse-Osmosis-Solutions-Brochure.pdf" aria-label="Download the Aquen Reverse Osmosis Solutions brochure PDF">Download Brochure <Download size={16} /></a>
                 </div>
                 <div className={styles.heroMetrics}>
                   <div><strong>250–15,000 LPH</strong><span>standard model range</span></div>

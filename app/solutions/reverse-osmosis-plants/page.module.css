@@ -26,12 +26,14 @@
 .heroCopy h2 { max-width: 620px; margin: 0 0 19px; color: #b5eff9; font: 700 clamp(21px, 2.5vw, 29px)/1.22 "Plus Jakarta Sans", Arial, sans-serif; letter-spacing: -.035em; }
 .heroCopy > p { max-width: 640px; margin: 0; color: rgba(233, 249, 252, .8); font-size: 16px; line-height: 1.8; }
 .heroActions { display: flex; align-items: center; gap: 21px; flex-wrap: wrap; margin-top: 30px; }
-.primaryButton, .textButton, .ctaButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.primaryButton, .textButton, .ctaButton, .downloadButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .primaryButton { min-height: 48px; padding: 13px 21px; border-radius: 12px; background: #fff; box-shadow: 0 13px 28px rgba(0, 6, 29, .2); color: var(--navy); font-size: 13px; font-weight: 900; }
 .primaryButton:hover, .ctaButton:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0, 6, 29, .25); }
 .textButton { color: #a5effb; font-size: 13px; font-weight: 900; }
 .textButton:hover { transform: translateX(3px); }
-.primaryButton:focus-visible, .textButton:focus-visible, .ctaButton:focus-visible, .breadcrumb a:focus-visible, .faqItem summary:focus-visible { outline: 3px solid #f8d25e; outline-offset: 4px; }
+.downloadButton { min-height: 48px; padding: 12px 17px; border: 1px solid rgba(165, 239, 251, .45); border-radius: 12px; background: rgba(255, 255, 255, .08); color: #dffcff; font-size: 13px; font-weight: 900; }
+.downloadButton:hover { transform: translateY(-2px); background: rgba(255, 255, 255, .14); box-shadow: 0 14px 28px rgba(0, 6, 29, .2); }
+.primaryButton:focus-visible, .textButton:focus-visible, .ctaButton:focus-visible, .downloadButton:focus-visible, .breadcrumb a:focus-visible, .faqItem summary:focus-visible { outline: 3px solid #f8d25e; outline-offset: 4px; }
 .heroMetrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 40px; }
 .heroMetrics > div { display: grid; align-content: center; gap: 6px; min-height: 82px; padding: 14px; border: 1px solid rgba(154, 228, 245, .2); border-radius: 15px; background: rgba(255, 255, 255, .08); }
 .heroMetrics strong { color: #fff; font-size: 15px; line-height: 1.2; }
@@ -198,5 +200,5 @@
   .ctaButton { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .textButton, .ctaButton, .galleryImage img { transition: none; }
+  .primaryButton, .textButton, .ctaButton, .downloadButton, .galleryImage img { transition: none; }
 }

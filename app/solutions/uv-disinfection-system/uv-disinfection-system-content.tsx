@@ -8,6 +8,7 @@ import {
   Check,
   ChevronRight,
   CircleAlert,
+  Download,
   Droplets,
   Factory,
   FlaskConical,
@@ -188,7 +189,7 @@ export default function UVDisinfectionSystemContent() {
               <h1>Ultra Violet <em>(UV) Disinfection System</em></h1>
               <h2>Safe, Chemical-Free &amp; Environment-Friendly Disinfection for Water &amp; Wastewater Applications</h2>
               <p>AQUEN UV systems use ultraviolet light inside a stainless-steel reactor to inactivate susceptible bacteria, viruses and protozoa when the required UV dose is delivered. The process adds no chemical disinfectant to the water itself and is selected around water quality, flow and validated performance.</p>
-              <div className={styles.heroActions}><Link className={styles.primaryButton} href="#quote">Request a Quote <ArrowRight size={17} /></Link><Link className={styles.textButton} href="/contact">Contact Us <ArrowRight size={15} /></Link></div>
+              <div className={styles.heroActions}><Link className={styles.primaryButton} href="#quote">Request a Quote <ArrowRight size={17} /></Link><Link className={styles.textButton} href="/contact">Contact Us <ArrowRight size={15} /></Link><a className={styles.downloadButton} href="/uv-disinfection-systems-brochure.pdf" download="Aquen-UV-Water-Disinfection-Systems-Brochure.pdf" aria-label="Download the Aquen UV Water Disinfection Systems brochure PDF">Download Brochure <Download size={16} /></a></div>
               <div className={styles.heroMetrics}><div><strong>1–100 m³/hr</strong><span>brochure system range</span></div><div><strong>254 nm</strong><span>brochure UV wavelength</span></div><div><strong>SS-304 / SS-316</strong><span>reactor options</span></div></div>
               <p className={styles.heroNote}>Design · Manufacturing · Supply · Installation · Commissioning · AMC</p>
             </div>
