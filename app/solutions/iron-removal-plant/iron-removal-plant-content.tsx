@@ -11,6 +11,7 @@ import {
   Check,
   CircleAlert,
   CircleCheck,
+  Download,
   Factory,
   Filter,
   Gauge,
@@ -184,6 +185,7 @@ function IronRemovalPlantContent() {
                 <div className={styles.heroActions}>
                   <Link href="/contact" className={styles.primaryButton}>Request a Quote <ArrowRight size={17} /></Link>
                   <a href="#contact" className={styles.textButton}>Contact Us <ArrowRight size={16} /></a>
+                  <a href="/iron-removal-plants-brochure.pdf" className={styles.downloadButton} download="Aquen-Iron-Removal-Plants-Brochure.pdf" aria-label="Download the Aquen Iron Removal Plants brochure PDF">Download Brochure <Download size={16} /></a>
                 </div>
                 <div className={styles.heroMetrics}>
                   <div><strong>0.5–50 m³/hr</strong><span>brochure model range</span></div>

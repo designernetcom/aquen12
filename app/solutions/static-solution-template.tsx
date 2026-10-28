@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, ChevronRight, CircleAlert } from "lucide-react";
+import { ArrowRight, Check, ChevronRight, CircleAlert, Download } from "lucide-react";
 import type { ReactNode } from "react";
 
 import Footer from "@/app/layouts/footer";
@@ -63,6 +63,7 @@ export default function StaticSolutionTemplate({ solution }: { solution: StaticS
                 <div className={styles.heroActions}>
                   <Link className={styles.primaryButton} href="/contact#contact-form">Discuss this solution <ArrowRight size={17} /></Link>
                   <Link className={styles.textButton} href="/contact">Contact us <ArrowRight size={15} /></Link>
+                  {solution.brochure ? <a className={styles.downloadButton} href={solution.brochure.href} download={solution.brochure.downloadName} aria-label={solution.brochure.ariaLabel}>{solution.brochure.label} <Download size={16} /></a> : null}
                 </div>
                 <div className={styles.heroMetrics}>
                   {solution.stats.map((stat) => <div key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}

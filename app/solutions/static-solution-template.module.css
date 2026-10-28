@@ -19,10 +19,11 @@
 .heroCopy h1 { max-width: 720px; margin: 17px 0 20px; color: #fff; font: 800 clamp(42px, 6vw, 72px)/1.02 "Plus Jakarta Sans", Arial, sans-serif; letter-spacing: -.055em; }
 .heroCopy > p { max-width: 650px; color: rgba(232,249,252,.84); font-size: 17px; line-height: 1.8; }
 .heroActions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 30px; }
-.primaryButton, .textButton, .ctaButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; font-weight: 800; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.primaryButton, .textButton, .ctaButton, .downloadButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; font-weight: 800; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
 .primaryButton { padding: 14px 20px; background: #59e2ff; color: #032d3a; box-shadow: 0 12px 30px rgba(0,0,0,.18); }
 .textButton { padding: 12px 4px; color: #fff; }
-.primaryButton:hover, .textButton:hover, .ctaButton:hover { transform: translateY(-2px); }
+.downloadButton { padding: 12px 16px; border: 1px solid rgba(166,235,247,.35); background: rgba(255,255,255,.08); color: #dffcff; }
+.primaryButton:hover, .textButton:hover, .ctaButton:hover, .downloadButton:hover { transform: translateY(-2px); }
 .heroMetrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 38px; }
 .heroMetrics div { display: grid; gap: 5px; padding: 14px 14px 13px; border: 1px solid rgba(166,235,247,.22); border-radius: 14px; background: rgba(0,18,48,.22); }
 .heroMetrics strong { color: #fff; font-size: 14px; }
@@ -126,5 +127,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .textButton, .ctaButton, .relatedCard { transition: none; }
+  .primaryButton, .textButton, .ctaButton, .downloadButton, .relatedCard { transition: none; }
 }

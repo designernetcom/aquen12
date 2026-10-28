@@ -9,6 +9,7 @@ import {
   Check,
   CircleAlert,
   CircleCheck,
+  Download,
   Factory,
   Filter,
   Gauge,
@@ -242,6 +243,7 @@ function FluorideRemovalPlantContent() {
                 <div className={styles.heroActions}>
                   <Link href="/contact" className={styles.primaryButton}>Request a Quote <ArrowRight size={17} /></Link>
                   <a href="#contact" className={styles.textButton}>Contact Us <ArrowRight size={16} /></a>
+                  <a href="/fluoride-removal-plant-brochure.pdf" className={styles.downloadButton} download="Aquen-Fluoride-Removal-Plant-Brochure.pdf" aria-label="Download the Aquen Fluoride Removal Plant brochure PDF">Download Brochure <Download size={16} /></a>
                 </div>
                 <div className={styles.heroMetrics}>
                   <div><strong>Up to 10 mg/L*</strong><span>brochure feed claim</span></div>

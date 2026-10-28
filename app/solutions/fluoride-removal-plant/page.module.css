@@ -26,12 +26,14 @@
 .heroCopy h2 { max-width: 650px; margin: 0 0 19px; color: #b7effa; font: 700 clamp(22px, 2.5vw, 30px)/1.2 "Plus Jakarta Sans", Arial, sans-serif; }
 .heroCopy > p { max-width: 650px; color: rgba(231, 248, 252, .78); font-size: 16px; line-height: 1.8; }
 .heroActions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-.primaryButton, .textButton, .contactButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.primaryButton, .textButton, .contactButton, .downloadButton { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
 .primaryButton { min-height: 46px; padding: 13px 20px; border-radius: 11px; background: #fff; box-shadow: 0 12px 25px rgba(0, 6, 29, .2); color: var(--navy); font-size: 13px; font-weight: 800; }
 .primaryButton:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(0, 6, 29, .3); }
 .textButton { color: #9ceefe; font-size: 13px; font-weight: 800; }
 .textButton:hover { transform: translateX(3px); }
-.primaryButton:focus-visible, .textButton:focus-visible, .contactButton:focus-visible, .breadcrumb a:focus-visible, .faqItem summary:focus-visible { outline: 3px solid #f6cf5c; outline-offset: 4px; }
+.downloadButton { min-height: 46px; padding: 12px 17px; border: 1px solid rgba(156, 238, 254, .45); border-radius: 11px; background: rgba(255, 255, 255, .08); color: #dffcff; font-size: 13px; font-weight: 800; }
+.downloadButton:hover { transform: translateY(-2px); background: rgba(255, 255, 255, .14); box-shadow: 0 14px 28px rgba(0, 6, 29, .22); }
+.primaryButton:focus-visible, .textButton:focus-visible, .contactButton:focus-visible, .downloadButton:focus-visible, .breadcrumb a:focus-visible, .faqItem summary:focus-visible { outline: 3px solid #f6cf5c; outline-offset: 4px; }
 .heroMetrics { display: flex; gap: 0; margin-top: 42px; padding-top: 20px; border-top: 1px solid rgba(161, 232, 246, .27); }
 .heroMetrics > div { display: grid; gap: 4px; padding: 0 17px; border-right: 1px solid rgba(161, 232, 246, .2); }
 .heroMetrics > div:first-child { padding-left: 0; }
@@ -245,5 +247,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .textButton, .contactButton { transition: none; }
+  .primaryButton, .textButton, .contactButton, .downloadButton { transition: none; }
 }

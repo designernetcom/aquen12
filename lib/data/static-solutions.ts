@@ -13,6 +13,12 @@ export type StaticSolution = {
   description: string;
   image: string;
   imageAlt: string;
+  brochure?: {
+    href: string;
+    downloadName: string;
+    label: string;
+    ariaLabel: string;
+  };
   stats: { value: string; label: string }[];
   overview: string;
   process: { title: string; description: string }[];
@@ -141,6 +147,12 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "De-mineralization plants reduce dissolved ionic impurities through a configured cation and anion exchange process for process water, boiler feed and high-purity water duties.",
     image: "/mixed-bed-unit.png",
     imageAlt: "Ion exchange vessels used in a de-mineralization plant",
+    brochure: {
+      href: "/combined-water-treatment-systems.pdf",
+      downloadName: "Aquen-Combined-Water-Treatment-Systems.pdf",
+      label: "Download Brochure",
+      ariaLabel: "Download the Aquen Combined Water Treatment Systems brochure PDF",
+    },
     stats: [{ value: "Two-bed", label: "Typical arrangement" }, { value: "Low TDS", label: "Treatment objective" }, { value: "Custom", label: "Plant sizing" }],
     overview: "A de-mineralization plant uses hydrogen-form cation resin and hydroxide-form anion resin to exchange dissolved cations and anions. The final arrangement may include a degasser and mixed-bed polisher when the process requires lower conductivity or silica control. Resin selection, regeneration chemistry and vessel sizing must follow the feed-water analysis.",
     process: [
@@ -180,6 +192,12 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "Reverse osmosis skids with stainless-steel construction options for applications where cleanability, corrosion resistance and a hygienic equipment finish are important.",
     image: "/ro-4000-lph-ss304.png",
     imageAlt: "Stainless-steel reverse osmosis plant skid",
+    brochure: {
+      href: "/stainless-steel-ro-systems-brochure.pdf",
+      downloadName: "Aquen-Stainless-Steel-RO-Systems-Brochure.pdf",
+      label: "Download Brochure",
+      ariaLabel: "Download the Aquen Stainless Steel RO Systems brochure PDF",
+    },
     stats: [{ value: "SS-304", label: "Standard option" }, { value: "SS-316", label: "Selected applications" }, { value: "Custom", label: "Feed-specific design" }],
     overview: "The RO membrane removes a major portion of dissolved salts and other contaminants by applying pressure above the feed-water osmotic pressure. Stainless-steel frame, piping and wetted components can be selected in SS-304 or SS-316 according to water chemistry, hygiene expectations and the project specification.",
     process: [
@@ -259,6 +277,12 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "Moving Bed Biofilm Reactor sewage treatment plants use attached-growth media and aeration to support stable biological treatment in a compact process train.",
     image: "/banner/advanced-biological.png",
     imageAlt: "Biological wastewater treatment plant reference for MBBR technology",
+    brochure: {
+      href: "/stp-mbbr-civil-electro-mechanical.pdf",
+      downloadName: "Aquen-STP-MBBR-Civil-Electro-Mechanical.pdf",
+      label: "Download Brochure",
+      ariaLabel: "Download the Aquen STP MBBR Civil Electro Mechanical brochure PDF",
+    },
     stats: [{ value: "MBBR", label: "Attached-growth process" }, { value: "Modular", label: "Tank and media layout" }, { value: "Custom", label: "Capacity and polishing" }],
     overview: "An MBBR STP retains biofilm on free-moving carriers inside an aerated reactor. Screening, equalisation, biological treatment, clarification and optional tertiary filtration or disinfection are combined according to sewage flow, influent strength and the intended reuse or discharge route.",
     process: [
@@ -299,6 +323,12 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "Membrane Bioreactor sewage treatment plants combine biological treatment with membrane separation to produce a low-solids treated stream in a compact footprint.",
     image: "/banner/operation-maintenance.png",
     imageAlt: "Representative membrane-based wastewater treatment reference",
+    brochure: {
+      href: "/mbr-stp-technology-brochure.pdf",
+      downloadName: "Aquen-MBR-STP-Technology-Brochure.pdf",
+      label: "Download Brochure",
+      ariaLabel: "Download the Aquen MBR STP Technology brochure PDF",
+    },
     stats: [{ value: "MBR", label: "Biology + membrane" }, { value: "Compact", label: "Footprint option" }, { value: "Custom", label: "Flux and cleaning" }],
     overview: "An MBR STP retains activated sludge inside a biological reactor and uses submerged or external membranes for solids separation. This removes the need for a conventional secondary clarifier in the membrane stage, while still requiring careful aeration, fouling control, cleaning and sludge management.",
     process: [
@@ -339,6 +369,12 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "Factory-assembled FRP package sewage treatment plants for sites that need a compact, corrosion-resistant and installation-ready treatment enclosure.",
     image: "/banner/water-treatment.png",
     imageAlt: "Packaged water and wastewater treatment plant reference",
+    brochure: {
+      href: "/frp-sewage-treatment-plant-catalogue.pdf",
+      downloadName: "Aquen-FRP-Sewage-Treatment-Plant-Catalogue.pdf",
+      label: "Download Catalogue",
+      ariaLabel: "Download the Aquen FRP Sewage Treatment Plant catalogue PDF",
+    },
     stats: [{ value: "FRP", label: "Package construction" }, { value: "Modular", label: "Factory assembly" }, { value: "Custom", label: "Process selection" }],
     overview: "A packaged FRP STP brings tanks, process equipment, piping and controls into a coordinated plant arrangement. The biological process may be selected as MBBR, SBR or another approved treatment train; the final package depends on flow, influent quality, site access and reuse requirements.",
     process: [
