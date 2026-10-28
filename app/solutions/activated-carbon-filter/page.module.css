@@ -74,7 +74,8 @@
 .heroActions { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
 
 .primaryButton,
-.textButton {
+.textButton,
+.downloadButton {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -96,6 +97,17 @@
 .primaryButton:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(5, 44, 101, 0.27); }
 .textButton { color: #18749e; font-size: 12px; font-weight: 800; }
 .textButton:hover { transform: translateX(3px); }
+.downloadButton {
+  padding: 13px 17px;
+  border: 1px solid #9ccfe0;
+  border-radius: 11px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(5, 44, 101, 0.08);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 800;
+}
+.downloadButton:hover { transform: translateY(-2px); border-color: var(--blue); box-shadow: 0 12px 24px rgba(5, 44, 101, 0.14); }
 
 .heroMetrics {
   display: flex;
@@ -275,5 +287,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .textButton, .tabs button { transition: none; }
+  .primaryButton, .textButton, .downloadButton, .tabs button { transition: none; }
 }

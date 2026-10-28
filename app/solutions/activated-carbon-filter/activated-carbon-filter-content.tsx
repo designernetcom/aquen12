@@ -8,6 +8,7 @@ import {
   Building2,
   Check,
   CircleCheck,
+  Download,
   Droplets,
   Factory,
   FlaskConical,
@@ -73,7 +74,7 @@ const vessels: {
     key: "frp",
     title: "FRP Vessel",
     fullName: "Fibreglass Reinforced Plastic",
-    image: "/acf-frp-vessel.png",
+    image: "https://www.datocms-assets.com/150507/1748230920-mitchelton-wines-ultrafiltration-water-filtration-1-1.jpg?auto=format&w=2560",
     imageAlt: "Blue FRP activated carbon filter vessels in an industrial water-treatment installation",
     features: [
       "Lightweight construction",
@@ -291,6 +292,14 @@ export default function ActivatedCarbonFilterContent() {
                 <div className={styles.heroActions}>
                   <Link href="/contact" className={styles.primaryButton}>Enquire Now <ArrowRight size={17} /></Link>
                   <a href="#model-specifications" className={styles.textButton}>View Specifications <ArrowRight size={16} /></a>
+                  <a
+                    href="/activated-carbon-filter-catalog.pdf"
+                    className={styles.downloadButton}
+                    download="Aquen-Activated-Carbon-Filter-Catalog.pdf"
+                    aria-label="Download the Aquen Activated Carbon Filter catalog PDF"
+                  >
+                    Download Catalog <Download size={16} />
+                  </a>
                 </div>
                 <div className={styles.heroMetrics}>
                   <div><strong>8 × 30 mesh</strong><span>standard carbon media</span></div>

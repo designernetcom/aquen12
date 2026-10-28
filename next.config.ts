@@ -8,7 +8,13 @@ const nextConfig: NextConfig = {
     "/*": ["./certs/**"],
   },
   images: {
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.datocms-assets.com",
+        pathname: "/150507/**",
+      },
+    ],
   },
   async redirects() {
     return [{ source: "/solutions/:category/:slug", destination: "/solutions/:slug", permanent: true }];
