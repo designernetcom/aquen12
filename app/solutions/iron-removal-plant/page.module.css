@@ -39,7 +39,7 @@
 .heroFootnote { margin-top: 17px; color: rgba(201, 237, 245, .67) !important; font-size: 12px !important; line-height: 1.6 !important; }
 .heroVisual { position: relative; z-index: 2; min-height: 475px; overflow: hidden; border: 1px solid rgba(160, 233, 248, .38); border-radius: 28px; background: rgba(255,255,255,.09); box-shadow: 0 25px 60px rgba(0, 9, 39, .3), inset 0 1px 0 rgba(255, 255, 255, .16); }
 .heroVisual::after { position: absolute; right: -90px; bottom: -120px; width: 360px; height: 360px; border: 1px solid rgba(104, 231, 250, .32); border-radius: 50%; box-shadow: 0 0 0 34px rgba(104, 231, 250, .05), 0 0 0 68px rgba(104, 231, 250, .04); content: ""; }
-.heroVisual img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: cover; opacity: .84; filter: saturate(.86) contrast(1.04); }
+.heroVisual img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; object-fit: contain; background: #b8dded; opacity: .84; filter: saturate(.86) contrast(1.04); }
 .heroVisual::before { position: absolute; z-index: 2; inset: 0; background: linear-gradient(90deg, rgba(3,29,70,.82) 0%, rgba(3,29,70,.18) 55%, rgba(3,29,70,.35) 100%), linear-gradient(0deg, rgba(3,29,70,.72), transparent 42%); content: ""; }
 .heroVisualLabel { position: absolute; z-index: 3; top: 22px; left: 22px; display: grid; gap: 7px; padding: 12px 14px; border: 1px solid rgba(167, 236, 248, .28); border-radius: 12px; background: rgba(3, 29, 70, .64); backdrop-filter: blur(12px); }
 .heroVisualLabel span { color: #8eeafa; font-size: 9px; font-weight: 800; letter-spacing: .14em; }
@@ -56,6 +56,12 @@
 .sectionHeading { max-width: 820px; margin-bottom: 40px; }
 .sectionHeading h2 { margin: 12px 0 14px; color: var(--navy); font: 800 clamp(30px, 4vw, 48px)/1.1 "Plus Jakarta Sans", Arial, sans-serif; letter-spacing: -.05em; }
 .sectionHeading p { max-width: 760px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.visualReferenceGrid { display: grid; gap: 24px; }
+.visualReferenceFigure { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 14px 32px rgba(5, 44, 101, .07); }
+.visualReferenceFigure img { display: block; width: 100%; height: auto; }
+.visualReferenceFigure figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 16px 19px; }
+.visualReferenceFigure figcaption span { color: var(--blue); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.visualReferenceFigure figcaption strong { color: var(--navy); font-size: 15px; }
 .darkSection .sectionHeading h2, .processSection .sectionHeading h2 { color: #fff; }
 .darkSection .sectionHeading p, .processSection .sectionHeading p { color: rgba(255,255,255,.76); }
 .darkSection .eyebrow, .processSection .eyebrow { color: var(--cyan); }

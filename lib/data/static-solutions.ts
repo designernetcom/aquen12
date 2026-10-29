@@ -13,6 +13,15 @@ export type StaticSolution = {
   description: string;
   image: string;
   imageAlt: string;
+  heroImageFit?: "cover" | "contain";
+  visualReferences?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+    label: string;
+    title: string;
+  }[];
   brochure?: {
     href: string;
     downloadName: string;
@@ -145,8 +154,13 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     title: "De-Mineralization Plant",
     eyebrow: "ION EXCHANGE WATER PURIFICATION",
     description: "De-mineralization plants reduce dissolved ionic impurities through a configured cation and anion exchange process for process water, boiler feed and high-purity water duties.",
-    image: "/mixed-bed-unit.png",
+    image: "/de-mineralization-plant-hero.png",
     imageAlt: "Ion exchange vessels used in a de-mineralization plant",
+    heroImageFit: "contain",
+    visualReferences: [
+      { src: "/de-mineralization-plant-project-references.png", alt: "De-mineralization plant project and installation references", width: 947, height: 632, label: "Project references", title: "De-mineralization plant installations" },
+      { src: "/de-mineralization-plant-brochure-reference.png", alt: "De-mineralization plant brochure and technical reference", width: 947, height: 640, label: "Brochure reference", title: "De-Mineralization Plant system" },
+    ],
     brochure: {
       href: "/combined-water-treatment-systems.pdf",
       downloadName: "Aquen-Combined-Water-Treatment-Systems.pdf",
@@ -190,8 +204,12 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     title: "RO Plants in SS-304 & SS-316",
     eyebrow: "MEMBRANE WATER TREATMENT",
     description: "Reverse osmosis skids with stainless-steel construction options for applications where cleanability, corrosion resistance and a hygienic equipment finish are important.",
-    image: "/ro-4000-lph-ss304.png",
+    image: "/ro-ss-304-ss-316-hero.png",
     imageAlt: "Stainless-steel reverse osmosis plant skid",
+    heroImageFit: "contain",
+    visualReferences: [
+      { src: "/ro-ss-304-ss-316-reference.png", alt: "RO SS-304 and SS-316 system project reference", width: 1070, height: 721, label: "Project reference", title: "RO SS-304 / SS-316 system" },
+    ],
     brochure: {
       href: "/stainless-steel-ro-systems-brochure.pdf",
       downloadName: "Aquen-Stainless-Steel-RO-Systems-Brochure.pdf",

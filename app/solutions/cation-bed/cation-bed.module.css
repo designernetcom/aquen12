@@ -60,6 +60,7 @@
 .applicationLead p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .applicationGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .applicationCard { overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+.applicationIcon { display: grid; width: 36px; height: 36px; margin: 12px 10px 0; place-items: center; border-radius: 10px; background: #eaf8ff; color: var(--blue); }
 .applicationImage { position: relative; height: 82px; overflow: hidden; background: #dff4fb; }
 .applicationImage::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(3,29,70,.62)); content: ""; }
 .applicationImage img { object-fit: cover; }

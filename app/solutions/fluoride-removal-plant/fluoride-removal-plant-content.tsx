@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import {
@@ -278,6 +279,22 @@ function FluorideRemovalPlantContent() {
             </div>
             <div className={styles.brandStrip} aria-label="AQUEN service capabilities">
               {['Safe Water', 'Low Fluoride', 'Healthy Life', 'Design / Supply / Installation / AMC'].map((label) => <span key={label}>{label}</span>)}
+            </div>
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.lightSection}`} id="visual-references">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="Fluoride removal plant visuals" title="Fluoride removal plant references">Reference visuals for the Fluoride Removal Plant, presented for project discussion and equipment confirmation.</SectionHeading>
+            <div className={styles.visualReferenceGrid}>
+              <figure className={styles.visualReferenceFigure}>
+                <Image src="/fluoride-removal-plant-project-references.png" alt="Fluoride removal plant project execution references" width={1135} height={752} />
+                <figcaption><span>Project references</span><strong>Fluoride Removal Plant installations</strong></figcaption>
+              </figure>
+              <figure className={styles.visualReferenceFigure}>
+                <Image src="/fluoride-removal-plant-brochure-reference.png" alt="Fluoride removal plant brochure and technical reference" width={1135} height={758} />
+                <figcaption><span>Brochure reference</span><strong>Fluoride Removal Plant specifications</strong></figcaption>
+              </figure>
             </div>
           </div>
         </section>

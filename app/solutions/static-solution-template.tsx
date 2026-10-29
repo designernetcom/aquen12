@@ -71,8 +71,8 @@ export default function StaticSolutionTemplate({ solution }: { solution: StaticS
                 <p className={styles.heroNote}>Configuration, capacity and outlet quality are confirmed after reviewing the project requirement.</p>
               </div>
               <div className={styles.heroVisual}>
-                <div className={styles.heroVisualFrame}>
-                  <Image src={solution.image} alt={solution.imageAlt} fill priority sizes="(max-width: 850px) 100vw, 52vw" />
+                <div className={`${styles.heroVisualFrame} ${solution.heroImageFit === "contain" ? styles.heroVisualFrameContain : ""}`}>
+                  <Image className={solution.heroImageFit === "contain" ? styles.heroImageContain : undefined} src={solution.image} alt={solution.imageAlt} fill priority sizes="(max-width: 850px) 100vw, 52vw" />
                 </div>
                 <div className={styles.heroBadge}>Solution reference</div>
                 <div className={styles.heroCaption}><span>Category</span><strong>{solution.category}</strong><span>Design basis</span><strong>Project-specific</strong></div>
@@ -80,6 +80,18 @@ export default function StaticSolutionTemplate({ solution }: { solution: StaticS
             </div>
           </div>
         </section>
+
+        {solution.visualReferences?.length ? <section className={`${styles.section} ${styles.lightSection}`} id="visual-references">
+          <div className={styles.container}>
+            <SectionHeading eyebrow={`${solution.title.toUpperCase()} VISUALS`} title={`${solution.title} references`}>Reference visuals for {solution.title}, presented for project discussion and equipment confirmation.</SectionHeading>
+            <div className={styles.visualReferenceGrid}>
+              {solution.visualReferences.map((reference) => <figure className={styles.visualReferenceFigure} key={reference.src}>
+                <Image src={reference.src} alt={reference.alt} width={reference.width} height={reference.height} />
+                <figcaption><span>{reference.label}</span><strong>{reference.title}</strong></figcaption>
+              </figure>)}
+            </div>
+          </div>
+        </section> : null}
 
         <section className={styles.section} id="overview">
           <div className={styles.container}>

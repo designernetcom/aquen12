@@ -121,15 +121,9 @@
 .applicationList { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 14px; }
 .applicationList span { display: flex; align-items: flex-start; gap: 7px; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .applicationList svg { flex: none; margin-top: 2px; color: #42a7c0; }
-.galleryGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.galleryCard { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(5, 44, 101, .06); }
-.galleryImage { position: relative; height: 235px; overflow: hidden; background: #dff4fb; }
-.galleryImage img { object-fit: cover; transition: transform .4s ease; }
-.galleryCard:hover .galleryImage img { transform: scale(1.03); }
-.galleryCard figcaption { display: grid; gap: 6px; padding: 18px; }
-.galleryCard figcaption span { color: #3283a4; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
-.galleryCard figcaption strong { color: var(--navy); font-size: 17px; }
-.galleryCard figcaption small { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.brochureFigure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 15px 34px rgba(5, 44, 101, .08); }
+.brochureFigure img { display: block; width: 100%; height: auto; }
+.brochureFigure figcaption { padding: 15px 18px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .faqSection { background: #f9fcfd; }
 .faqList { display: grid; gap: 10px; max-width: 980px; }
 .faqItem { border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 8px 19px rgba(5, 44, 101, .04); }
@@ -154,8 +148,6 @@
 @media (max-width: 1050px) {
   .heroGrid { gap: 36px; }
   .capacityGrid { grid-template-columns: repeat(3, 1fr); }
-  .galleryGrid { grid-template-columns: repeat(2, 1fr); }
-  .galleryCard:last-child { grid-column: span 2; }
 }
 @media (max-width: 850px) {
   .hero { padding-top: 126px; }
@@ -185,9 +177,8 @@
   .heroCaption { right: 17px; bottom: 18px; padding: 9px 10px; font-size: 8px; }
   .section { padding: 70px 0; }
   .sectionHeading h2 { font-size: 34px; }
-  .capacityGrid, .galleryGrid { grid-template-columns: 1fr; }
+  .capacityGrid { grid-template-columns: 1fr; }
   .capacityFeatured { transform: none; }
-  .galleryCard:last-child { grid-column: auto; }
   .sourceBanner { padding: 15px; }
   .flowBoard { padding: 18px; }
   .flowTrack { display: grid; overflow: visible; padding: 0; }
@@ -200,5 +191,5 @@
   .ctaButton { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .primaryButton, .textButton, .ctaButton, .downloadButton, .galleryImage img { transition: none; }
+  .primaryButton, .textButton, .ctaButton, .downloadButton { transition: none; }
 }

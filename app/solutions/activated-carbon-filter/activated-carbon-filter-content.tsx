@@ -310,10 +310,10 @@ export default function ActivatedCarbonFilterContent() {
               <div className={styles.heroVisual}>
                 <div className={styles.heroVisualMedia}>
                   <Image
-                    src="/activated-carbon-filter-catalog.avif"
-                    alt="Activated carbon filter vessels and pipework in an operating water-treatment installation"
-                    width={2560}
-                    height={1920}
+                    src="/activated-carbon-hero.png"
+                    alt="Activated carbon filter plant with carbon media filtration illustration"
+                    width={1254}
+                    height={1254}
                     priority
                     sizes="(max-width: 800px) 100vw, 50vw"
                   />

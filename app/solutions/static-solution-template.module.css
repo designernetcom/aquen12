@@ -32,7 +32,9 @@
 .heroVisual { position: relative; min-height: 440px; }
 .heroVisualFrame { position: absolute; inset: 0 0 54px; overflow: hidden; border: 1px solid rgba(166,235,247,.32); border-radius: 26px; background: #0b4c68; box-shadow: 0 25px 60px rgba(0,0,0,.23); }
 .heroVisualFrame::after { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(3,26,65,.08), rgba(3,26,65,.65)); content: ""; }
+.heroVisualFrameContain::after { display: none; }
 .heroVisualFrame img { object-fit: cover; }
+.heroVisualFrame img.heroImageContain { object-fit: contain; background: #bfe6f4; }
 .heroBadge { position: absolute; top: 20px; left: 20px; padding: 8px 11px; border: 1px solid rgba(166,235,247,.35); border-radius: 999px; background: rgba(3,29,70,.68); color: #c6f7fc; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 .heroCaption { position: absolute; right: 18px; bottom: 0; left: 18px; display: grid; grid-template-columns: 1fr auto; gap: 7px 20px; padding: 18px 20px; border: 1px solid rgba(166,235,247,.3); border-radius: 17px; background: rgba(3,29,70,.88); box-shadow: 0 18px 40px rgba(0,0,0,.22); }
 .heroCaption span { color: rgba(218,247,250,.62); font-size: 10px; text-transform: uppercase; letter-spacing: .1em; }
@@ -40,6 +42,12 @@
 .section, .faqSection, .relatedSection, .ctaSection { padding: 92px 0; }
 .lightSection { background: #f3fafc; }
 .darkSection { color: #fff; background: linear-gradient(135deg, #031b45, #064e6b); }
+.visualReferenceGrid { display: grid; gap: 24px; }
+.visualReferenceFigure { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 14px 32px rgba(5,44,101,.07); }
+.visualReferenceFigure img { display: block; width: 100%; height: auto; }
+.visualReferenceFigure figcaption { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 16px 19px; }
+.visualReferenceFigure figcaption span { color: var(--blue); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+.visualReferenceFigure figcaption strong { color: var(--navy); font-size: 15px; }
 .sectionHeading { max-width: 830px; margin-bottom: 32px; }
 .sectionHeading > span { display: block; margin-bottom: 12px; color: var(--blue); font-size: 10px; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
 .darkSection .sectionHeading > span, .ctaSection .sectionHeading > span { color: var(--cyan); }

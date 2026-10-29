@@ -221,8 +221,8 @@ export default function ReverseOsmosisPlantsContent() {
               <div className={styles.heroVisual}>
                 <div className={styles.heroVisualFrame}>
                   <Image
-                    src="/reverseosmosis.png"
-                    alt="Reverse Osmosis plant with pretreatment, membrane housings, pumps and control panel"
+                    src="/ro-installation-gallery.png"
+                    alt="AQUEN reverse osmosis plant installation references with pretreatment, pumps and control panels"
                     fill
                     priority
                     sizes="(max-width: 850px) 100vw, 52vw"
@@ -296,6 +296,24 @@ export default function ReverseOsmosisPlantsContent() {
           </div>
         </section>
 
+        <section className={`${styles.section} ${styles.lightSection}`} id="brochure">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="04 · Product brochure" title="Reverse Osmosis Plants brochure">
+              Review the supplied AQUEN brochure for the standard capacity range, process flow, indicative technical data, scope of supply and available configurations.
+            </SectionHeading>
+            <figure className={styles.brochureFigure}>
+              <Image
+                src="/ro-brochure-reference.png"
+                alt="AQUEN Reverse Osmosis Plants product brochure with process flow, model capacities and technical specifications"
+                width={1028}
+                height={690}
+                sizes="(max-width: 1180px) calc(100vw - 48px), 1180px"
+              />
+              <figcaption>Supplied Reverse Osmosis Plants brochure · Open image in a new tab for detailed reading.</figcaption>
+            </figure>
+          </div>
+        </section>
+
         <section className={`${styles.section} ${styles.darkSection}`}>
           <div className={styles.container}>
             <SectionHeading eyebrow="04 · System architecture" title="Configured around the water, not a fixed promise">
@@ -364,22 +382,9 @@ export default function ReverseOsmosisPlantsContent() {
           </div>
         </section>
 
-        <section className={styles.section}>
-          <div className={styles.container}>
-            <SectionHeading eyebrow="08 · Verified project references" title="Reference visuals from the current AQUEN library">
-              The library currently contains a plant reference image and two supplied 4,000 LPH engineering drawings. Configuration labels below reflect the files that are actually available.
-            </SectionHeading>
-            <div className={styles.galleryGrid}>
-              <figure className={styles.galleryCard}><div className={styles.galleryImage}><Image src="/reverseosmosis.png" alt="Reverse Osmosis plant reference image" fill sizes="(max-width: 700px) 100vw, 33vw" /></div><figcaption><span>Reference image</span><strong>Reverse Osmosis Plant</strong><small>Plant, pumps, membrane housings and control panel</small></figcaption></figure>
-              <figure className={styles.galleryCard}><div className={styles.galleryImage}><Image src="/ro-4000-lph-ss304.png" alt="4,000 LPH SS-304 Reverse Osmosis Plant engineering drawing" fill sizes="(max-width: 700px) 100vw, 33vw" /></div><figcaption><span>Supplied drawing · 4,000 LPH</span><strong>SS-304 configuration</strong><small>Pretreatment + RO process and piping diagram</small></figcaption></figure>
-              <figure className={styles.galleryCard}><div className={styles.galleryImage}><Image src="/ro-4000-lph-msep-frp.png" alt="4,000 LPH MSEP FRP Reverse Osmosis Plant engineering drawing" fill sizes="(max-width: 700px) 100vw, 33vw" /></div><figcaption><span>Supplied drawing · 4,000 LPH</span><strong>MSEP / FRP configuration</strong><small>Pretreatment + RO process and piping diagram</small></figcaption></figure>
-            </div>
-          </div>
-        </section>
-
         <section className={`${styles.section} ${styles.faqSection}`} id="faq">
           <div className={styles.container}>
-            <SectionHeading eyebrow="09 · Frequently asked questions" title="RO plant questions, answered clearly" />
+            <SectionHeading eyebrow="08 · Frequently asked questions" title="RO plant questions, answered clearly" />
             <div className={styles.faqList}>
               {faqs.map(([question, answer]) => <details className={styles.faqItem} key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}
             </div>
@@ -389,7 +394,7 @@ export default function ReverseOsmosisPlantsContent() {
         <section className={styles.ctaSection}>
           <div className={styles.container}>
             <div className={styles.ctaGrid}>
-              <div><span className={styles.eyebrow}>10 · Start with your water report</span><h2>Let’s size the right RO plant for your application.</h2><p>Share your required permeate flow, feed-water analysis and end use. AQUEN can prepare a project-specific configuration and quotation.</p><div className={styles.ctaChecklist}><span><Check size={16} />Capacity and operating hours</span><span><Check size={16} />Feed-water test report</span><span><Check size={16} />Preferred MOC and controls</span><span><Check size={16} />Permeate and reject requirements</span></div></div>
+              <div><span className={styles.eyebrow}>09 · Start with your water report</span><h2>Let’s size the right RO plant for your application.</h2><p>Share your required permeate flow, feed-water analysis and end use. AQUEN can prepare a project-specific configuration and quotation.</p><div className={styles.ctaChecklist}><span><Check size={16} />Capacity and operating hours</span><span><Check size={16} />Feed-water test report</span><span><Check size={16} />Preferred MOC and controls</span><span><Check size={16} />Permeate and reject requirements</span></div></div>
               <div className={styles.ctaCard}><span>Talk to AQUEN</span><strong>AQUEN Fluid Technologies LLP</strong><a href="tel:+919622554445">+91 962255 4445 <ArrowRight size={15} /></a><a href="mailto:info@aquenfluid.com">info@aquenfluid.com <ArrowRight size={15} /></a><Link className={styles.ctaButton} href="/contact">Request a Quote <ArrowRight size={16} /></Link></div>
             </div>
           </div>

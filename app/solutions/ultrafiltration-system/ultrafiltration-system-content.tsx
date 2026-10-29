@@ -296,11 +296,29 @@ export default function UltrafiltrationSystemContent() {
 
               <div className={styles.heroVisual}>
                 <div className={styles.heroVisualFrame}>
-                  <Image src="/reverseosmosis.png" alt="Representative skid-mounted membrane treatment plant reference image" fill priority sizes="(max-width: 850px) 100vw, 52vw" />
+                  <Image src="/ultrafiltration-hero.png" alt="Ultrafiltration plant with membrane modules and water filtration illustration" fill priority sizes="(max-width: 850px) 100vw, 52vw" />
                 </div>
                 <div className={styles.heroBadge}><BadgeCheck size={16} /><span>Membrane plant reference</span></div>
                 <div className={styles.heroCaption}><span>UF design</span><strong>compact · modular</strong><span>Image status</span><strong>UF photo to confirm</strong></div>
               </div>
+            </div>
+         </div>
+       </section>
+
+        <section className={`${styles.section} ${styles.lightSection}`} id="visual-references">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="09 · UF system visuals" title="UF system catalogue and installation references">
+              Browse the supplied UF technical catalogue and project installation reference collage. Final equipment scope, capacities and site applicability remain subject to engineering confirmation.
+            </SectionHeading>
+            <div className={styles.visualReferenceGrid}>
+              <figure className={styles.visualReferenceFigure}>
+                <Image src="/uf-system-catalogue.png" alt="AQUEN ultrafiltration system technical catalogue reference" width={1067} height={712} sizes="(max-width: 1180px) calc(100vw - 48px), 1180px" />
+                <figcaption><span>Technical catalogue</span><strong>UF system overview and specifications</strong></figcaption>
+              </figure>
+              <figure className={styles.visualReferenceFigure}>
+                <Image src="/uf-installation-references.png" alt="AQUEN ultrafiltration system installation reference collage" width={1067} height={711} sizes="(max-width: 1180px) calc(100vw - 48px), 1180px" />
+                <figcaption><span>Installation references</span><strong>UF plants across capacities and configurations</strong></figcaption>
+              </figure>
             </div>
           </div>
         </section>
@@ -389,22 +407,6 @@ export default function UltrafiltrationSystemContent() {
             </SectionHeading>
             <div className={styles.twoTableGrid}><div><h3 className={styles.tableTitle}>Material of construction</h3><DataTable label="UF material of construction" headers={["Item", "Material / specification"]} rows={mocRows} compact /></div><div><h3 className={styles.tableTitle}>TYPICAL BOQ / BILL OF MATERIAL (BOM) — 10 m³/hr UF PLANT</h3><DataTable label="Typical bill of materials for 10 cubic metre per hour UF plant" headers={["No.", "Description", "Specification / size", "Quantity"]} rows={bomRows} compact /></div></div>
             <p className={styles.tableFootnote}>BOM row alignment and the exact included scope must be checked against the original high-resolution brochure and official engineering BOM before publication or quotation.</p>
-          </div>
-        </section>
-
-        <section className={`${styles.section} ${styles.lightSection}`} id="gallery">
-          <div className={styles.container}>
-            <SectionHeading eyebrow="09 · Installation gallery" title="UF plant installation references">
-              Captions follow the requested brochure labels. Existing project image assets are used here as installation references; UF-specific source photography should be confirmed before presenting these as verified UF installations.
-            </SectionHeading>
-            <div className={styles.galleryGrid}>
-              {[
-                ["/installation-img1.png", "UF Plant — 5 m³/hr", "Installation in Progress"],
-                ["/installation-img2.png", "UF Plant — 10 m³/hr", "Complete Installation"],
-                ["/installation-img3.png", "UF Plant — 15 m³/hr", "Industrial Application"],
-                ["/reverseosmosis.png", "UF Plant — 20 m³/hr", "Skid Mounted"],
-              ].map(([src, title, detail]) => <figure className={styles.galleryCard} key={title}><div className={styles.galleryImage}><Image src={src} alt={`${title} installation reference`} fill sizes="(max-width: 700px) 100vw, 25vw" /></div><figcaption><span>AQUEN installation reference</span><strong>{title}</strong><small>{detail}</small></figcaption></figure>)}
-            </div>
           </div>
         </section>
 

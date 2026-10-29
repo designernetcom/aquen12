@@ -60,24 +60,18 @@ const benefits: { icon: LucideIcon; title: string; text: string }[] = [
 const vessels: {
   title: string;
   fullName: string;
-  image?: string;
-  imageAlt?: string;
   note: string;
   status: string;
 }[] = [
   {
     title: "FRP Vessel",
     fullName: "Fibreglass Reinforced Plastic",
-    image: "/water-softener-15000-lph-frp.png",
-    imageAlt: "Existing FRP water softener drawing reference from the project assets",
     note: "An existing FRP softener drawing reference is present in the project. Confirm the current offering, rating and duty before quotation.",
     status: "Existing project reference",
   },
   {
     title: "MSEP Vessel",
     fullName: "Mild Steel Epoxy Painted",
-    image: "/water-softener-15000-lph-msep.png",
-    imageAlt: "Existing MSEP water softener drawing reference from the project assets",
     note: "An existing MSEP softener drawing reference is present in the project. Coating, pressure and compatibility require confirmation.",
     status: "Existing project reference",
   },
@@ -93,7 +87,7 @@ const specificationRows = [
   ["Model", "Technical specifications are being confirmed"],
   ["Rated capacity and service flow", "To be confirmed against the Water Softener data sheet"],
   ["Vessel material", "FRP and MSEP drawing references exist; final availability is to be confirmed"],
-  ["Vessel dimensions", "To be confirmed; not copied from the Iron Removal Plant brochure"],
+  ["Vessel dimensions", "Use the supplied brochure as an indicative reference; confirm against the approved design"],
   ["Resin type and quantity", "To be confirmed for the selected softener design"],
   ["Operating pressure and temperature", "To be confirmed for the selected vessel and control arrangement"],
   ["Inlet / outlet connection", "To be confirmed from the approved process design"],
@@ -196,15 +190,15 @@ export default function WaterSoftenerContent() {
               <div className={styles.heroVisual}>
                 <div className={styles.heroVisualMedia}>
                   <Image
-                    src="/Softener.png"
-                    alt="Existing project water softener system reference with resin vessels and brine tank"
+                    src="/water-softener-installation-gallery.png"
+                    alt="AQUEN water softener installation references with MGF, softener vessels, pumps and regeneration tanks"
                     width={1400}
                     height={1128}
                     priority
                     sizes="(max-width: 800px) 100vw, 50vw"
                   />
                 </div>
-                <span className={styles.imageCaption}>Existing Water Softener reference asset - verify final product configuration</span>
+                <span className={styles.imageCaption}>New supplied installation references · verify final product configuration</span>
               </div>
             </div>
           </div>
@@ -235,9 +229,6 @@ export default function WaterSoftenerContent() {
             <div className={styles.vesselGrid}>
               {vessels.map((vessel) => (
                 <article className={styles.vesselCard} key={vessel.title}>
-                  <div className={styles.vesselImage}>
-                    {vessel.image ? <Image src={vessel.image} alt={vessel.imageAlt ?? vessel.title} fill sizes="(max-width: 900px) 100vw, 33vw" /> : <div className={styles.vesselPlaceholder}><Layers3 size={28} /><span>Verified softener image required</span></div>}
-                  </div>
                   <div className={styles.vesselBody}>
                     <span className={styles.cardEyebrow}>{vessel.status}</span>
                     <h3>{vessel.title}</h3>
@@ -275,15 +266,15 @@ export default function WaterSoftenerContent() {
 
         <section className={`${styles.section} ${styles.lightSection}`} id="technical-specifications">
           <div className={styles.container}>
-            <SectionHeading eyebrow="04 / Technical data status" title="Water Softener specifications are being confirmed">
-              The current supplied brochure is for an Iron Removal Plant, not a Water Softener. Its IRP model table, media, capacities and water-quality values are intentionally not reproduced here.
+            <SectionHeading eyebrow="04 / Technical data status" title="Water Softener specifications from the supplied brochure">
+              The supplied Water Softener brochure now provides the product reference for vessel construction, working principle, indicative capacity, operating parameters, regeneration and salt/water consumption. Final selection remains project-specific.
             </SectionHeading>
             <div className={styles.sourceStatus}>
-              <div className={styles.sourceStatusHeader}><span>Source verification</span><strong>Water Softener data sheet required</strong></div>
-              <p>Existing project files contain a Water Softener product reference and drawing assets, but the approved model range and engineering limits for this Solutions page still need confirmation.</p>
+              <div className={styles.sourceStatusHeader}><span>Source verification</span><strong>Supplied Water Softener brochure</strong></div>
+              <p>The brochure is presented in the dedicated section below. The values on this page are indicative brochure references and should be confirmed against the approved process design before quotation.</p>
             </div>
             <div className={styles.technicalCard}>
-              <div className={styles.cardTitle}>Specification fields awaiting verified source data</div>
+              <div className={styles.cardTitle}>Specification fields for project confirmation</div>
               <div className={styles.tableWrap}>
                 <table>
                   <thead><tr><th>Specification</th><th>Status</th></tr></thead>
@@ -291,13 +282,31 @@ export default function WaterSoftenerContent() {
                 </table>
               </div>
             </div>
-            <p className={styles.dataNote}>Technical specifications are being confirmed. Contact our team for product details.</p>
+            <p className={styles.dataNote}>Brochure values are indicative. Contact our team for project-specific sizing, resin selection and regeneration details.</p>
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.lightSection}`} id="brochure">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="05 / Product brochure" title="Water Softener brochure">
+              Review the supplied AQUEN brochure for FRP, MSEP and MSRL vessel features, working principle, capacity and vessel sizing, design parameters, regeneration sequence, salt and water consumption, applications and an actual site installation reference.
+            </SectionHeading>
+            <figure className={styles.brochureFigure}>
+              <Image
+                src="/water-softener-brochure-reference.png"
+                alt="AQUEN Water Softener product brochure with vessel options, working principle, sizing, regeneration and applications"
+                width={1071}
+                height={712}
+                sizes="(max-width: 1180px) calc(100vw - 48px), 1180px"
+              />
+              <figcaption>Supplied Water Softener brochure · Open image in a new tab for detailed reading.</figcaption>
+            </figure>
           </div>
         </section>
 
         <section className={styles.section} id="applications">
           <div className={styles.container}>
-            <SectionHeading eyebrow="05 / Applications" title="Potential water-softening applications">
+            <SectionHeading eyebrow="06 / Applications" title="Potential water-softening applications">
               Suitability depends on feed-water quality, operating conditions, downstream treatment requirements and confirmation by the technical team.
             </SectionHeading>
             <div className={styles.applicationGrid}>
@@ -314,7 +323,7 @@ export default function WaterSoftenerContent() {
 
         <section className={`${styles.section} ${styles.lightSection}`} id="faq">
           <div className={styles.container}>
-            <SectionHeading eyebrow="06 / Frequently asked questions" title="Water Softener FAQs">
+            <SectionHeading eyebrow="07 / Frequently asked questions" title="Water Softener FAQs">
               General guidance is provided below. Product-specific capacities, consumption, guarantees and maintenance intervals require confirmation.
             </SectionHeading>
             <div className={styles.faqList}>
@@ -330,14 +339,20 @@ export default function WaterSoftenerContent() {
 
         <section className={styles.section} id="installation">
           <div className={styles.container}>
-            <SectionHeading eyebrow="07 / Product gallery & installations" title="Verified Water Softener imagery required">
-              The current source set does not include a confirmed Water Softener installation gallery. Iron Removal Plant installation images are not presented here as softener installations.
+            <SectionHeading eyebrow="08 / Product gallery & installations" title="Water Softener installation references">
+              The new supplied collage shows FRP, MSEP and MSRL softener installations with pumps, regeneration tanks and control panels. Labels are kept as source references and should not be treated as customer or project claims.
             </SectionHeading>
-            <div className={styles.installationPlaceholder}>
-              <div className={styles.placeholderIcon}><Layers3 size={28} aria-hidden="true" /></div>
-              <div><h3>Share the approved Water Softener brochure or installation photographs</h3><p>Once verified media is available, it can be added to this section without changing the page structure. No customer names, locations, capacities or project dates are assumed here.</p></div>
-              <Link href="/contact" className={styles.textButton}>Send details <ArrowRight size={16} /></Link>
-            </div>
+            <figure className={styles.referenceCard}>
+              <div className={styles.referenceImage}>
+                <Image
+                  src="/water-softener-installation-gallery.png"
+                  alt="Water Softener installation collage showing FRP, MSEP and MSRL vessel configurations"
+                  fill
+                  sizes="(max-width: 900px) 100vw, 1180px"
+                />
+              </div>
+              <figcaption>New supplied Water Softener installation reference collage</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -345,7 +360,7 @@ export default function WaterSoftenerContent() {
           <div className={styles.container}>
             <div className={styles.ctaGrid}>
               <div>
-                <span className={styles.eyebrow}>08 / Request a quote</span>
+                <span className={styles.eyebrow}>09 / Request a quote</span>
                 <h2>Need a Water Softener for your application?</h2>
                 <p>Contact AQUEN Fluid Technologies LLP with your application, approximate flow, available feed-water hardness report and operating requirements so the correct configuration can be confirmed.</p>
               </div>

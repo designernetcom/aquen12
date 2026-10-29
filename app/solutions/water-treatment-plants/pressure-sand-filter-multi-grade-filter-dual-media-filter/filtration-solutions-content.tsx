@@ -9,6 +9,7 @@ import {
   Check,
   CircleCheck,
   Droplets,
+  Download,
   Factory,
   Fan,
   Filter,
@@ -16,7 +17,6 @@ import {
   Landmark,
   Settings2,
   ShieldCheck,
-  Wind,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,8 +43,8 @@ const filterSystems: FilterSystem[] = [
     key: "psf",
     eyebrow: "01 / Pressure filtration",
     title: "Pressure Sand Filter (PSF)",
-    image: "/mgf-15000-lph-frp.png",
-    imageAlt: "Aquen FRP pressure filtration vessel reference",
+    image: "/pressure-filter-installation-2.png",
+    imageAlt: "Pressure sand filter, multi grade filter and dual media filter installation",
     description:
       "A pressure sand filter removes suspended solids, turbidity, silt and fine particles from raw water through a sand filtration bed with gravel support media.",
     media: ["Silica sand: 0.6–1.2 mm", "Gravel support media: 2–6 mm"],
@@ -66,8 +66,8 @@ const filterSystems: FilterSystem[] = [
     key: "mgf",
     eyebrow: "02 / Graded media",
     title: "Multi Grade Filter (MGF)",
-    image: "/Multigrade.png",
-    imageAlt: "Aquen multi grade filter skid with layered media vessels",
+    image: "/pressure-filter-installation-3.png",
+    imageAlt: "Multi grade and dual media filter vessels with pumps and pipework",
     description:
       "A multi grade filter uses multiple layers of filtration media to capture different particle sizes and improve filtration efficiency across industrial water streams.",
     media: [
@@ -93,8 +93,8 @@ const filterSystems: FilterSystem[] = [
     key: "dmf",
     eyebrow: "03 / Depth filtration",
     title: "Dual Media Filter (DMF)",
-    image: "/mgf-15000-lph-msep.png",
-    imageAlt: "Aquen MSEP dual media filtration vessel reference",
+    image: "/pressure-filter-installation-4.png",
+    imageAlt: "Filter installation pumps, pipework and control panel",
     description:
       "A dual media filter combines anthracite and sand layers to improve depth filtration and support longer filtration run times, depending on operating conditions.",
     media: [
@@ -155,16 +155,12 @@ const benefits: { icon: LucideIcon; title: string; text: string }[] = [
 const vessels: {
   title: string;
   fullName: string;
-  image: string;
-  imageAlt: string;
   features: string[];
   note: string;
 }[] = [
   {
     title: "FRP Vessel",
     fullName: "Fibreglass Reinforced Plastic",
-    image: "/water-softener-15000-lph-frp.png",
-    imageAlt: "FRP vessel configuration reference",
     features: [
       "Lightweight and corrosion resistant",
       "Suitable for low to medium pressure",
@@ -176,8 +172,6 @@ const vessels: {
   {
     title: "MSEP Vessel",
     fullName: "Mild Steel Epoxy Painted",
-    image: "/mgf-15000-lph-msep.png",
-    imageAlt: "MSEP vessel and piping configuration reference",
     features: [
       "High-strength fabricated vessel with epoxy coating",
       "Cost-effective for industrial applications",
@@ -189,8 +183,6 @@ const vessels: {
   {
     title: "MSRL Vessel",
     fullName: "Mild Steel Rubber Lined",
-    image: "/ironremoval.png",
-    imageAlt: "Industrial MSRL vessel and piping reference",
     features: [
       "Mild steel construction with rubber lining",
       "Excellent corrosion resistance",
@@ -261,38 +253,6 @@ const qualityTables: {
       ["Iron (mg/L)", "Up to 10", "<0.1"],
       ["Manganese (mg/L)", "Up to 0.5", "<0.1"],
     ],
-  },
-];
-
-const mediaCards: {
-  title: string;
-  range: string;
-  image: string;
-  imageAlt: string;
-}[] = [
-  {
-    title: "Silica Sand",
-    range: "0.6–1.2 mm",
-    image: "/mgf-15000-lph-frp.png",
-    imageAlt: "Layered filtration media in an FRP vessel",
-  },
-  {
-    title: "Anthracite",
-    range: "0.8–1.6 mm",
-    image: "/Multigrade.png",
-    imageAlt: "Anthracite layer in a multi grade filter system",
-  },
-  {
-    title: "Garnet",
-    range: "0.2–0.4 mm",
-    image: "/mgf-15000-lph-msep.png",
-    imageAlt: "Garnet layer in a multi grade filter system",
-  },
-  {
-    title: "Gravel Support Media",
-    range: "2–6 mm",
-    image: "/mixed-bed-supporting-gravel.png",
-    imageAlt: "Gravel support media and filter vessel diagram",
   },
 ];
 
@@ -415,6 +375,15 @@ export default function FiltrationSolutionsContent() {
                 </p>
                 <div className={styles.heroActions}>
                   <Link href="/contact" className={styles.primaryButton}>Enquire Now <ArrowRight size={17} /></Link>
+                  <a
+                    href="/psf-dmf-acf-brochure.pdf"
+                    className={styles.brochureButton}
+                    download
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Download Brochure <Download size={16} />
+                  </a>
                   <a href="#filtration-systems" className={styles.textButton}>Explore Filtration Systems <ArrowRight size={16} /></a>
                 </div>
                 <div className={styles.heroMetrics}>
@@ -426,8 +395,8 @@ export default function FiltrationSolutionsContent() {
               <div className={styles.heroVisual}>
                 <div className={styles.heroVisualMedia}>
                   <Image
-                    src="/Multigrade.png"
-                    alt="Aquen industrial multi grade water filtration system"
+                    src="/pressure-filter-hero.png"
+                    alt="Pressure sand, multi grade and dual media filter plant with layered media filtration illustration"
                     width={1400}
                     height={1128}
                     priority
@@ -436,6 +405,24 @@ export default function FiltrationSolutionsContent() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.lightSection}`} id="brochure-overview">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="Brochure overview" title="PSF, MGF & DMF filtration at a glance">
+              Explore the available filtration approaches, vessel configurations, media options and typical operating parameters in one visual reference.
+            </SectionHeading>
+            <figure className={styles.brochureFigure}>
+              <Image
+                src="/psf-dmf-acf-overview.png"
+                alt="Aquen Fluid Technologies brochure overview for pressure sand, multi grade and dual media filters"
+                width={1030}
+                height={682}
+                sizes="(max-width: 1180px) calc(100vw - 48px), 1180px"
+              />
+              <figcaption>PSF, MGF and DMF product overview</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -492,7 +479,6 @@ export default function FiltrationSolutionsContent() {
             <div className={styles.vesselGrid}>
               {vessels.map((vessel) => (
                 <article className={styles.vesselCard} key={vessel.title}>
-                  <div className={styles.vesselImage}><Image src={vessel.image} alt={vessel.imageAlt} fill sizes="(max-width: 900px) 100vw, 33vw" /></div>
                   <div className={styles.vesselBody}>
                     <span className={styles.cardEyebrow}>Vessel type</span>
                     <h3>{vessel.title}</h3>
@@ -564,29 +550,9 @@ export default function FiltrationSolutionsContent() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.lightSection}`} id="media-components">
-          <div className={styles.container}>
-            <SectionHeading eyebrow="07 / Media & internals" title="Filtration media & filter components">
-              Media grading, support layers and underdrain selection influence filtration performance, head loss and backwash behavior.
-            </SectionHeading>
-            <div className={styles.mediaGrid}>
-              {mediaCards.map((media) => (
-                <article className={styles.mediaCard} key={media.title}>
-                  <div className={styles.mediaImage}><Image src={media.image} alt={media.imageAlt} fill sizes="(max-width: 700px) 100vw, 25vw" /></div>
-                  <div><h3>{media.title}</h3><span>{media.range}</span></div>
-                </article>
-              ))}
-            </div>
-            <div className={styles.componentStrip}>
-              <article><div className={styles.componentIcon}><Wind size={22} /></div><div><h3>Underdrain System</h3><p>Lateral type with gravel support for even collection and distribution.</p></div></article>
-              <article><div className={styles.componentIcon}><Settings2 size={22} /></div><div><h3>Multiport Valve</h3><p>Manual or automatic configuration, as applicable to the selected vessel and duty.</p></div></article>
-            </div>
-          </div>
-        </section>
-
         <section className={styles.section} id="applications">
           <div className={styles.container}>
-            <SectionHeading eyebrow="08 / Applications" title="Where these filtration systems fit">
+            <SectionHeading eyebrow="07 / Applications" title="Where these filtration systems fit">
               From raw-water conditioning to RO pre-treatment, filtration is selected as part of the complete treatment train.
             </SectionHeading>
             <div className={styles.applicationGrid}>
@@ -604,7 +570,7 @@ export default function FiltrationSolutionsContent() {
         <section className={styles.ctaSection} id="enquiry">
           <div className={styles.container}>
             <div className={styles.ctaGrid}>
-              <div><span className={styles.eyebrow}>09 / Start a conversation</span><h2>Looking for the right water filtration solution?</h2><p>Contact Aquen Fluid Technologies LLP to discuss your water quality requirements, flow capacity, filtration media and vessel configuration.</p></div>
+              <div><span className={styles.eyebrow}>08 / Start a conversation</span><h2>Looking for the right water filtration solution?</h2><p>Contact Aquen Fluid Technologies LLP to discuss your water quality requirements, flow capacity, filtration media and vessel configuration.</p></div>
               <div className={styles.ctaCard}><div><span>Company</span><strong>Aquen Fluid Technologies LLP</strong></div><div><span>Email</span><a href="mailto:ceo@aquenfluid.com">ceo@aquenfluid.com</a></div><div><span>Office / factory</span><strong>Charholi Budruk, Pimpri-Chinchwad, Maharashtra – 412105, India</strong></div><Link href="/contact" className={styles.primaryButton}>Enquire Now <ArrowRight size={17} /></Link></div>
             </div>
           </div>

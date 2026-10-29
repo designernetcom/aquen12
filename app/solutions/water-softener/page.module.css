@@ -57,10 +57,6 @@
 
 .vesselGrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 .vesselCard { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 14px 32px rgba(5,44,101,.07); }
-.vesselImage { position: relative; height: 220px; overflow: hidden; background: #eaf7ff; }
-.vesselImage img { object-fit: cover; }
-.vesselPlaceholder { display: grid; height: 100%; place-items: center; align-content: center; gap: 9px; color: #5f8398; font-size: 11px; text-align: center; }
-.vesselPlaceholder svg { color: #68bfdc; }
 .vesselBody { padding: 23px; }
 .cardEyebrow { font-size: 9px; letter-spacing: .12em; }
 .vesselBody h3 { margin: 9px 0 4px; color: var(--navy); font-size: 21px; line-height: 1.2; }
@@ -97,6 +93,9 @@
 .tableWrap tr:nth-child(even) { background: #fbfdfe; }
 .tableWrap td:first-child { color: #234b69; font-weight: 700; }
 .dataNote { margin: 15px 0 0; color: #6b8390; font-size: 11px; font-style: italic; line-height: 1.6; }
+.brochureFigure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 15px 34px rgba(5,44,101,.08); }
+.brochureFigure img { display: block; width: 100%; height: auto; }
+.brochureFigure figcaption { padding: 15px 18px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .applicationGrid { display: grid; grid-template-columns: repeat(4,1fr); gap: 13px; }
 .faqList { display: grid; gap: 10px; }
@@ -111,6 +110,10 @@
 .placeholderIcon { display: grid; width: 54px; height: 54px; place-items: center; border-radius: 16px; background: #e4f7ff; color: var(--blue); }
 .installationPlaceholder h3 { margin: 0 0 7px; color: var(--navy); font-size: 18px; }
 .installationPlaceholder p { max-width: 720px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.referenceCard { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 15px 34px rgba(5,44,101,.08); }
+.referenceImage { position: relative; min-height: 520px; background: #eaf7ff; }
+.referenceImage img { object-fit: cover; }
+.referenceCard figcaption { padding: 15px 18px; color: var(--muted); font-size: 12px; line-height: 1.5; }
 
 .ctaSection { padding: 96px 0 !important; background: linear-gradient(125deg,#031e4b,#0578c1) !important; }
 .ctaGrid { display: grid; grid-template-columns: 1fr .8fr; gap: 64px; align-items: center; }
@@ -130,8 +133,6 @@
   .heroGrid { gap: 38px; }
   .benefitGrid { grid-template-columns: repeat(2,1fr); }
   .vesselGrid { grid-template-columns: 1fr; }
-  .vesselCard { display: grid; grid-template-columns: .8fr 1.2fr; }
-  .vesselImage { height: 100%; min-height: 250px; }
   .applicationGrid { grid-template-columns: repeat(2,1fr); }
 }
 
@@ -160,9 +161,8 @@
   .section { padding: 70px 0; }
   .sectionHeading h2 { font-size: 34px; }
   .benefitGrid, .applicationGrid { grid-template-columns: 1fr; }
-  .vesselCard { display: block; }
-  .vesselImage { height: 220px; min-height: 0; }
   .sourceStatusHeader { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .referenceImage { min-height: 280px; }
   .installationPlaceholder { grid-template-columns: 1fr; }
   .installationPlaceholder .textButton { grid-column: auto; }
   .ctaSection { padding: 70px 0 !important; }

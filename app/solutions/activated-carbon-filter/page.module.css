@@ -133,8 +133,8 @@
   box-shadow: 0 25px 60px rgba(5, 44, 101, 0.17);
 }
 
-.heroVisualMedia { position: absolute; inset: 0; }
-.heroVisualMedia img { width: 100%; height: 100%; object-fit: cover; }
+.heroVisualMedia { position: absolute; inset: 0; background: #eaf7ff; }
+.heroVisualMedia img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
 
 .section { padding: 94px 0; background: #fff; }
 .lightSection { background: var(--pale); }

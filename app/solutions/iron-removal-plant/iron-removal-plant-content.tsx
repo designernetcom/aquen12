@@ -195,13 +195,29 @@ function IronRemovalPlantContent() {
                 <p className={styles.heroFootnote}>Model capacities and typical water-quality values are sourced from the supplied brochure and require technical confirmation before quotation.</p>
               </div>
               <div className={styles.heroVisual}>
-                <Image src="/ironremoval.png" alt="AQUEN Iron Removal Plant vessel and aeration system reference" width={1400} height={1128} priority sizes="(max-width: 850px) 100vw, 52vw" />
+                <Image src="/iron-removal-plant-hero.png" alt="Iron removal plant filtration system with media vessels and water-treatment process illustration" width={1254} height={1254} priority sizes="(max-width: 850px) 100vw, 52vw" />
                 <div className={styles.heroVisualLabel}><span>IRON REMOVAL PLANT</span><strong>Fe · Mn · H₂S</strong></div>
                 <div className={styles.heroVisualCaption}><CircleCheck size={14} /> Supplied product reference image</div>
               </div>
             </div>
             <div className={styles.brandStrip} aria-label="AQUEN services and product messages">
               {['Clean Water', 'Iron Free Water', 'Healthy Life', 'Design / Manufacturing / Supply / Installation / AMC'].map((label) => <span key={label}>{label}</span>)}
+            </div>
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.lightSection}`} id="visual-references">
+          <div className={styles.container}>
+            <SectionHeading eyebrow="Iron removal plant visuals" title="Iron removal plant references">Reference visuals for the Iron Removal Plant, presented for project discussion and equipment confirmation.</SectionHeading>
+            <div className={styles.visualReferenceGrid}>
+              <figure className={styles.visualReferenceFigure}>
+                <Image src="/iron-removal-plant-catalogue.png" alt="Iron removal plant catalogue reference" width={981} height={660} />
+                <figcaption><span>Catalogue reference</span><strong>Iron Removal Plant</strong></figcaption>
+              </figure>
+              <figure className={styles.visualReferenceFigure}>
+                <Image src="/iron-removal-plant-installation-references.png" alt="Iron removal plant installation reference" width={987} height={662} />
+                <figcaption><span>Installation reference</span><strong>Iron removal equipment</strong></figcaption>
+              </figure>
             </div>
           </div>
         </section>
