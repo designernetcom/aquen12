@@ -295,6 +295,10 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "Moving Bed Biofilm Reactor sewage treatment plants use attached-growth media and aeration to support stable biological treatment in a compact process train.",
     image: "/banner/advanced-biological.png",
     imageAlt: "Biological wastewater treatment plant reference for MBBR technology",
+    visualReferences: [
+      { src: "/stp-mbbr-technology-reference-01.png", alt: "STP MBBR technology project reference", width: 917, height: 612, label: "Project reference", title: "MBBR sewage treatment plant" },
+      { src: "/stp-mbbr-technology-reference-02.png", alt: "STP MBBR technology equipment reference", width: 925, height: 608, label: "Equipment reference", title: "MBBR treatment system" },
+    ],
     brochure: {
       href: "/stp-mbbr-civil-electro-mechanical.pdf",
       downloadName: "Aquen-STP-MBBR-Civil-Electro-Mechanical.pdf",
@@ -341,6 +345,10 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     description: "Membrane Bioreactor sewage treatment plants combine biological treatment with membrane separation to produce a low-solids treated stream in a compact footprint.",
     image: "/banner/operation-maintenance.png",
     imageAlt: "Representative membrane-based wastewater treatment reference",
+    visualReferences: [
+      { src: "/stp-mbr-technology-reference-01.png", alt: "STP MBR technology project reference", width: 950, height: 630, label: "Project reference", title: "MBR sewage treatment plant" },
+      { src: "/stp-mbr-technology-reference-02.png", alt: "STP MBR technology equipment reference", width: 947, height: 637, label: "Equipment reference", title: "MBR treatment system" },
+    ],
     brochure: {
       href: "/mbr-stp-technology-brochure.pdf",
       downloadName: "Aquen-MBR-STP-Technology-Brochure.pdf",

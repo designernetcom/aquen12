@@ -57,6 +57,10 @@ export default async function Solution({ params }: Props) {
       data={{
         title: page.title,
         excerpt: page.excerpt,
+        visualReferences: slug === "effluent-treatment-plant" ? [
+          { src: "/effluent-treatment-plant-reference-01.png", alt: "Effluent Treatment Plant project reference", width: 948, height: 632, label: "Project reference", title: "Effluent treatment plant" },
+          { src: "/effluent-treatment-plant-reference-02.png", alt: "Effluent Treatment Plant equipment reference", width: 953, height: 638, label: "Equipment reference", title: "ETP treatment system" },
+        ] : undefined,
         sections: page.sections.map((section) => ({
           type: section.type,
           title: section.title,

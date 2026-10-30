@@ -557,7 +557,8 @@ function animateCount(target: number, duration: number, onTick: (n: number) => v
 }
 
 export type MasterSection = { type: string; title?: string | null; content: Record<string, unknown>; sortOrder: number; isEnabled: boolean };
-export type MasterSolutionData = { title: string; excerpt?: string | null; sections: MasterSection[] };
+export type MasterVisualReference = { src: string; alt: string; width: number; height: number; label: string; title: string };
+export type MasterSolutionData = { title: string; excerpt?: string | null; sections: MasterSection[]; visualReferences?: MasterVisualReference[] };
 type DynamicItem = { icon?: string; title?: string; label?: string; description?: string; text?: string; image?: string; alt?: string; caption?: string; size?: string; value?: string; number?: string; stepNumber?: string; question?: string; answer?: string; bulletPoints?: string[]; points?: string[] };
 const ICONS: Record<string, LucideIcon> = { Beaker, Building2, Droplet, Factory, FlaskConical, GraduationCap, HeartPulse, Hotel, Landmark, Lightbulb, Milk, Recycle, ShieldCheck, Shirt, Target, UtensilsCrossed, Wrench, Layers, RefreshCw, Ruler, Zap, Filter, PenTool, Gauge, Box, Pill, ClipboardCheck };
 const iconFor = (name?: string) => ICONS[name || ""] || Droplet;
@@ -685,6 +686,22 @@ const toggle = (index: number) => {
   </section>
   
     
+    {data?.visualReferences?.length ? <section className="aq-visual-reference-section" id="visual-references" style={{order:1}}>
+      <div className="aq-visual-reference-container">
+        <div className="aq-visual-reference-head">
+          <div className="aq-visual-reference-kicker">{data.title.toUpperCase()} VISUALS</div>
+          <h2>{data.title} references</h2>
+          <p>Reference visuals for {data.title}, presented for project discussion and equipment confirmation.</p>
+        </div>
+        <div className="aq-visual-reference-grid">
+          {data.visualReferences.map((reference) => <figure className="aq-visual-reference-card" key={reference.src}>
+            <Image src={reference.src} alt={reference.alt} width={reference.width} height={reference.height} />
+            <figcaption><span>{reference.label}</span><strong>{reference.title}</strong></figcaption>
+          </figure>)}
+        </div>
+      </div>
+    </section> : null}
+
 
     <section className="ov-section" id="about" hidden={!visible("OVERVIEW")} style={{order:order("OVERVIEW",2)}}>
       <div className="ov-container">
