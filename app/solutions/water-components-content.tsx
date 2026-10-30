@@ -156,8 +156,9 @@ function Hero({ kind }: { kind: WaterComponentKind }) {
       accent: "VESSELS",
       subtitle: "For Water & Wastewater Treatment",
       intro: "High-strength FRP pressure vessels with food-grade polyethylene liners for filtration, softening, iron removal, demineralization and other suitable water-treatment systems.",
-      image: "/water-softener-15000-lph-frp.png",
-      alt: "AQUEN FRP vessel system reference",
+      image: "/frp-vessels-hero.png",
+      alt: "Blue FRP pressure vessels for water and wastewater treatment",
+      imageFit: "contain",
       badge: "FRP pressure vessel range",
       caption: ["Range", "8\" x 44\" – 63\" x 86\"", "Pressure", "10 bar operating"],
       metrics: [["8\"–63\"", "vessel diameter range"], ["10 bar", "operating pressure"], ["Food grade", "PE inner liner"]],
@@ -168,8 +169,9 @@ function Hero({ kind }: { kind: WaterComponentKind }) {
       accent: "VALVE",
       subtitle: "Top & Side Mount Options for Filters and Softeners",
       intro: "Multi Port Valves for FRP and MS vessels, with top-mount and side-mount configurations for filtration, softening and related water-treatment cycles.",
-      image: "/mgf-15000-lph-frp.png",
-      alt: "AQUEN multigrade filter system with multi port valve reference",
+      image: "/multi-port-valve-hero.png",
+      alt: "Black multi-port valves for FRP water-treatment vessels",
+      imageFit: "contain",
       badge: "MPV configuration range",
       caption: ["Mounts", "Top + side mount", "Cycle", "Filter · backwash · rinse"],
       metrics: [["3 + 4", "top and side sizes"], ["5 bar", "max. operating pressure"], ["5–50 °C", "operating temperature"]],
@@ -180,8 +182,9 @@ function Hero({ kind }: { kind: WaterComponentKind }) {
       accent: "SYSTEMS",
       subtitle: "Top & Lateral (Hub & Lateral) for FRP Vessels",
       intro: "UPVC SCH-80 top distributors and hub-and-lateral assemblies designed for uniform water distribution and collection across the supplied FRP vessel size range.",
-      image: "/Multigrade.png",
-      alt: "AQUEN multi grade filter cross-section showing vessel distribution media and underdrain reference",
+      image: "/distribution-systems-hero.png",
+      alt: "FRP vessel distribution systems with top distributors and hub-and-lateral assemblies",
+      imageFit: "contain",
       badge: "FRP vessel distribution",
       caption: ["Material", "UPVC SCH-80", "Vessels", "8\" x 44\" – 63\" x 86\""],
       metrics: [["UPVC", "SCH-80 construction"], ["0.25–0.50 mm", "lateral slot width"], ["0–50 °C", "operating temperature"]],
@@ -199,7 +202,7 @@ function Hero({ kind }: { kind: WaterComponentKind }) {
       <div className={base.heroActions}><Link className={base.primaryButton} href="/contact">Request a Quote <ArrowRight size={17} /></Link><Link className={base.textButton} href="#specifications">View specifications <ArrowRight size={15} /></Link></div>
       <div className={base.heroMetrics}>{copy.metrics.map(([value, label]) => <div key={value}><strong>{value}</strong><span>{label}</span></div>)}</div>
       <p className={base.heroNote}>{copy.note}</p>
-    </div><div className={base.heroVisual}><div className={base.heroVisualFrame}><Image src={copy.image} alt={copy.alt} fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={base.heroBadge}><BadgeCheck size={16} /><span>{copy.badge}</span></div><div className={base.heroCaption}><span>{copy.caption[0]}</span><strong>{copy.caption[1]}</strong><span>{copy.caption[2]}</span><strong>{copy.caption[3]}</strong></div></div></div>
+    </div><div className={base.heroVisual}><div className={base.heroVisualFrame}><Image src={copy.image} alt={copy.alt} fill priority sizes="(max-width: 850px) 100vw, 52vw" style={{ objectFit: copy.imageFit === "contain" ? "contain" : "cover", background: copy.imageFit === "contain" ? "#b5d9ed" : undefined }} /></div><div className={base.heroBadge}><BadgeCheck size={16} /><span>{copy.badge}</span></div><div className={base.heroCaption}><span>{copy.caption[0]}</span><strong>{copy.caption[1]}</strong><span>{copy.caption[2]}</span><strong>{copy.caption[3]}</strong></div></div></div>
   </div></section>;
 }
 
