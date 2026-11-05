@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Process cooling solutions with air-cooled and water-cooled configurations, scroll and screw compressors, and custom engineering options.",
     url: canonicalPath,
     type: "website",
+    images: ["/industrial-water-chiller-hero.png"],
   },
 };
 

@@ -253,28 +253,8 @@ function FluorideRemovalPlantContent() {
                 </div>
                 <p className={styles.heroFootnote}>*Brochure claim, not a universal guarantee. Actual results require feed-water analysis and design confirmation.</p>
               </div>
-              <div className={styles.heroVisual} role="img" aria-label="Illustrated Fluoride Removal Plant process reference with service and standby filters">
-                <div className={styles.heroVisualTop}><span>AQUEN / MEDIA TREATMENT</span><span>REFERENCE DIAGRAM</span></div>
-                <div className={styles.heroVisualGrid} aria-hidden="true" />
-                <div className={styles.heroDiagram}>
-                  <div className={styles.heroFlowLabel}><span>RAW WATER</span><small>high fluoride feed</small><ArrowRight size={17} /></div>
-                  <div className={styles.heroFilters}>
-                    <div className={styles.heroFilterCard}>
-                      <div className={styles.heroFilterHead}><span>01</span><b>IN SERVICE</b></div>
-                      <div className={styles.heroFilterBody}><span className={styles.heroFilterIcon}><Filter size={23} /></span><strong>Fluoride filter</strong><small>Activated alumina</small></div>
-                    </div>
-                    <div className={styles.heroFilterCard}>
-                      <div className={styles.heroFilterHead}><span>02</span><b>STANDBY</b></div>
-                      <div className={styles.heroFilterBody}><span className={styles.heroFilterIcon}><Filter size={23} /></span><strong>Fluoride filter</strong><small>Configuration dependent</small></div>
-                    </div>
-                  </div>
-                  <div className={styles.heroFlowLabel}><span>TREATED WATER</span><small>typical brochure flow</small><CircleCheck size={17} /></div>
-                </div>
-                <div className={styles.heroVisualBottom}>
-                  <div><span>MEDIA</span><strong>Activated alumina</strong></div>
-                  <div><span>VESSELS</span><strong>FRP / MSEP / MSRL</strong></div>
-                  <div className={styles.heroPhotoNote}><CircleAlert size={14} /><span>Verified plant photo pending</span></div>
-                </div>
+              <div className={styles.heroVisual} role="img" aria-label="AQUEN Fluoride Removal Plant with activated alumina media and control system">
+                <div className={styles.heroImageFrame}><Image src="/fluoride-removal-plant-hero.png" alt="AQUEN Fluoride Removal Plant with blue filter vessels and control panel" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div>
               </div>
             </div>
             <div className={styles.brandStrip} aria-label="AQUEN service capabilities">

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Flocculation equipment configurations for water and wastewater treatment, with typical specifications for six system types.",
     url: canonicalPath,
     type: "website",
+    images: ["/flocculation-systems-hero.png"],
   },
 };
 

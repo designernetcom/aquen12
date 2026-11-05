@@ -22,6 +22,7 @@
 .processFoot b { color: #9deaf6; }
 .modelIntro { margin: -16px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .wideTable table { min-width: 1180px; }
+.heroImageContain { object-fit: contain !important; }
 .optionGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .optionCard { display: grid; grid-template-columns: 28px 1fr; gap: 10px; min-height: 118px; padding: 18px; border: 1px solid var(--line); border-radius: 16px; background: #fff; box-shadow: 0 9px 22px rgba(5, 44, 101, .04); }
 .optionCard svg { color: var(--blue); }

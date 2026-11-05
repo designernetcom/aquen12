@@ -43,6 +43,8 @@
 .heroFootnote { margin-top: 17px; color: rgba(201, 237, 245, .67) !important; font-size: 12px !important; line-height: 1.6 !important; }
 
 .heroVisual { position: relative; z-index: 2; min-height: 475px; overflow: hidden !important; border: 1px solid rgba(160, 233, 248, .38); border-radius: 28px; background: linear-gradient(145deg, rgba(255, 255, 255, .14), rgba(255, 255, 255, .04)); box-shadow: 0 25px 60px rgba(0, 9, 39, .3), inset 0 1px 0 rgba(255, 255, 255, .16); }
+.heroImageFrame { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; background: #b5d9ed; }
+.heroImageFrame img { object-fit: contain; }
 .heroVisualGrid { position: absolute; inset: 0; opacity: .35; background-image: linear-gradient(rgba(128, 224, 245, .16) 1px, transparent 1px), linear-gradient(90deg, rgba(128, 224, 245, .16) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(135deg, #000, transparent 90%); }
 .heroVisual::after { position: absolute; right: -90px; bottom: -120px; width: 360px; height: 360px; border: 1px solid rgba(104, 231, 250, .32); border-radius: 50%; box-shadow: 0 0 0 34px rgba(104, 231, 250, .05), 0 0 0 68px rgba(104, 231, 250, .04); content: ""; }
 .heroVisualTop { position: absolute; z-index: 5; top: 22px; right: 24px; left: 24px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #a1dce8; font-size: 9px; font-weight: 800; letter-spacing: .14em; visibility: visible !important; opacity: 1 !important; }

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Continuous EDI systems for high-purity water from suitable RO permeate, with SS-304/SS-316 construction and model-wise technical specifications.",
     url: canonicalPath,
     type: "website",
+    images: ["/electrodeionization-edi-system-hero.png"],
   },
 };
 

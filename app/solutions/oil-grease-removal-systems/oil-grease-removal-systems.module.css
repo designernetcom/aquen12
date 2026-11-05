@@ -1,4 +1,4 @@
-.heroImageNote { position: absolute; z-index: 2; right: 23px; bottom: 99px; max-width: 225px; padding: 10px 12px; border: 1px solid rgba(166, 237, 248, .3); border-radius: 10px; background: rgba(3, 29, 70, .78); color: #d7f6fa; font-size: 10px; line-height: 1.45; }
+img.heroImageContain { object-fit: contain !important; background: #b5d9ed; }
 .oilVisual { position: relative; min-height: 155px; overflow: hidden; border: 1px solid #9fcfda; border-radius: 16px; background: linear-gradient(155deg, #d6f2f5, #b8e0e8); }
 .oilVisual::before { position: absolute; right: 18%; bottom: 18px; left: 18%; height: 72px; border: 2px solid #3e91a5; border-radius: 8px 8px 18px 18px; background: linear-gradient(180deg, rgba(255,255,255,.74) 0 42%, rgba(73,177,196,.4) 42%); box-shadow: 0 10px 0 rgba(42, 127, 147, .12); content: ""; }
 .oilVisual::after { position: absolute; top: 32px; right: 21%; left: 21%; height: 11px; border-radius: 99px; background: #f2d77b; box-shadow: 0 26px 0 rgba(255,255,255,.8); content: ""; }
@@ -25,7 +25,6 @@
   .applicationGrid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 620px) {
-  .heroImageNote { right: 14px; bottom: 84px; max-width: 180px; font-size: 9px; }
   .oilVisual { min-height: 125px; }
   .processBoard { padding: 18px; }
   .processLaneThree { grid-template-columns: 1fr; }

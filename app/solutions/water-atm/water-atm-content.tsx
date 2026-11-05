@@ -136,7 +136,7 @@ function DataTable({ headers, rows, label, wide = false }: { headers: string[]; 
 }
 
 function WaterAtmVisual() {
-  return <div className={styles.heroVisual}><div className={atm.atmVisual}><div className={atm.atmMachine}><div className={atm.atmBrand}><span>AQUEN</span><small>WATER ATM</small></div><div className={atm.atmScreen}><span>Smart water dispensing</span><strong>1 L / ₹</strong></div><div className={atm.atmControls}><span>COIN</span><span>RFID</span><span>QR / UPI</span></div><div className={atm.atmOutlet} /></div><div className={atm.visualLabel}>Conceptual product visual. Final cabinet, display and payment hardware depend on the selected configuration.</div></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>WATM series reference</span></div><div className={styles.heroCaption}><span>Capacity</span><strong>50–1,000 LPH</strong><span>Dispensing</span><strong>1–20 litres</strong></div></div>;
+  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image className={atm.heroImageContain} src="/water-atm-hero.png" alt="AQUEN Water ATM kiosk with water treatment and digital payment options" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>WATM series reference</span></div><div className={styles.heroCaption}><span>Capacity</span><strong>50–1,000 LPH</strong><span>Dispensing</span><strong>1–20 litres</strong></div></div>;
 }
 
 export default function WaterAtmContent() {

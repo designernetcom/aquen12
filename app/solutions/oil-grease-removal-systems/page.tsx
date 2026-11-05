@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Oil and grease separation configurations for suitable water and wastewater treatment applications.",
     url: canonicalPath,
     type: "website",
+    images: ["/oil-grease-removal-systems-hero.png"],
   },
 };
 

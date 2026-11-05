@@ -125,7 +125,7 @@ function DataTable({ headers, rows, label }: { headers: string[]; rows: TableRow
 }
 
 function ChillerVisual() {
-  return <div className={styles.heroVisual}><div className={chiller.heroPlaceholder}><Snowflake size={64} strokeWidth={1.3} /><strong>Industrial Water Chiller</strong><span>1–100 TR · air-cooled and water-cooled configurations</span><small>No verified AQUEN chiller photograph is currently available in the project assets. Replace this confirmation panel with approved product imagery when supplied.</small></div><div className={styles.heroBadge}><Snowflake size={16} /><span>ACW series reference</span></div><div className={styles.heroCaption}><span>Range</span><strong>1–100 TR</strong><span>Focus</span><strong>Process cooling</strong></div></div>;
+  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image className={chiller.heroImageContain} src="/industrial-water-chiller-hero.png" alt="AQUEN industrial water chiller with process cooling equipment" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><Snowflake size={16} /><span>ACW series reference</span></div><div className={styles.heroCaption}><span>Range</span><strong>1–100 TR</strong><span>Focus</span><strong>Process cooling</strong></div></div>;
 }
 
 export default function IndustrialWaterChillerContent() {

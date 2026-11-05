@@ -1,4 +1,4 @@
-.heroImageNote { position: absolute; z-index: 2; right: 23px; bottom: 99px; max-width: 225px; padding: 10px 12px; border: 1px solid rgba(166, 237, 248, .3); border-radius: 10px; background: rgba(3, 29, 70, .78); color: #d7f6fa; font-size: 10px; line-height: 1.45; }
+img.heroImageContain { object-fit: contain !important; background: #b5d9ed; }
 .screenVisual { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; min-height: 150px; padding: 20px 28px; border: 1px solid #9fcfda; border-radius: 16px; background: linear-gradient(155deg, #d6f2f5, #b8e0e8); overflow: hidden; }
 .screenVisual::before { position: absolute; top: 50%; right: -4px; left: -4px; height: 18px; border-radius: 99px; background: #69a6b4; box-shadow: 0 -31px 0 #69a6b4, 0 31px 0 #69a6b4; content: ""; transform: translateY(-50%); }
 .screenVisual span { position: relative; z-index: 1; width: 7px; height: 100%; justify-self: center; border-radius: 99px; background: #f6ffff; box-shadow: 0 0 0 1px rgba(32, 101, 119, .35); }
@@ -25,7 +25,6 @@
   .applicationGrid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 620px) {
-  .heroImageNote { right: 14px; bottom: 84px; max-width: 180px; font-size: 9px; }
   .screenVisual { min-height: 125px; padding: 16px 19px; }
   .debrisVisual { min-height: 125px; }
   .processBoard { padding: 18px; }

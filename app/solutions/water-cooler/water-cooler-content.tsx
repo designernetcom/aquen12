@@ -112,7 +112,7 @@ function DataTable({ headers, rows, label }: { headers: string[]; rows: TableRow
 }
 
 function CoolerVisual() {
-  return <div className={styles.heroVisual}><div className={cooler.coolerPlaceholder}><Snowflake size={64} strokeWidth={1.3} /><strong>Water Cooler range</strong><span>5–1,000 LPH · stainless steel cooling solutions</span><small>No verified Water Cooler photograph is currently available in the project assets. Replace this confirmation panel with approved AQUEN product imagery when supplied.</small></div><div className={styles.heroBadge}><Snowflake size={16} /><span>AWC series reference</span></div><div className={styles.heroCaption}><span>Cooling</span><strong>5–1,000 LPH</strong><span>Construction</span><strong>SS-304 options</strong></div></div>;
+  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image className={cooler.heroImageContain} src="/water-cooler-hero.png" alt="Stainless steel water cooler with multiple taps and filtration components" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><Snowflake size={16} /><span>AWC series reference</span></div><div className={styles.heroCaption}><span>Cooling</span><strong>5–1,000 LPH</strong><span>Construction</span><strong>SS-304 options</strong></div></div>;
 }
 
 export default function WaterCoolerContent() {

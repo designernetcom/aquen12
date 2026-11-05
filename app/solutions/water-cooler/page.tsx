@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Stainless steel water cooler solutions with storage configurations, multiple taps, optional purification connections and custom capacities.",
     url: canonicalPath,
     type: "website",
+    images: ["/water-cooler-hero.png"],
   },
 };
 

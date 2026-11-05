@@ -123,7 +123,7 @@ export default function Header() {
                   <span className={styles["mega-menu-kicker"]}>Solutions directory</span>
                   <p>Water treatment systems, components, and fabrication.</p>
                 </div>
-                <span className={styles["mega-menu-count"]}>04 categories</span>
+                <span className={styles["mega-menu-count"]}>{String(solutionCategories.length).padStart(2, '0')} categories</span>
               </div>
               <div className={styles["mega-menu-grid"]}>
                 {solutionCategories.map((category) => (

@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Smart drinking-water dispensing systems with configurable treatment, payment and monitoring options for 50 to 1,000 LPH applications.",
     url: canonicalPath,
     type: "website",
+    images: ["/water-atm-hero.png"],
   },
 };
 

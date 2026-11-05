@@ -194,9 +194,9 @@ export default function UVDisinfectionSystemContent() {
               <p className={styles.heroNote}>Design · Manufacturing · Supply · Installation · Commissioning · AMC</p>
             </div>
             <div className={styles.heroVisual}>
-              <div className={styles.heroVisualFrame}><Image src="/uv-disinfection-hero.png" alt="Ultraviolet disinfection water treatment plant with clarifier and flowing water" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div>
+              <div className={styles.heroVisualFrame}><Image src="/uv-disinfection-system-hero.png" alt="Stainless-steel ultraviolet disinfection system with control panel and illuminated UV reactor" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div>
               <div className={styles.heroBadge}><BadgeCheck size={16} /><span>Equipment reference</span></div>
-              <div className={styles.heroCaption}><span>System</span><strong>UV disinfection</strong><span>Image status</span><strong>UV photo to confirm</strong></div>
+              <div className={styles.heroCaption}><span>System</span><strong>UV disinfection</strong><span>Image status</span><strong>Provided equipment image</strong></div>
             </div>
           </div>
         </div>

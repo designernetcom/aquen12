@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Bar screen configurations for coarse and fine solids screening in water and wastewater treatment applications.",
     url: canonicalPath,
     type: "website",
+    images: ["/bar-screen-systems-hero.png"],
   },
 };
 

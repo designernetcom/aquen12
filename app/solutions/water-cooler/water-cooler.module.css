@@ -1,10 +1,4 @@
-.coolerPlaceholder { position: absolute; inset: 14px; display: grid; align-content: center; justify-items: center; gap: 13px; overflow: hidden; border: 1px solid rgba(166, 237, 248, .3); border-radius: 19px; background: radial-gradient(circle at 50% 28%, rgba(123, 229, 247, .23), transparent 30%), linear-gradient(145deg, #0b779a, #032049 74%); text-align: center; }
-.coolerPlaceholder::before { position: absolute; top: -100px; right: -110px; width: 350px; height: 350px; border: 1px solid rgba(145, 236, 247, .35); border-radius: 50%; box-shadow: 0 0 0 35px rgba(145, 236, 247, .06), 0 0 0 70px rgba(145, 236, 247, .04); content: ""; }
-.coolerPlaceholder > svg, .coolerPlaceholder strong, .coolerPlaceholder span, .coolerPlaceholder small { position: relative; z-index: 1; }
-.coolerPlaceholder > svg { color: #9cecf7; }
-.coolerPlaceholder strong { max-width: 260px; color: #fff; font-size: 22px; }
-.coolerPlaceholder span { max-width: 290px; color: #c7f2f7; font-size: 13px; line-height: 1.55; }
-.coolerPlaceholder small { max-width: 260px; color: rgba(219, 248, 251, .68); font-size: 11px; line-height: 1.5; }
+.heroImageContain { object-fit: contain !important; background: #b5d9ed; }
 .rangeGrid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .rangeCard { display: grid; align-content: start; min-height: 210px; padding: 21px; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: 0 10px 24px rgba(5, 44, 101, .05); }
 .rangeMarker { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 14px; background: #e7f8fd; color: var(--blue); }
@@ -63,7 +57,4 @@
 }
 @media (max-width: 620px) {
   .rangeGrid, .cardGrid, .optionGrid, .applicationGrid, .characteristicGrid { grid-template-columns: 1fr; }
-  .coolerPlaceholder { inset: 9px; }
-  .coolerPlaceholder strong { font-size: 19px; }
-  .coolerPlaceholder span { max-width: 245px; font-size: 12px; }
 }

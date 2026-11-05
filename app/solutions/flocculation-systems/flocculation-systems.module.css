@@ -1,4 +1,4 @@
-.heroImageNote { position: absolute; z-index: 2; right: 23px; bottom: 99px; max-width: 225px; padding: 10px 12px; border: 1px solid rgba(166, 237, 248, .3); border-radius: 10px; background: rgba(3, 29, 70, .78); color: #d7f6fa; font-size: 10px; line-height: 1.45; }
+img.heroImageContain { object-fit: contain !important; background: #b5d9ed; }
 .explainerGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; align-items: center; margin-top: 30px; padding: 30px; border: 1px solid #bce5ee; border-radius: 22px; background: #f5fcff; }
 .explainerVisual { display: grid; grid-template-columns: 1fr 35px 1fr; gap: 14px; align-items: center; min-height: 235px; padding: 28px; border-radius: 18px; background: linear-gradient(145deg, #e3f8fa, #d2eef4); }
 .particleCluster, .flocCluster { position: relative; display: grid; place-items: center; min-height: 155px; border: 1px dashed #96cbd8; border-radius: 50%; background: rgba(255, 255, 255, .55); }
@@ -85,7 +85,6 @@
   .processLane { grid-template-columns: repeat(5, minmax(150px, 1fr)); }
 }
 @media (max-width: 620px) {
-  .heroImageNote { right: 14px; bottom: 84px; max-width: 180px; font-size: 9px; }
   .typeGrid, .applicationGrid { grid-template-columns: 1fr; }
   .explainerGrid { padding: 18px; }
   .explainerVisual { grid-template-columns: 1fr; gap: 8px; padding: 18px; }

@@ -1,10 +1,4 @@
-.heroPlaceholder { position: absolute; inset: 14px; display: grid; align-content: center; justify-items: center; gap: 13px; overflow: hidden; border: 1px solid rgba(166, 237, 248, .3); border-radius: 19px; background: radial-gradient(circle at 50% 25%, rgba(123, 229, 247, .22), transparent 30%), linear-gradient(145deg, #0b779a, #032049 74%); text-align: center; }
-.heroPlaceholder::before { position: absolute; top: -100px; right: -110px; width: 350px; height: 350px; border: 1px solid rgba(145, 236, 247, .35); border-radius: 50%; box-shadow: 0 0 0 35px rgba(145, 236, 247, .06), 0 0 0 70px rgba(145, 236, 247, .04); content: ""; }
-.heroPlaceholder > svg, .heroPlaceholder strong, .heroPlaceholder span, .heroPlaceholder small { position: relative; z-index: 1; }
-.heroPlaceholder > svg { color: #9cecf7; }
-.heroPlaceholder strong { max-width: 285px; color: #fff; font-size: 22px; }
-.heroPlaceholder span { max-width: 310px; color: #c7f2f7; font-size: 13px; line-height: 1.55; }
-.heroPlaceholder small { max-width: 280px; color: rgba(219, 248, 251, .68); font-size: 11px; line-height: 1.5; }
+.heroImageContain { object-fit: contain !important; }
 .typeGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
 .typeCard { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; box-shadow: 0 12px 28px rgba(5, 44, 101, .06); }
 .typeVisual { display: grid; min-height: 170px; place-items: center; align-content: center; gap: 10px; padding: 23px; background: linear-gradient(145deg, #effcff, #d8f4fa); color: #3084a0; text-align: center; }
@@ -66,8 +60,5 @@
 }
 @media (max-width: 620px) {
   .typeGrid, .optionalGrid, .applicationGrid, .markGrid { grid-template-columns: 1fr; }
-  .heroPlaceholder { inset: 9px; }
-  .heroPlaceholder strong { font-size: 19px; }
-  .heroPlaceholder span { max-width: 245px; font-size: 12px; }
   .dimensionMarks { grid-template-columns: 1fr; }
 }

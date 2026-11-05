@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Activated alumina fluoride treatment systems with FRP, MSEP and MSRL vessel options, subject to water analysis and engineering confirmation.",
     url: canonicalPath,
     type: "website",
+    images: ["/fluoride-removal-plant-hero.png"],
   },
 };
 

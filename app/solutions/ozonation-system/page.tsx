@@ -15,6 +15,7 @@ export const metadata: Metadata = {
       "Effective disinfection and advanced oxidation solutions for suitable water and wastewater treatment applications.",
     url: canonicalPath,
     type: "website",
+    images: ["/ozonation-system-hero.png"],
   },
 };
 
