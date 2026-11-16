@@ -445,6 +445,55 @@
   cursor: default;
 }
 
+/* Nested wastewater links under the ETP menu item */
+.mega-nested {
+  display: flex;
+  flex-direction: column;
+}
+
+.mega-nested-trigger {
+  justify-content: space-between;
+}
+
+.mega-nested-trigger svg {
+  flex: none;
+  color: #78a8c8;
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.mega-nested:hover > .mega-nested-trigger,
+.mega-nested:focus-within > .mega-nested-trigger {
+  color: #3badff;
+  background: #edf8ff;
+}
+
+.mega-nested:hover > .mega-nested-trigger svg,
+.mega-nested:focus-within > .mega-nested-trigger svg {
+  color: #008cff;
+  transform: rotate(90deg);
+}
+
+.mega-nested-menu {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 13px;
+  opacity: 0;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+}
+
+.mega-nested:hover .mega-nested-menu,
+.mega-nested:focus-within .mega-nested-menu {
+  max-height: 260px;
+  opacity: 1;
+}
+
+.mega-nested-menu a {
+  padding: 6px 7px;
+  font-size: 0.75rem;
+  border-left: 1px solid rgba(0, 140, 255, 0.18);
+  border-radius: 0 8px 8px 0;
+}
+
 /* Mobile: Solutions collapses into a stacked accordion instead of a grid */
 .mobile-section {
   display: flex;
@@ -1751,6 +1800,53 @@
   font-size: 13px;
   font-weight: 600;
   cursor: default;
+}
+
+.mm-nested {
+  display: flex;
+  flex-direction: column;
+}
+
+.mm-nested-head {
+  display: flex;
+  align-items: stretch;
+}
+
+.mm-nested-head > a {
+  flex: 1;
+}
+
+.mm-nested-toggle {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 38px;
+  margin: 8px 0;
+  border: 1px solid rgba(89, 226, 255, 0.18);
+  border-radius: 9px;
+  background: rgba(89, 226, 255, 0.06);
+  color: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+}
+
+.mm-nested-toggle:hover {
+  border-color: rgba(89, 226, 255, 0.45);
+  color: #7fe9ff;
+}
+
+.mm-nested-body {
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+  border-left: 1px solid rgba(89, 226, 255, 0.22);
+  opacity: 0;
+  transition: max-height 0.25s ease, opacity 0.25s ease;
+}
+
+.mm-nested-body-open {
+  max-height: 320px;
+  padding-bottom: 4px;
+  opacity: 1;
 }
 
 /* ---- Footer: CTA + contact chips ---- */

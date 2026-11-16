@@ -1,4 +1,8 @@
-export type SolutionMenuLink = { label: string; to: string };
+export type SolutionMenuLink = {
+  label: string;
+  to: string;
+  children?: SolutionMenuLink[];
+};
 
 export type SolutionMenuCategory = {
   title: string;
@@ -75,10 +79,6 @@ export const STATIC_SOLUTION_CATEGORIES: SolutionMenuCategory[] = [
       link("Water Cooler", "water-cooler"),
       link("Water Chiller", "industrial-water-chiller"),
       link("RO - SS-304 & RO-316", "ro-ss-304-ss-316"),
-      link("Coagulation Systems", "coagulation-systems"),
-      link("Flocculation Systems", "flocculation-systems"),
-      link("Bar Screen Systems", "bar-screen-systems"),
-      link("Oil & Grease Removal Systems", "oil-grease-removal-systems"),
       link("DAF (Dissolved Air Flotation)", "daf-dissolved-air-flotation"),
     ],
   },
@@ -89,7 +89,15 @@ export const STATIC_SOLUTION_CATEGORIES: SolutionMenuCategory[] = [
       link("STP - MBR Technology", "stp-mbr-technology"),
       link("STP - SBR Technology", "sewage-treatment-plant"),
       link("STP - Package FRP", "stp-package-frp"),
-      link("Effluent Treatment Plant (ETP)", "effluent-treatment-plant"),
+      {
+        ...link("Effluent Treatment Plant - MBBR", "effluent-treatment-plant"),
+        children: [
+          link("Bar Screen", "bar-screen-systems"),
+          link("Oil & Grease Removal Solutions", "oil-grease-removal-systems"),
+          link("Coagulation System", "coagulation-systems"),
+          link("Flocculation System", "flocculation-systems"),
+        ],
+      },
       link("Grey Water Treatment Plant", "grey-water-treatment-plant"),
     ],
   },

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react'
-import { ArrowRight, ChevronDown, Mail, Menu, Phone, X } from 'lucide-react'
+import { ArrowRight, ChevronDown, ChevronRight, Mail, Menu, Phone, X } from 'lucide-react'
 import styles from './header.module.css'
 import Link from 'next/link';
 import { STATIC_SOLUTION_CATEGORIES } from '@/lib/data/static-solutions';
@@ -31,6 +31,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [openSection, setOpenSection] = useState<MobileSectionKey | null>(null)
+  const [openSolutionItem, setOpenSolutionItem] = useState<string | null>(null)
   const solutionCategories = STATIC_SOLUTION_CATEGORIES
 
   /*
@@ -88,9 +89,13 @@ export default function Header() {
   function closeMenu() {
     setMenuOpen(false)
     setOpenSection(null)
+    setOpenSolutionItem(null)
   }
   const toggleSection = (key: MobileSectionKey) => {
     setOpenSection((prev) => (prev === key ? null : key))
+  }
+  const toggleSolutionItem = (to: string) => {
+    setOpenSolutionItem((prev) => (prev === to ? null : to))
   }
 
   return (
@@ -129,7 +134,19 @@ export default function Header() {
                 {solutionCategories.map((category) => (
                   <div key={category.title} className={styles["mega-col"]}>
                     <h4>{category.title}</h4>
-                    {category.links.map((link) => (
+                    {category.links.map((link) => link.children?.length ? (
+                      <div key={link.label} className={styles['mega-nested']}>
+                        <Link href={link.to} className={styles['mega-nested-trigger']}>
+                          <span>{link.label}</span>
+                          <ChevronRight size={14} aria-hidden="true" />
+                        </Link>
+                        <div className={styles['mega-nested-menu']}>
+                          {link.children.map((child) => (
+                            <Link key={child.label} href={child.to}>{child.label}</Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
                       <Link key={link.label} href={link.to}>{link.label}</Link>
                     ))}
                   </div>
@@ -248,7 +265,31 @@ export default function Header() {
                     {key === 'solutions' && solutionCategories.map((category) => (
                       <div key={category.title} className={styles['mm-subgroup']}>
                         <strong>{category.title}</strong>
-                        {category.links.map((link) => (
+                        {category.links.map((link) => link.children?.length ? (
+                          <div key={link.label} className={styles['mm-nested']}>
+                            <div className={styles['mm-nested-head']}>
+                              <Link href={link.to} onClick={closeMenu}>{link.label}</Link>
+                              <button
+                                type="button"
+                                className={styles['mm-nested-toggle']}
+                                onClick={() => toggleSolutionItem(link.to)}
+                                aria-label={`Show ${link.label} pages`}
+                                aria-expanded={openSolutionItem === link.to}
+                              >
+                                <ChevronDown
+                                  size={15}
+                                  className={openSolutionItem === link.to ? styles['mm-chevron-open'] : ''}
+                                  aria-hidden="true"
+                                />
+                              </button>
+                            </div>
+                            <div className={`${styles['mm-nested-body']} ${openSolutionItem === link.to ? styles['mm-nested-body-open'] : ''}`}>
+                              {link.children.map((child) => (
+                                <Link key={child.label} href={child.to} onClick={closeMenu}>{child.label}</Link>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
                           <Link key={link.label} href={link.to} onClick={closeMenu}>{link.label}</Link>
                         ))}
                       </div>
