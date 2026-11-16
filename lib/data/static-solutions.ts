@@ -79,7 +79,6 @@ export const STATIC_SOLUTION_CATEGORIES: SolutionMenuCategory[] = [
       link("Water Cooler", "water-cooler"),
       link("Water Chiller", "industrial-water-chiller"),
       link("RO - SS-304 & RO-316", "ro-ss-304-ss-316"),
-      link("DAF (Dissolved Air Flotation)", "daf-dissolved-air-flotation"),
     ],
   },
   {
@@ -94,6 +93,7 @@ export const STATIC_SOLUTION_CATEGORIES: SolutionMenuCategory[] = [
         children: [
           link("Bar Screen", "bar-screen-systems"),
           link("Oil & Grease Removal Solutions", "oil-grease-removal-systems"),
+          link("DAF (Dissolved Air Flotation)", "daf-dissolved-air-flotation"),
           link("Coagulation System", "coagulation-systems"),
           link("Flocculation System", "flocculation-systems"),
         ],
