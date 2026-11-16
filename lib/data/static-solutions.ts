@@ -429,8 +429,8 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     title: "STP - MBBR Technology",
     eyebrow: "BIOLOGICAL SEWAGE TREATMENT",
     description: "The supplied STP MBBR brochure presents attached-growth sewage treatment plants from 50 to 500 KLD, with aeration, media-based biology, clarification and optional tertiary polishing.",
-    image: "/stp-mbbr-technology-hero.png",
-    imageAlt: "AQUEN STP MBBR treatment plant with aeration tanks, tube settler, PSF, ACF and disinfection stages",
+    image: "/stp-mbbr-technology-hero-custom.png",
+    imageAlt: "STP MBBR treatment plant with aeration tanks, media carriers and process equipment",
     visualReferences: [
       { src: "/stp-mbbr-technology-reference-01.png", alt: "STP MBBR technology brochure overview with process flow and technical specifications", width: 1071, height: 703, label: "Brochure overview", title: "MBBR sewage treatment plant" },
       { src: "/stp-mbbr-technology-reference-02.png", alt: "STP MBBR technology brochure project photographs", width: 1071, height: 713, label: "Project references", title: "MBBR treatment system" },
@@ -479,8 +479,8 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     title: "STP - MBR Technology",
     eyebrow: "MEMBRANE BIOREACTOR SEWAGE TREATMENT",
     description: "The supplied STP MBR brochure presents membrane bioreactor sewage treatment plants from 10 to 500 KLD, with submerged PVDF membrane modules, biological treatment and optional tertiary polishing.",
-    image: "/stp-mbr-technology-hero.png",
-    imageAlt: "AQUEN STP MBR treatment plant with anoxic tank, membrane modules, PSF, ACF and disinfection stages",
+    image: "/stp-mbr-technology-hero-custom.png",
+    imageAlt: "STP MBR treatment plant with membrane modules, aeration tanks and process equipment",
     visualReferences: [
       { src: "/stp-mbr-technology-reference-01.png", alt: "STP MBR technology brochure overview with process flow and technical specifications", width: 1071, height: 703, label: "Brochure overview", title: "MBR sewage treatment plant" },
       { src: "/stp-mbr-technology-reference-02.png", alt: "STP MBR technology brochure project photographs", width: 1071, height: 713, label: "Project references", title: "MBR treatment system" },
@@ -529,8 +529,8 @@ export const STATIC_SOLUTION_PAGES: StaticSolution[] = [
     title: "STP - Package FRP",
     eyebrow: "COMPACT PACKAGED SEWAGE TREATMENT",
     description: "Factory-assembled FRP package sewage treatment plants for sites that need a compact, corrosion-resistant and installation-ready treatment enclosure.",
-    image: "/banner/water-treatment.png",
-    imageAlt: "Packaged water and wastewater treatment plant reference",
+    image: "/stp-package-frp-hero.png",
+    imageAlt: "Packaged FRP sewage treatment plant with tanks, piping and control panel",
     brochure: {
       href: "/frp-sewage-treatment-plant-catalogue.pdf",
       downloadName: "Aquen-FRP-Sewage-Treatment-Plant-Catalogue.pdf",
