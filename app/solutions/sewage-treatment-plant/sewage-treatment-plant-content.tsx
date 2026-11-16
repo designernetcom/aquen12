@@ -152,7 +152,7 @@ function ProcessLane({ items, laneClass = "" }: { items: readonly (readonly [str
 }
 
 function HeroVisual() {
-  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image src="/banner/advanced-biological.png" alt="Related biological wastewater treatment plant reference" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>SBR context</span></div><div className={stp.heroVisualNote}>Existing biological wastewater-treatment asset shown as a related process reference. It is not presented as a specific AQUEN SBR installation photograph.</div><div className={styles.heroCaption}><span>Capacity</span><strong>10–500 KLD</strong><span>Operation</span><strong>22 hours</strong></div></div>;
+  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image src="/sewage-treatment-plant-hero.png" alt="Sewage treatment plant with aeration basins, settling tanks and process equipment" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>SBR context</span></div><div className={stp.heroVisualNote}>Illustrative sewage treatment-plant reference image. Final plant design, equipment and performance depend on project-specific engineering.</div><div className={styles.heroCaption}><span>Capacity</span><strong>10–500 KLD</strong><span>Operation</span><strong>22 hours</strong></div></div>;
 }
 
 export default function SewageTreatmentPlantContent() {

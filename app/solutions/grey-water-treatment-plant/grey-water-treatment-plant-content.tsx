@@ -133,7 +133,7 @@ function ProcessLane() {
 }
 
 function HeroVisual() {
-  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image src="/banner/advanced-biological.png" alt="Related biological wastewater treatment plant reference" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>Greywater context</span></div><div className={local.heroVisualNote}>Existing biological-treatment asset shown as a related process reference. It is not presented as a specific AQUEN greywater project photograph.</div><div className={styles.heroCaption}><span>Capacity</span><strong>5–200 KLD</strong><span>Reuse</span><strong>Non-potable</strong></div></div>;
+  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image src="/grey-water-treatment-plant-hero.png" alt="Grey water treatment plant with biological treatment chambers, filtration tanks and landscape reuse" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>Greywater context</span></div><div className={local.heroVisualNote}>Illustrative greywater treatment-plant reference image. Final plant design, equipment and reuse suitability depend on project-specific engineering.</div><div className={styles.heroCaption}><span>Capacity</span><strong>5–200 KLD</strong><span>Reuse</span><strong>Non-potable</strong></div></div>;
 }
 
 export default function GreyWaterTreatmentPlantContent() {

@@ -161,7 +161,7 @@ function ProcessLane({ items, laneClass = "" }: { items: { label: string; title:
 }
 
 function HeroVisual() {
-  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image src="/banner/advanced-biological.png" alt="Related biological wastewater treatment plant reference" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>MBBR context</span></div><div className={local.heroVisualNote}>Existing biological wastewater-treatment asset shown as a related process reference. It is not presented as a specific AQUEN ETP installation photograph.</div><div className={styles.heroCaption}><span>Capacity</span><strong>10–500 KLD</strong><span>Operation</span><strong>22 hours</strong></div></div>;
+  return <div className={styles.heroVisual}><div className={styles.heroVisualFrame}><Image src="/effluent-treatment-plant-hero.png" alt="Effluent treatment plant with biological treatment tanks, filtration vessels and aeration basins" fill priority sizes="(max-width: 850px) 100vw, 52vw" /></div><div className={styles.heroBadge}><BadgeCheck size={16} /><span>MBBR context</span></div><div className={local.heroVisualNote}>Illustrative ETP treatment-plant reference image. Final plant design, equipment and performance depend on project-specific engineering.</div><div className={styles.heroCaption}><span>Capacity</span><strong>10–500 KLD</strong><span>Operation</span><strong>22 hours</strong></div></div>;
 }
 
 export default function EffluentTreatmentPlantContent() {
